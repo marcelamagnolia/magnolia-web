@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MagSelf — Magnolia Signature</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- ── Navigation ──────────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="../">
+      <img src="../assets/magnolia_signature.svg" alt="Magnolia Signature">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../magconnect/">MagConnect</a></li>
+      <li><a href="./" class="active">MagSelf</a></li>
+      <li><a href="../#collectif" class="btn btn-gold" style="padding:8px 18px;font-size:12px;" data-fr>Rejoindre</a>
+          <a href="../#collectif" class="btn btn-gold" style="padding:8px 18px;font-size:12px;" data-en>Join us</a></li>
+    </ul>
+    <div class="lang-toggle">
+      <button onclick="setLang('fr')" id="btn-fr" class="active">FR</button>
+      <span class="sep">|</span>
+      <button onclick="setLang('en')" id="btn-en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero ────────────────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="container">
+
+    <span class="tagline" data-fr>Se connaître, c'est choisir librement.</span>
+    <span class="tagline" data-en>Knowing yourself means choosing freely.</span>
+
+    <h1 data-fr>La connaissance de soi,<br>accessible à tous.</h1>
+    <h1 data-en>Self-knowledge,<br>accessible to everyone.</h1>
+
+    <div class="divider center"></div>
+
+    <p class="intro" data-fr>MagSelf rend la connaissance de soi accessible pour aider les jeunes adultes à faire des choix éclairés et s'épanouir pleinement.</p>
+    <p class="intro" data-en>MagSelf makes self-knowledge accessible to help young adults make informed choices and thrive fully.</p>
+
+  </div>
+</section>
+
+<!-- ── Coming soon ────────────────────────────────────────── -->
+<section class="alt" style="text-align:center;">
+  <div class="container">
+
+    <span class="section-label" data-fr>En construction</span>
+    <span class="section-label" data-en>Coming soon</span>
+
+    <h2 data-fr>MagSelf arrive bientôt.</h2>
+    <h2 data-en>MagSelf is coming soon.</h2>
+
+    <div class="divider center"></div>
+
+    <p style="max-width:480px;margin:0 auto 40px;" data-fr>Cette initiative est en cours de développement. Rejoignez le collectif Magnolia pour être informé en avant-première.</p>
+    <p style="max-width:480px;margin:0 auto 40px;" data-en>This initiative is in development. Join the Magnolia collective to be the first to hear about it.</p>
+
+    <a href="../#collectif" class="btn btn-outline" data-fr>Rejoindre le Collectif</a>
+    <a href="../#collectif" class="btn btn-outline" data-en>Join the Collective</a>
+
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-logo">
+      <img src="../assets/magnolia_signature.svg" alt="Magnolia Signature">
+    </div>
+    <p>© 2026 Magnolia Signature</p>
+    <nav>
+      <ul>
+        <li><a href="../" data-fr>Accueil</a><a href="../" data-en>Home</a></li>
+        <li><a href="../magconnect/">MagConnect</a></li>
+        <li><a href="./">MagSelf</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.documentElement.lang = lang;
+    localStorage.setItem('ms-lang', lang);
+  }
+
+  // Restore saved language preference
+  const saved = localStorage.getItem('ms-lang');
+  if (saved === 'en') setLang('en');
+</script>
+
+</body>
+</html>
