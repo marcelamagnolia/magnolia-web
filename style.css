@@ -35,6 +35,7 @@ body.lang-en [data-fr] { display: none !important; }
 body.lang-en [data-en] { display: revert !important; }
 body.lang-en .tagline[data-en],
 body.lang-en .section-label[data-en] { display: block !important; }
+body.lang-en .btn[data-en] { display: inline-block !important; }
 
 /* ── Layout ────────────────────────────────────────────────── */
 
