@@ -21,10 +21,13 @@
       <li><a href="../#collectif" class="btn btn-gold" style="padding:0 18px;font-size:12px;height:34px;line-height:34px;" data-fr>Rejoindre</a>
           <a href="../#collectif" class="btn btn-gold" style="padding:0 18px;font-size:12px;height:34px;line-height:34px;" data-en>Join us</a></li>
     </ul>
-    <div class="lang-toggle">
-      <button onclick="setLang('fr')" id="btn-fr" class="active">FR</button>
-      <span class="sep">|</span>
-      <button onclick="setLang('en')" id="btn-en">EN</button>
+    <div class="nav-controls">
+      <div class="lang-toggle">
+        <button onclick="setLang('fr')" id="btn-fr" class="active">FR</button>
+        <span class="sep">|</span>
+        <button onclick="setLang('en')" id="btn-en">EN</button>
+      </div>
+      <button class="nav-hamburger" onclick="toggleNav()" aria-label="Menu">☰</button>
     </div>
   </div>
 </nav>
@@ -93,6 +96,16 @@
     document.documentElement.lang = lang;
     localStorage.setItem('ms-lang', lang);
   }
+
+  function toggleNav() {
+    document.querySelector('.nav-links').classList.toggle('open');
+  }
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('nav')) {
+      document.querySelector('.nav-links').classList.remove('open');
+    }
+  });
 
   // Restore saved language preference
   const saved = localStorage.getItem('ms-lang');
