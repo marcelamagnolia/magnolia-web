@@ -312,12 +312,13 @@
     <p data-fr>Recevez en avant-première : les lancements, les réflexions, et les projets qui transforment notre façon d'être, de se relier et d'agir.</p>
     <p data-en>Receive exclusive early access to: our launches, our insights, and the projects transforming how we live!</p>
 
-    <form class="email-form" onsubmit="return false;">
-      <input type="email" placeholder="votre@email.com" data-fr>
-      <input type="email" placeholder="your@email.com" data-en>
+    <form class="email-form" onsubmit="handleSubscribe(event, 'magnolia', 6)">
+      <input type="email" id="email-magnolia" placeholder="votre@email.com" data-fr required>
+      <input type="email" id="email-magnolia-en" placeholder="your@email.com" data-en required>
       <button type="submit" data-fr>Rejoindre</button>
       <button type="submit" data-en>Join</button>
     </form>
+    <p id="msg-magnolia" style="display:none;margin-top:12px;font-size:14px;"></p>
 
   </div>
 </section>
@@ -339,12 +340,42 @@
 </footer>
 
 <script>
+  const API_URL = 'https://api.magconnect.ca';
+
   function setLang(lang) {
     document.body.classList.toggle('lang-en', lang === 'en');
     document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
     document.getElementById('btn-en').classList.toggle('active', lang === 'en');
     document.documentElement.lang = lang;
     localStorage.setItem('ms-lang', lang);
+  }
+
+  async function handleSubscribe(e, formKey, listId) {
+    e.preventDefault();
+    const isEn = document.body.classList.contains('lang-en');
+    const emailId = isEn ? `email-${formKey}-en` : `email-${formKey}`;
+    const email = document.getElementById(emailId).value;
+    const msg = document.getElementById(`msg-${formKey}`);
+
+    try {
+      const res = await fetch(`${API_URL}/waitlist`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, list_id: listId }),
+      });
+      msg.style.display = 'block';
+      if (res.ok) {
+        msg.style.color = '#3f856c';
+        msg.textContent = isEn ? 'You\'re on the list! We\'ll be in touch.' : 'C\'est noté ! On te contacte bientôt.';
+      } else {
+        msg.style.color = '#e53e3e';
+        msg.textContent = isEn ? 'Something went wrong. Please try again.' : 'Une erreur s\'est produite. Réessaie.';
+      }
+    } catch {
+      msg.style.display = 'block';
+      msg.style.color = '#e53e3e';
+      msg.textContent = isEn ? 'Something went wrong. Please try again.' : 'Une erreur s\'est produite. Réessaie.';
+    }
   }
 
   // Restore saved language preference
