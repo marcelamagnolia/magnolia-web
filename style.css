@@ -53,6 +53,11 @@ section.alt {
   background: var(--white);
 }
 
+/* Offset anchor scroll so sticky nav doesn't cover the section title */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
 /* ── Navigation ────────────────────────────────────────────── */
 
 nav {
@@ -91,14 +96,66 @@ nav {
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--slate);
+  color: var(--navy);
   text-decoration: none;
   transition: color 0.2s;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--navy);
+  border-bottom-color: var(--gold);
+}
+
+/* Dropdown */
+.nav-links li {
+  position: relative;
+}
+
+/* Invisible bridge fills the gap so mouse doesn't leave the li */
+.nav-links li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 10px;
+}
+
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  min-width: 160px;
+  padding: 8px 0;
+  z-index: 200;
+  list-style: none;
+}
+
+.nav-links li:hover .nav-dropdown {
+  display: block;
+}
+
+.nav-dropdown li a {
+  display: block;
+  padding: 8px 18px;
+  font-size: 12px;
+  border-bottom: none !important;
+  white-space: nowrap;
+}
+
+.nav-dropdown li a:hover {
+  background: rgba(52, 80, 122, 0.05);
+  border-bottom: none !important;
 }
 
 .lang-toggle {
@@ -400,14 +457,14 @@ a {
 /* ── Biography ─────────────────────────────────────────────── */
 
 .biography .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 72px;
-  align-items: center;
+  max-width: 720px;
 }
 
 .bio-photo {
+  float: right;
   position: relative;
+  width: 280px;
+  margin: 0 0 24px 40px;
 }
 
 .bio-photo img {
@@ -788,7 +845,7 @@ footer nav a:hover {
 
   .hero { min-height: 480px; }
   .method-grid { grid-template-columns: 1fr; gap: 32px; }
-  .biography .container { grid-template-columns: 1fr; gap: 40px; }
+  .bio-photo { float: none; width: 100%; margin: 0 0 24px 0; }
   .bio-photo::after { display: none; }
   .values-grid { grid-template-columns: repeat(2, 1fr); }
   .universes-grid { grid-template-columns: 1fr; }
@@ -827,11 +884,25 @@ footer nav a:hover {
     text-align: center;
   }
 
-  .nav-links li a.btn {
+  .nav-dropdown {
     display: block;
-    width: 100%;
-    box-sizing: border-box;
+    position: static;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    border-top: 1px solid var(--border);
+    border-radius: 0;
+    padding: 4px 0;
+    background: transparent;
+    margin-top: 4px;
   }
+
+  .nav-dropdown li a {
+    padding: 6px 18px;
+    font-size: 11px;
+    color: var(--slate);
+  }
+
 }
 
 @media (max-width: 480px) {
