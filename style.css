@@ -12,6 +12,7 @@
   --gold:   #ecba64;
   --slate:  #7A7060;
   --cream:  #fff7e6;
+  --cream-l: #fffbf3;
   --white:  #FFFFFF;
   --border: #E8E0D4;
   --max:    780px;
@@ -50,7 +51,16 @@ section {
 }
 
 section.alt {
-  background: var(--white);
+  background: var(--navy);
+}
+
+section.alt h2,
+section.alt h3 {
+  color: var(--cream);
+}
+
+section.alt p {
+  color: rgba(255,247,230,.70);
 }
 
 /* Offset anchor scroll so sticky nav doesn't cover the section title */
@@ -284,7 +294,7 @@ a {
 }
 
 .hero .tagline {
-  color: var(--gold);
+  color: var(--navy);
   text-shadow: 0 1px 6px rgba(0,0,0,0.3);
 }
 
@@ -314,7 +324,7 @@ a {
 }
 
 .hero .divider {
-  background: var(--gold);
+  background: var(--navy);
 }
 
 .hero h1 {
@@ -499,13 +509,11 @@ a {
 }
 
 .bio-content .direction {
-  margin-top: 28px;
-  padding-top: 24px;
-  border-top: 1px solid var(--border);
-  font-family: 'Instrument Serif', serif;
-  font-style: italic;
-  font-size: 16px;
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: 600;
   color: var(--navy);
+  letter-spacing: 0.01em;
 }
 
 /* ── Values ────────────────────────────────────────────────── */
@@ -528,7 +536,8 @@ a {
   text-align: center;
   padding: 28px 16px;
   border: 1px solid var(--border);
-  background: var(--white);
+  border-left: 2px solid var(--gold);
+  background: var(--cream-l);
 }
 
 .value-item h3 {
@@ -564,7 +573,8 @@ a {
 }
 
 .universe-item {
-  background: var(--cream);
+  background: var(--cream-l);
+  border-left: 2px solid var(--gold);
   padding: 40px 36px;
   text-align: left;
   text-decoration: none;
@@ -573,7 +583,7 @@ a {
 }
 
 .universe-item:hover {
-  background: var(--white);
+  background: var(--cream);
 }
 
 .universe-item .uni-name {
@@ -599,7 +609,7 @@ a {
 }
 
 .universe-item.coming-soon:hover {
-  background: var(--cream);
+  background: var(--cream-l);
 }
 
 /* ── Email capture ─────────────────────────────────────────── */
@@ -791,6 +801,16 @@ footer nav a:hover {
   color: var(--gold);
   display: block;
   margin-bottom: 10px;
+}
+
+/* ── Alt-section specific overrides ───────────────────────── */
+
+.method.alt .method-item {
+  border-top-color: rgba(255,255,255,.18);
+}
+
+.biography.alt .bio-content .direction {
+  color: var(--cream);
 }
 
 /* ── Pilot CTA ─────────────────────────────────────────────── */
