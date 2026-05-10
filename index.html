@@ -6,6 +6,7 @@
   <title>Magnolia Signature</title>
   <link rel="icon" type="image/svg+xml" href="assets/magnolia_favicon.svg">
   <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
 
@@ -22,7 +23,7 @@
           <li><a href="#manifeste" data-fr>Manifeste</a><a href="#manifeste" data-en>Manifesto</a></li>
           <li><a href="#approche" data-fr>Approche</a><a href="#approche" data-en>Approach</a></li>
           <li><a href="#valeurs" data-fr>Valeurs</a><a href="#valeurs" data-en>Values</a></li>
-          <li><a href="#fondatrice" data-fr>Fondatrice</a><a href="#fondatrice" data-en>Founder</a></li>
+          <li><a href="#fondatrice" data-fr>Créatrice</a><a href="#fondatrice" data-en>Creator</a></li>
         </ul>
       </li>
       <li>
@@ -45,14 +46,12 @@
   </div>
 </nav>
 
-<!-- ── Hero ────────────────────────────────────────────────── -->
-<section class="hero">
-  <img class="hero-bg" src="assets/magali_flowers.jpg" alt="Magnolia Signature">
-  <div class="hero-overlay"></div>
+<!-- ── Hero text ─────────────────────────────────────────── -->
+<section class="hero-panel alt">
   <div class="container">
 
-    <span class="tagline" data-fr>Une révolution douce, humaine et puissante.</span>
-    <span class="tagline" data-en>A gentle and powerful human revolution.</span>
+    <span class="tagline" data-fr>Une <em>révolution</em>,<br>douce, humaine et puissante.</span>
+    <span class="tagline" data-en>A gentle, human<br>and powerful <em>revolution</em>.</span>
 
     <h1 data-fr>Nous n'avons pas besoin de plus.<br>Nous avons besoin de mieux nous relier.</h1>
     <h1 data-en>We don't need more.<br>We need to reconnect — more deeply.</h1>
@@ -62,11 +61,23 @@
     <p class="intro" data-fr>Et si la solution n'était pas une invention de plus…<br>mais une façon différente d'être au monde ?<br>Magnolia Signature ose créer une nouvelle voie.</p>
     <p class="intro" data-en>What if the solution wasn't another invention…<br>but a different way of being in the world?<br>Magnolia Signature dares to create a new path.</p>
 
-    <p class="hero-quote" data-fr>« Rien n'arrête une idée dont le temps est venu. » — Victor Hugo</p>
-    <p class="hero-quote" data-en>"Nothing is more powerful than an idea whose time has come." — Victor Hugo</p>
-
   </div>
 </section>
+
+<!-- ── Photo banner with CTAs ────────────────────────────── -->
+<div class="hero-banner">
+  <img src="assets/magali_flowers_short.png" alt="Magnolia Signature">
+  <div class="hero-banner-ctas">
+    <div class="hero-banner-btns">
+      <a href="#collectif" class="btn btn-gold" data-fr>Rejoindre le collectif</a>
+      <a href="#collectif" class="btn btn-gold" data-en>Join the collective</a>
+      <a href="#univers" class="btn btn-gold" data-fr>Découvrir nos univers</a>
+      <a href="#univers" class="btn btn-gold" data-en>Discover our initiatives</a>
+    </div>
+    <p class="hero-quote" data-fr>« Rien n'arrête une idée dont le temps est venu. » — Victor Hugo</p>
+    <p class="hero-quote" data-en>"Nothing is more powerful than an idea whose time has come." — Victor Hugo</p>
+  </div>
+</div>
 
 <!-- ── Manifesto ────────────────────────────────────────────── -->
 <section class="manifesto" id="manifeste">
@@ -77,8 +88,6 @@
 
     <h2 data-fr>Chaque pas est une œuvre.<br>Chaque œuvre commence par un pas.</h2>
     <h2 data-en>Every step is a masterpiece.<br>Every masterpiece begins with a step.</h2>
-
-    <div class="divider center"></div>
 
     <div class="manifesto-text">
 
@@ -188,34 +197,37 @@
     <h2 data-fr>Nos valeurs</h2>
     <h2 data-en>Our values</h2>
 
-    <div class="divider center"></div>
-
     <div class="values-grid">
       <div class="value-item">
+        <span class="value-icon"><i data-lucide="sparkles"></i></span>
         <h3 data-fr>Épanouissement</h3>
         <h3 data-en>Fulfilment</h3>
         <p data-fr>Rayonner et agir depuis qui l'on est vraiment.</p>
         <p data-en>Radiating and acting from who we truly are.</p>
       </div>
       <div class="value-item">
+        <span class="value-icon"><i data-lucide="leaf"></i></span>
         <h3 data-fr>Simplicité</h3>
         <h3 data-en>Simplicity</h3>
         <p data-fr>Aller à l'essentiel, sans détour inutile.</p>
         <p data-en>Going to the essence, without unnecessary detours.</p>
       </div>
       <div class="value-item">
+        <span class="value-icon"><i data-lucide="shield"></i></span>
         <h3 data-fr>Autonomie</h3>
         <h3 data-en>Empowerment</h3>
         <p data-fr>Empuissancer des humains.</p>
         <p data-en>Cultivating autonomy and self-belief.</p>
       </div>
       <div class="value-item">
+        <span class="value-icon"><i data-lucide="zap"></i></span>
         <h3 data-fr>Efficience</h3>
         <h3 data-en>Efficiency</h3>
         <p data-fr>Agir mieux avec moins et avec les autres.</p>
         <p data-en>Doing better with less, and with others.</p>
       </div>
       <div class="value-item">
+        <span class="value-icon"><i data-lucide="flame"></i></span>
         <h3 data-fr>Audace</h3>
         <h3 data-en>Boldness</h3>
         <p data-fr>Oser créer de nouvelles voies.</p>
@@ -231,8 +243,8 @@
   <div class="container">
 
     <div class="bio-content">
-      <span class="section-label" data-fr>La fondatrice</span>
-      <span class="section-label" data-en>The founder</span>
+      <span class="section-label" data-fr>La créatrice</span>
+      <span class="section-label" data-en>The creator</span>
 
       <div class="bio-photo">
         <img src="assets/magali_et_cimba.jpg" alt="Magali — Fondatrice de Magnolia Signature">
@@ -272,8 +284,8 @@
     <span class="section-label" data-fr>Nos initiatives</span>
     <span class="section-label" data-en>Our initiatives</span>
 
-    <h2 data-fr>Une direction. Quatre leviers d'impact.</h2>
-    <h2 data-en>One direction. Four levers of impact.</h2>
+    <h2 data-fr>Quatre leviers d'impact.</h2>
+    <h2 data-en>Four levers of impact.</h2>
 
     <p class="subtitle" data-fr>Chaque initiative naît d'une conviction commune : ce dont nous avons besoin existe déjà, il suffit de le révéler.</p>
     <p class="subtitle" data-en>Each initiative is born of a shared conviction:<br>what we need already exists — it simply needs to be revealed.</p>
@@ -281,6 +293,7 @@
     <div class="universes-grid">
 
       <a href="magconnect/" class="universe-item">
+        <span class="uni-icon"><i data-lucide="sprout"></i></span>
         <span class="uni-name">MagConnect</span>
         <h3 data-fr>Impact social & Durabilité</h3>
         <h3 data-en>Social Impact & Sustainability</h3>
@@ -289,6 +302,7 @@
       </a>
 
       <a href="magself/" class="universe-item">
+        <span class="uni-icon"><i data-lucide="sparkles"></i></span>
         <span class="uni-name">MagSelf</span>
         <h3 data-fr>Connaissance de soi</h3>
         <h3 data-en>Self discovery</h3>
@@ -297,6 +311,9 @@
       </a>
 
       <div class="universe-item coming-soon">
+        <span class="uni-badge" data-fr>Bientôt</span>
+        <span class="uni-badge" data-en>Coming soon</span>
+        <span class="uni-icon"><i data-lucide="target"></i></span>
         <span class="uni-name">MagAlign</span>
         <h3 data-fr>Alignement des dirigeants</h3>
         <h3 data-en>Leadership Alignment</h3>
@@ -305,6 +322,9 @@
       </div>
 
       <div class="universe-item coming-soon">
+        <span class="uni-badge" data-fr>Bientôt</span>
+        <span class="uni-badge" data-en>Coming soon</span>
+        <span class="uni-icon"><i data-lucide="heart"></i></span>
         <span class="uni-name">MagGive</span>
         <h3 data-fr>Fondation</h3>
         <h3 data-en>Foundation</h3>
@@ -324,17 +344,14 @@
     <span class="tagline" data-fr>Soyez les premiers à vivre la révolution Magnolia.</span>
     <span class="tagline" data-en>Be among the first to experience the Magnolia revolution.</span>
 
-    <h2 data-fr>Rejoindre le Collectif</h2>
-    <h2 data-en>Join the Collective</h2>
-
-    <p data-fr>Recevez en avant-première : les lancements, les réflexions, et les projets qui transforment notre façon d'être, de se relier et d'agir !</p>
+    <p data-fr>Recevez en avant-première : les graines ou les étincelles qui transforment notre façon d'être, de se relier et d'agir !</p>
     <p data-en>Receive exclusive early access to: our launches, our insights, and the projects transforming how we live!</p>
 
     <form class="email-form" onsubmit="handleSubscribe(event, 'magnolia', 6)">
       <input type="email" id="email-magnolia" placeholder="votre@email.com" data-fr required>
       <input type="email" id="email-magnolia-en" placeholder="your@email.com" data-en required>
-      <button type="submit" data-fr>Rejoindre</button>
-      <button type="submit" data-en>Join</button>
+      <button type="submit" data-fr>Rejoindre le Collectif</button>
+      <button type="submit" data-en>Join the Collective</button>
     </form>
     <p id="msg-magnolia" style="display:none;margin-top:12px;font-size:14px;"></p>
 
@@ -394,6 +411,8 @@
   // Restore saved language preference
   const saved = localStorage.getItem('ms-lang');
   if (saved === 'en') setLang('en');
+
+  lucide.createIcons();
 </script>
 
 </body>
