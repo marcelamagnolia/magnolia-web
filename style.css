@@ -177,6 +177,7 @@ nav {
   font-size: 12px;
   border-bottom: none !important;
   white-space: nowrap;
+  text-transform: none;
 }
 
 .nav-dropdown li a:hover {
