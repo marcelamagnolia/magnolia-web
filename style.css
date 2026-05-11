@@ -549,6 +549,24 @@ a {
   margin-bottom: 56px;
 }
 
+.method-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  text-align: left;
+}
+
+.method-intro h2 {
+  margin-bottom: 16px;
+}
+
+.method-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
 .method-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -557,8 +575,22 @@ a {
 }
 
 .method-item {
-  padding-top: 24px;
-  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  margin-top: 28px;
+  border-top: none;
+  position: relative;
+}
+
+.method-item:first-child {
+  margin-top: 0;
+}
+
+.method-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), rgba(236,186,100,0.15));
 }
 
 .method-item .number {
