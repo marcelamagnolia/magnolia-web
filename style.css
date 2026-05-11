@@ -516,16 +516,22 @@ a {
 
 .manifesto-text .result {
   margin: 24px 0;
-  padding-left: 20px;
-  border-left: 2px solid var(--gold);
+}
+
+.manifesto-text .result p {
+  font-style: italic;
+  color: var(--navy);
 }
 
 .manifesto-text .closing {
-  margin-top: 32px;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
   font-family: 'Instrument Serif', serif;
-  font-size: 18px;
+  font-size: clamp(20px, 2.2vw, 26px);
   color: var(--navy);
-  font-style: italic;
+  text-align: center;
+  line-height: 1.6;
 }
 
 /* ── Method ────────────────────────────────────────────────── */
@@ -978,6 +984,9 @@ footer nav a:hover {
   flex-direction: column;
   justify-content: center;
 }
+
+.alt .split-content .section-label { color: var(--gold); opacity: 1; }
+.alt .split-content .direction { color: rgba(255,247,230,.70); }
 
 @media (max-width: 720px) {
   .section-split,
