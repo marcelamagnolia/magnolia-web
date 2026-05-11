@@ -23,16 +23,9 @@
       background: linear-gradient(rgba(52,80,122,0.72), rgba(52,80,122,0.72)), url('../assets/matiere-bois-3.jpg') center center / cover no-repeat;
     }
     .pilot {
-      background: url('../assets/matiere-bois-3.jpg') center center / cover no-repeat;
-      position: relative;
+      background: var(--navy);
+      text-align: center;
     }
-    .pilot::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(52,80,122,0.78);
-    }
-    .pilot .container { position: relative; z-index: 1; }
     .pilot h2 { color: var(--cream); }
     .pilot p { color: rgba(255,247,230,.75); }
     .pilot .tagline { color: var(--gold); }
@@ -80,15 +73,13 @@
 <section class="hero-panel alt">
   <div class="container">
 
-    <span class="tagline" data-fr>Là où les <em>humains</em> retrouvent le goût de <em>coopérer</em>,<br>et où les <em>matières</em> retrouvent leur <em>valeur</em>.</span>
-    <span class="tagline" data-en>Where <em>people</em> rediscover the joy of <em>cooperating</em>,<br>and where <em>materials</em> rediscover their <em>value</em>.</span>
+    <span class="tagline" style="margin-top:24px;display:block;" data-fr>Là où les <em>humains</em> retrouvent le goût de <em>coopérer</em>,<br>et où les <em>matières</em> retrouvent leur <em>valeur</em>.</span>
+    <span class="tagline" style="margin-top:24px;display:block;" data-en>Where <em>people</em> rediscover the joy of <em>cooperating</em>,<br>and where <em>materials</em> rediscover their <em>value</em>.</span>
 
     <h1 data-fr>Une ressource inutilisée est une opportunité de rencontres humaines.</h1>
     <h1 data-en>An unused resource is an opportunity for human connection.</h1>
 
-    <div class="divider center"></div>
-
-    <div class="hero-banner-btns" style="margin-top:32px;">
+    <div class="hero-banner-btns" style="margin-top:80px;">
       <a href="#pilote" class="btn btn-gold" data-fr>Rejoindre</a>
       <a href="#pilote" class="btn btn-gold" data-en>Join us</a>
       <a href="#decouvrir" class="btn btn-gold" data-fr>En savoir plus</a>
@@ -99,7 +90,7 @@
 </section>
 
 <!-- ── Manifeste ─────────────────────────────────────────── -->
-<section>
+<section style="padding-bottom:0;">
   <div class="container">
 
     <span class="section-label" data-fr>Manifeste</span>
@@ -255,8 +246,8 @@
     <form class="email-form" onsubmit="handleSubscribe(event, 'magconnect', 4)" style="margin-top:24px;">
       <input type="email" id="email-magconnect" placeholder="ton@courriel.com" data-fr required>
       <input type="email" id="email-magconnect-en" placeholder="your@email.com" data-en required>
-      <button type="submit" class="btn btn-gold" data-fr>→ Je rejoins la liste des privilégiés</button>
-      <button type="submit" class="btn btn-gold" data-en>→ I join the founding community</button>
+      <button type="submit" class="btn btn-gold" data-fr>Je rejoins la liste des privilégiés</button>
+      <button type="submit" class="btn btn-gold" data-en>I join the founding community</button>
     </form>
     <p id="msg-magconnect" style="display:none;margin-top:12px;font-size:14px;"></p>
 
