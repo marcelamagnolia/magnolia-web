@@ -1045,11 +1045,14 @@ footer nav a:hover {
 @media (max-width: 720px) {
   .hero-panel {
     align-items: flex-start;
-    padding-top: 32px;
+    padding-top: 20px;
     min-height: 520px;
   }
   .hero-panel .tagline {
     margin-bottom: 160px;
+  }
+  .hero-panel h1 {
+    color: #d0d0d0 !important;
   }
   .method-layout {
     grid-template-columns: 1fr;
