@@ -10,24 +10,15 @@
   <style>
     section h2 { margin-bottom: 32px; }
     .hero-panel .tagline { font-size: clamp(20px, 2.2vw, 32px); }
-    .hero-banner { height: 260px; overflow: hidden; }
-    .hero-banner img { width: 100%; height: 100%; object-fit: cover; object-position: center center; }
     .method-icon { display: block; margin-bottom: 12px; }
     .method-icon svg { width: 28px; height: 28px; stroke: var(--gold); stroke-width: 1.5; fill: none; }
     .method-grid { grid-template-columns: repeat(2, 1fr); }
     .audience-closing { margin-top: 24px; font-style: italic; color: var(--slate); font-size: 15px; }
     .audience-tagline { margin-top: 10px; font-weight: 700; color: var(--navy); font-size: 14px; }
     .pilot {
-      background: url('../assets/espoir-germer-3.jpg') center center / cover no-repeat;
-      position: relative;
+      background: var(--navy);
+      text-align: center;
     }
-    .pilot::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(52,80,122,0.78);
-    }
-    .pilot .container { position: relative; z-index: 1; }
     .pilot h2 { color: var(--cream); }
     .pilot p { color: rgba(255,247,230,.75); }
     .pilot .tagline { color: var(--gold); }
@@ -75,13 +66,28 @@
 <section class="hero-panel alt">
   <div class="container">
 
-    <span class="tagline" data-fr>Là où des jeunes s'épanouissent et se réalisent grâce à la connaissance de soi.</span>
-    <span class="tagline" data-en>Where young people flourish and find themselves through self-knowledge.</span>
+    <span class="tagline" style="margin-top:24px;display:block;" data-fr>Là où des jeunes s'épanouissent et se réalisent grâce à la connaissance de soi.</span>
+    <span class="tagline" style="margin-top:24px;display:block;" data-en>Where young people flourish and find themselves through self-knowledge.</span>
 
     <h1 data-fr>Se connaître est un luxe.<br>Personne ne nous l'enseigne réellement.</h1>
     <h1 data-en>Self-knowledge is a luxury.<br>Nobody truly teaches it.</h1>
 
-    <div class="divider center"></div>
+    <div class="hero-banner-btns" style="margin-top:40px;">
+      <a href="#pilote" class="btn btn-gold" data-fr>Rejoindre</a>
+      <a href="#pilote" class="btn btn-gold" data-en>Join us</a>
+      <a href="#decouvrir" class="btn btn-gold" data-fr>En savoir plus</a>
+      <a href="#decouvrir" class="btn btn-gold" data-en>Learn more</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Manifeste ─────────────────────────────────────────── -->
+<section style="background: var(--cream);">
+  <div class="container">
+
+    <span class="section-label" data-fr>Manifeste</span>
+    <span class="section-label" data-en>Manifesto</span>
 
     <p class="intro" data-fr>Nous apprenons à travailler, à perfectionner, à avancer vite.<br>Mais rarement à nous comprendre.<br>Résultat&nbsp;: des jeunes qui avancent sans repères, qui doutent, imitent, s'adaptent, et finissent par se perdre sans comprendre comment ils fonctionnent.</p>
     <p class="intro" data-en>We learn to work, to improve, to move fast.<br>But rarely to understand ourselves.<br>The result: young people moving forward without bearings, who doubt, imitate, adapt, and end up losing themselves without understanding how they function.</p>
@@ -92,21 +98,8 @@
   </div>
 </section>
 
-<!-- ── Photo banner with CTAs ────────────────────────────── -->
-<div class="hero-banner">
-  <img src="../assets/arbre-lumière-2.jpg" alt="MagSelf">
-  <div class="hero-banner-ctas">
-    <div class="hero-banner-btns">
-      <a href="#pilote" class="btn btn-gold" data-fr>Rejoindre</a>
-      <a href="#pilote" class="btn btn-gold" data-en>Join us</a>
-      <a href="#decouvrir" class="btn btn-gold" data-fr>En savoir plus</a>
-      <a href="#decouvrir" class="btn btn-gold" data-en>Learn more</a>
-    </div>
-  </div>
-</div>
-
 <!-- ── Ce que fait MagSelf ─────────────────────────────────── -->
-<section id="decouvrir">
+<section id="decouvrir" style="background: var(--white);">
   <div class="container">
 
     <span class="section-label" data-fr>Ce que fait MagSelf</span>
@@ -161,8 +154,9 @@
 </section>
 
 <!-- ── À qui s'adresse MagSelf ──────────────────────────────── -->
-<section class="section-split" style="padding:0;">
-  <div class="split-content">
+<section style="background: var(--cream);">
+  <div class="container">
+
     <span class="section-label" data-fr>À qui s'adresse MagSelf ?</span>
     <span class="section-label" data-en>Who is MagSelf for?</span>
 
@@ -193,14 +187,12 @@
     <p class="audience-closing" data-en>These signals are not weaknesses. They are invitations.</p>
     <p class="audience-tagline" data-fr>MagSelf s'adresse aux 18-30 ans prêts à se connaître pour se réaliser.</p>
     <p class="audience-tagline" data-en>MagSelf is for 18–30 year olds ready to know themselves in order to fulfil their potential.</p>
-  </div>
-  <div class="split-img">
-    <img src="../assets/forest.jpg" alt="MagSelf">
+
   </div>
 </section>
 
 <!-- ── Qu'est-ce que MagSelf ────────────────────────────────── -->
-<section style="background: var(--cream);">
+<section style="background: var(--white);">
   <div class="container">
 
     <span class="section-label" data-fr>Qu'est-ce que MagSelf ?</span>
@@ -258,8 +250,8 @@
     <form class="email-form" onsubmit="handleSubscribe(event, 'magself', 5)" style="margin-top:24px;">
       <input type="email" id="email-magself" placeholder="ton@courriel.com" data-fr required>
       <input type="email" id="email-magself-en" placeholder="your@email.com" data-en required>
-      <button type="submit" class="btn btn-gold" data-fr>→ Je m'offre le luxe de me connaître.</button>
-      <button type="submit" class="btn btn-gold" data-en>→ I give myself the luxury of self-knowledge.</button>
+      <button type="submit" class="btn btn-gold" data-fr>Je m'offre le luxe de me connaître</button>
+      <button type="submit" class="btn btn-gold" data-en>I give myself the luxury of self-knowledge</button>
     </form>
     <p id="msg-magself" style="display:none;margin-top:12px;font-size:14px;"></p>
 
