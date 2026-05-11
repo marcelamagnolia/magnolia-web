@@ -394,8 +394,8 @@ a {
   margin: 0 auto 28px;
   font-family: 'Dancing Script', cursive;
   font-weight: 500;
-  color: var(--gold) !important;
-  text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+  color: var(--cream) !important;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.6);
 }
 
 .hero-panel .intro {
@@ -1048,10 +1048,6 @@ footer nav a:hover {
     align-items: flex-start;
     padding-top: 20px;
     min-height: 520px;
-  }
-  .hero-bg {
-    transform: scale(0.8);
-    transform-origin: right 20%;
   }
   .hero-panel .tagline {
     font-size: clamp(26px, 5.5vw, 34px);
