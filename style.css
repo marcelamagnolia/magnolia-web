@@ -13,7 +13,7 @@
   --slate:  #7A7060;
   --cream:  #fff7e6;
   --cream-l: #fffbf3;
-  --white:  #FFFFFF;
+  --white:  #fffbf3;
   --border: #E8E0D4;
   --max:    780px;
 }
@@ -657,8 +657,18 @@ a {
   padding: 32px 16px;
   border-radius: 16px;
   border: 1px solid rgba(52,80,122,.08);
-  background: var(--white);
+  background: var(--cream-l);
+  position: relative;
+  overflow: hidden;
   transition: border-color .3s, box-shadow .3s;
+}
+
+.value-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--navy), var(--gold));
 }
 
 .value-item:hover {
@@ -713,7 +723,7 @@ a {
 }
 
 .universe-item {
-  background: var(--white);
+  background: var(--cream-l);
   border-radius: 20px;
   padding: 36px 32px;
   border: 1px solid var(--border);
@@ -722,7 +732,7 @@ a {
   text-align: left;
   text-decoration: none;
   display: block;
-  transition: transform .3s, box-shadow .3s;
+  transition: background .25s, border-color .25s, box-shadow .25s;
 }
 
 .universe-item::before {
@@ -733,9 +743,10 @@ a {
   background: linear-gradient(90deg, var(--navy), var(--gold));
 }
 
-.universe-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(52,80,122,.1);
+.universe-item:not(.coming-soon):hover {
+  background: var(--cream);
+  border-color: var(--gold);
+  box-shadow: 0 8px 28px rgba(52,80,122,.08);
 }
 
 .uni-icon {
@@ -770,7 +781,6 @@ a {
 }
 
 .universe-item.coming-soon {
-  opacity: 0.65;
   cursor: default;
 }
 
@@ -803,7 +813,7 @@ a {
 }
 
 .email-capture .tagline {
-  color: var(--white);
+  color: var(--cream);
   font-family: 'Instrument Serif', serif;
   font-style: normal;
   font-size: clamp(22px, 2.8vw, 32px);
@@ -816,7 +826,7 @@ a {
 }
 
 .email-capture p {
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,247,230,.70);
   max-width: 440px;
   margin: 0 auto 36px;
 }
@@ -833,15 +843,15 @@ a {
   padding: 13px 20px;
   font-family: 'Nunito Sans', sans-serif;
   font-size: 14px;
-  border: 1px solid rgba(255,255,255,0.2);
-  background: rgba(255,255,255,0.08);
-  color: var(--white);
+  border: 1px solid rgba(255,255,255,0.3);
+  background: var(--cream-l);
+  color: var(--navy);
   outline: none;
   border-radius: 24px;
 }
 
 .email-form input::placeholder {
-  color: rgba(255,255,255,0.35);
+  color: rgba(52,80,122,0.45);
 }
 
 .email-form button {
