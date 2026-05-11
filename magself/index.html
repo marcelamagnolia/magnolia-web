@@ -6,6 +6,32 @@
   <title>MagSelf — Magnolia Signature</title>
   <link rel="icon" type="image/svg+xml" href="../assets/magnolia_favicon.svg">
   <link rel="stylesheet" href="../style.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+    section h2 { margin-bottom: 32px; }
+    .hero-panel .tagline { font-size: clamp(20px, 2.2vw, 32px); }
+    .hero-banner { height: 260px; overflow: hidden; }
+    .hero-banner img { width: 100%; height: 100%; object-fit: cover; object-position: center center; }
+    .method-icon { display: block; margin-bottom: 12px; }
+    .method-icon svg { width: 28px; height: 28px; stroke: var(--gold); stroke-width: 1.5; fill: none; }
+    .method-grid { grid-template-columns: repeat(2, 1fr); }
+    .audience-closing { margin-top: 24px; font-style: italic; color: var(--slate); font-size: 15px; }
+    .audience-tagline { margin-top: 10px; font-weight: 700; color: var(--navy); font-size: 14px; }
+    .pilot {
+      background: url('../assets/espoir-germer-3.jpg') center center / cover no-repeat;
+      position: relative;
+    }
+    .pilot::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(52,80,122,0.78);
+    }
+    .pilot .container { position: relative; z-index: 1; }
+    .pilot h2 { color: var(--cream); }
+    .pilot p { color: rgba(255,247,230,.75); }
+    .pilot .tagline { color: var(--gold); }
+  </style>
 </head>
 <body>
 
@@ -22,7 +48,7 @@
           <li><a href="../#manifeste" data-fr>Manifeste</a><a href="../#manifeste" data-en>Manifesto</a></li>
           <li><a href="../#approche" data-fr>Approche</a><a href="../#approche" data-en>Approach</a></li>
           <li><a href="../#valeurs" data-fr>Valeurs</a><a href="../#valeurs" data-en>Values</a></li>
-          <li><a href="../#fondatrice" data-fr>Fondatrice</a><a href="../#fondatrice" data-en>Founder</a></li>
+          <li><a href="../#fondatrice" data-fr>Créatrice</a><a href="../#fondatrice" data-en>Creator</a></li>
         </ul>
       </li>
       <li>
@@ -45,53 +71,239 @@
   </div>
 </nav>
 
-<!-- ── Hero ────────────────────────────────────────────────── -->
-<section class="page-hero">
+<!-- ── Hero text ─────────────────────────────────────────── -->
+<section class="hero-panel alt">
   <div class="container">
 
-    <span class="tagline" data-fr>Se connaître, c'est choisir librement.</span>
-    <span class="tagline" data-en>Knowing yourself means choosing freely.</span>
+    <span class="tagline" data-fr>Là où des jeunes s'épanouissent et se réalisent grâce à la connaissance de soi.</span>
+    <span class="tagline" data-en>Where young people flourish and find themselves through self-knowledge.</span>
 
-    <h1 data-fr>La connaissance de soi,<br>accessible à tous.</h1>
-    <h1 data-en>Self-knowledge,<br>accessible to everyone.</h1>
+    <h1 data-fr>Se connaître est un luxe.<br>Personne ne nous l'enseigne réellement.</h1>
+    <h1 data-en>Self-knowledge is a luxury.<br>Nobody truly teaches it.</h1>
 
     <div class="divider center"></div>
 
-    <p class="intro" data-fr>MagSelf rend la connaissance de soi accessible pour aider les jeunes adultes à faire des choix éclairés et s'épanouir pleinement.</p>
-    <p class="intro" data-en>MagSelf makes self-knowledge accessible to help young adults make informed choices and thrive fully.</p>
+    <p class="intro" data-fr>Nous apprenons à travailler, à perfectionner, à avancer vite.<br>Mais rarement à nous comprendre.<br>Résultat&nbsp;: des jeunes qui avancent sans repères, qui doutent, imitent, s'adaptent, et finissent par se perdre sans comprendre comment ils fonctionnent.</p>
+    <p class="intro" data-en>We learn to work, to improve, to move fast.<br>But rarely to understand ourselves.<br>The result: young people moving forward without bearings, who doubt, imitate, adapt, and end up losing themselves without understanding how they function.</p>
+
+    <p class="intro" style="margin-top:16px;" data-fr>MagSelf offre un espace.<br>Un espace pour se connaître, se comprendre, s'assumer et partager.<br>Avec une seule finalité&nbsp;: mieux se relier à soi, et aux autres.</p>
+    <p class="intro" style="margin-top:16px;" data-en>MagSelf offers a space.<br>A space to know yourself, understand yourself, own yourself, and share.<br>With one purpose: to connect more deeply with yourself, and with others.</p>
 
   </div>
 </section>
 
-<!-- ── Coming soon ────────────────────────────────────────── -->
-<section class="alt" style="text-align:center;">
+<!-- ── Photo banner with CTAs ────────────────────────────── -->
+<div class="hero-banner">
+  <img src="../assets/arbre-lumière-2.jpg" alt="MagSelf">
+  <div class="hero-banner-ctas">
+    <div class="hero-banner-btns">
+      <a href="#pilote" class="btn btn-gold" data-fr>Rejoindre</a>
+      <a href="#pilote" class="btn btn-gold" data-en>Join us</a>
+      <a href="#decouvrir" class="btn btn-gold" data-fr>En savoir plus</a>
+      <a href="#decouvrir" class="btn btn-gold" data-en>Learn more</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── Ce que fait MagSelf ─────────────────────────────────── -->
+<section id="decouvrir">
   <div class="container">
 
-    <span class="section-label" data-fr>En construction</span>
-    <span class="section-label" data-en>Coming soon</span>
+    <span class="section-label" data-fr>Ce que fait MagSelf</span>
+    <span class="section-label" data-en>What MagSelf does</span>
 
-    <h2 data-fr>MagSelf arrive bientôt.</h2>
-    <h2 data-en>MagSelf is coming soon.</h2>
+    <h2 data-fr>Simple. Pratique. Éclairant.</h2>
+    <h2 data-en>Simple. Practical. Enlightening.</h2>
 
-    <div class="divider center"></div>
+    <p style="max-width:580px;margin-bottom:16px;" data-fr>MagSelf n'est pas une plateforme de plus. C'est un lieu où l'on est soutenu à être soi.<br>Un espace où l'on apprend à se connaître, à son rythme, avec sécurité et impartialité.</p>
+    <p style="max-width:580px;margin-bottom:16px;" data-en>MagSelf is not just another platform. It's a place where you are supported in being yourself.<br>A space to learn to know yourself, at your own pace, with safety and impartiality.</p>
 
-    <p style="max-width:480px;margin:0 auto 40px;" data-fr>Cette initiative est en cours de développement. Rejoignez le collectif Magnolia pour être informé en avant-première.</p>
-    <p style="max-width:480px;margin:0 auto 40px;" data-en>This initiative is in development. Join the Magnolia collective to be the first to hear about it.</p>
+    <p class="subtitle" style="margin-bottom:40px;" data-fr>Deux niveaux d'impact&nbsp;:</p>
+    <p class="subtitle" style="margin-bottom:40px;" data-en>Two levels of impact:</p>
 
-    <a href="../#collectif" class="btn btn-outline" data-fr>Rejoindre le Collectif</a>
-    <a href="../#collectif" class="btn btn-outline" data-en>Join the Collective</a>
+    <div class="two-col">
+
+      <div class="impact-item">
+        <span class="method-icon"><i data-lucide="heart"></i></span>
+        <h3 data-fr>Intérieur</h3>
+        <h3 data-en>Inner</h3>
+        <p data-fr>Comprendre ses fonctionnements, ses besoins, ses réactions.<br>Identifier ce qui est juste pour soi et l'assumer.<br>Trouver ce qui fait sens.</p>
+        <p data-en>Understand how you function, your needs, your reactions.<br>Identify what feels right for you and own it.<br>Find what makes sense.</p>
+      </div>
+
+      <div class="impact-item">
+        <span class="method-icon"><i data-lucide="zap"></i></span>
+        <h3 data-fr>Extérieur</h3>
+        <h3 data-en>Outer</h3>
+        <p data-fr>S'appuyer sur ses repères pour faire des choix alignés.<br>Agir avec clarté, stabilité et confiance.<br>Se sentir légitime, validé et crédible.</p>
+        <p data-en>Draw on your inner compass to make aligned choices.<br>Act with clarity, stability and confidence.<br>Feel legitimate, validated and credible.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Pourquoi ce sujet est d'utilité publique ────────────── -->
+<section class="alt">
+  <div class="container">
+
+    <span class="section-label" data-fr>Pourquoi ce sujet est d'utilité publique ?</span>
+    <span class="section-label" data-en>Why this matters</span>
+
+    <h2 data-fr>L'angle mort de notre époque&nbsp;: ignorer notre inné.</h2>
+    <h2 data-en>The blind spot of our era: ignoring our innate nature.</h2>
+
+    <p data-fr>La santé mentale des jeunes se fragilise.<br>Pas par manque de capacité ou d'effort.<br>Par manque de connaissance d'eux-mêmes.<br>Sans repères&nbsp;: on choisit par défaut, on doute en permanence, on s'épuise à plaire.</p>
+    <p data-en>Young people's mental health is becoming more fragile.<br>Not for lack of ability or effort.<br>For lack of self-knowledge.<br>Without inner bearings: we choose by default, doubt constantly, exhaust ourselves trying to please.</p>
+
+  </div>
+</section>
+
+<!-- ── À qui s'adresse MagSelf ──────────────────────────────── -->
+<section class="section-split" style="padding:0;">
+  <div class="split-content">
+    <span class="section-label" data-fr>À qui s'adresse MagSelf ?</span>
+    <span class="section-label" data-en>Who is MagSelf for?</span>
+
+    <h2 data-fr>À qui s'adresse MagSelf ?</h2>
+    <h2 data-en>Who is MagSelf for?</h2>
+
+    <ul class="audience-list" data-fr>
+      <li>À ceux qui sentent que ça ne suffit plus de faire "comme il faut"</li>
+      <li>À ceux qui avancent, réussissent… mais sont dépourvus de sens</li>
+      <li>À ceux qui sont dans le flou, et peinent à faire des choix</li>
+      <li>À ceux qui sont fatigués de se suradapter</li>
+      <li>À ceux qui se sentent à côté de leur désir, de leur joie</li>
+      <li>À ceux qui veulent arrêter de fonctionner en pilote automatique</li>
+      <li>À ceux qui veulent explorer leur intériorité, et manquent d'outils ou de temps</li>
+    </ul>
+
+    <ul class="audience-list" data-en>
+      <li>Those who feel that doing things "the right way" is no longer enough</li>
+      <li>Those who move forward, succeed… but feel empty of meaning</li>
+      <li>Those who feel lost, and struggle to make choices</li>
+      <li>Those who are tired of over-adapting</li>
+      <li>Those who feel out of touch with their desires, their joy</li>
+      <li>Those who want to stop running on autopilot</li>
+      <li>Those who want to explore their inner world, but lack the tools or the time</li>
+    </ul>
+
+    <p class="audience-closing" data-fr>Ces signaux ne sont pas des faiblesses. Ce sont des invitations.</p>
+    <p class="audience-closing" data-en>These signals are not weaknesses. They are invitations.</p>
+    <p class="audience-tagline" data-fr>MagSelf s'adresse aux 18-30 ans prêts à se connaître pour se réaliser.</p>
+    <p class="audience-tagline" data-en>MagSelf is for 18–30 year olds ready to know themselves in order to fulfil their potential.</p>
+  </div>
+  <div class="split-img">
+    <img src="../assets/forest.jpg" alt="MagSelf">
+  </div>
+</section>
+
+<!-- ── Qu'est-ce que MagSelf ────────────────────────────────── -->
+<section style="background: var(--cream);">
+  <div class="container">
+
+    <span class="section-label" data-fr>Qu'est-ce que MagSelf ?</span>
+    <span class="section-label" data-en>What is MagSelf?</span>
+
+    <h2 data-fr>Quatre espaces. Un écosystème.</h2>
+    <h2 data-en>Four spaces. One ecosystem.</h2>
+
+    <div class="method-grid">
+
+      <div class="method-item">
+        <span class="method-icon"><i data-lucide="compass"></i></span>
+        <h3>Exploration</h3>
+        <p data-fr>Naviguer les périodes de doute, de choix et de défis avec un compagnon virtuel aligné sur nos fonctionnements innés, grâce aux coordonnées de naissance.</p>
+        <p data-en>Navigate periods of doubt, choices and challenges with a virtual companion aligned with your innate functioning, guided by birth coordinates.</p>
+      </div>
+
+      <div class="method-item">
+        <span class="method-icon"><i data-lucide="sparkles"></i></span>
+        <h3 data-fr>Ludique</h3>
+        <h3 data-en>Playful</h3>
+        <p data-fr>Évoluer à travers des parcours variés et personnalisés&nbsp;: jeux, vidéos, ateliers… pour découvrir avec plaisir.</p>
+        <p data-en>Grow through varied and personalised journeys: games, videos, workshops… to discover with pleasure.</p>
+      </div>
+
+      <div class="method-item">
+        <span class="method-icon"><i data-lucide="map-pin"></i></span>
+        <h3>Orientation</h3>
+        <p data-fr>Accéder à un annuaire de thérapeutes en ligne adapté à ses besoins et à sa personnalité.</p>
+        <p data-en>Access an online directory of therapists adapted to your needs and personality.</p>
+      </div>
+
+      <div class="method-item">
+        <span class="method-icon"><i data-lucide="users"></i></span>
+        <h3>Connexion</h3>
+        <p data-fr>Partager et grandir avec des personnes qui nous ressemblent, dans des espaces anonymes, sécurisants et bienveillants.</p>
+        <p data-en>Share and grow with like-minded people in anonymous, safe and caring spaces.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Rejoindre le pilote ─────────────────────────────────── -->
+<section class="pilot" id="pilote">
+  <div class="container">
+
+    <span class="tagline" data-fr>Réalise ton haut potentiel !</span>
+    <span class="tagline" data-en>Unlock your full potential!</span>
+
+    <h2 data-fr>MagSelf se bâtit.<br>Fais partie des privilégiés à savourer la joie d'être soi.</h2>
+    <h2 data-en>MagSelf is being built.<br>Be among the first to savour the joy of being yourself.</h2>
+
+    <form class="email-form" onsubmit="handleSubscribe(event, 'magself', 5)" style="margin-top:24px;">
+      <input type="email" id="email-magself" placeholder="ton@courriel.com" data-fr required>
+      <input type="email" id="email-magself-en" placeholder="your@email.com" data-en required>
+      <button type="submit" class="btn btn-gold" data-fr>→ Je m'offre le luxe de me connaître.</button>
+      <button type="submit" class="btn btn-gold" data-en>→ I give myself the luxury of self-knowledge.</button>
+    </form>
+    <p id="msg-magself" style="display:none;margin-top:12px;font-size:14px;"></p>
 
   </div>
 </section>
 
 
 <script>
+  const API_URL = 'https://api.magconnect.ca';
+
   function setLang(lang) {
     document.body.classList.toggle('lang-en', lang === 'en');
     document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
     document.getElementById('btn-en').classList.toggle('active', lang === 'en');
     document.documentElement.lang = lang;
     localStorage.setItem('ms-lang', lang);
+  }
+
+  async function handleSubscribe(e, formKey, listId) {
+    e.preventDefault();
+    const isEn = document.body.classList.contains('lang-en');
+    const emailId = isEn ? `email-${formKey}-en` : `email-${formKey}`;
+    const email = document.getElementById(emailId).value;
+    const msg = document.getElementById(`msg-${formKey}`);
+
+    try {
+      const res = await fetch(`${API_URL}/waitlist`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, list_id: listId }),
+      });
+      msg.style.display = 'block';
+      if (res.ok) {
+        msg.style.color = '#3f856c';
+        msg.textContent = isEn ? 'You\'re on the list! We\'ll be in touch.' : 'C\'est noté ! On te contacte bientôt.';
+      } else {
+        msg.style.color = '#e53e3e';
+        msg.textContent = isEn ? 'Something went wrong. Please try again.' : 'Une erreur s\'est produite. Réessaie.';
+      }
+    } catch {
+      msg.style.display = 'block';
+      msg.style.color = '#e53e3e';
+      msg.textContent = isEn ? 'Something went wrong. Please try again.' : 'Une erreur s\'est produite. Réessaie.';
+    }
   }
 
   function toggleNav() {
@@ -107,6 +319,8 @@
   // Restore saved language preference
   const saved = localStorage.getItem('ms-lang');
   if (saved === 'en') setLang('en');
+
+  lucide.createIcons();
 </script>
 
 </body>

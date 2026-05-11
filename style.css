@@ -576,12 +576,15 @@ a {
 
 .method-item {
   padding-top: 12px;
-  margin-top: 28px;
   border-top: none;
   position: relative;
 }
 
-.method-item:first-child {
+.method-items > .method-item {
+  margin-top: 28px;
+}
+
+.method-items > .method-item:first-child {
   margin-top: 0;
 }
 
@@ -1018,7 +1021,7 @@ footer nav a:hover {
 }
 
 .alt .split-content .section-label { color: var(--gold); opacity: 1; }
-.alt .split-content .direction { color: rgba(255,247,230,.70); }
+.alt .split-content .direction { color: var(--gold); font-style: italic; margin-top: 24px; }
 
 @media (max-width: 720px) {
   .section-split,
