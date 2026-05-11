@@ -367,6 +367,9 @@ a {
   text-align: center;
   padding-top: 48px;
   padding-bottom: 48px;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
 }
 
 .hero-panel .tagline {
@@ -380,7 +383,7 @@ a {
 
 .hero-panel .tagline em {
   font-style: italic;
-  color: var(--gold);
+  color: var(--cream);
 }
 
 .hero-panel h1 {
