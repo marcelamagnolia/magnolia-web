@@ -6,6 +6,7 @@
   <title>Magnolia Signature</title>
   <link rel="icon" type="image/svg+xml" href="assets/magnolia_favicon.svg">
   <link rel="stylesheet" href="style.css">
+  <link rel="preload" as="image" href="assets/magali_flowers.jpg">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
@@ -48,7 +49,7 @@
 
 <!-- ── Hero text ─────────────────────────────────────────── -->
 <section class="hero-panel alt">
-  <img class="hero-bg" src="assets/magali_flowers.jpg" alt="Magnolia Signature" style="object-position: right 20%;">
+  <img class="hero-bg" src="assets/magali_flowers.jpg" alt="Magnolia Signature" style="object-position: right 20%;" fetchpriority="high">
   <div class="hero-overlay" style="background: rgba(52,80,122,0.40);"></div>
   <div class="container">
 
