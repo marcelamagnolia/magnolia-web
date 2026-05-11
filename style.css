@@ -350,20 +350,22 @@ a {
 }
 
 .hero-banner-btns .btn-gold {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: var(--navy);
+  background: transparent;
+  border-color: rgba(255,255,255,0.45);
+  color: var(--cream);
 }
 
 .hero-banner-btns .btn-gold:hover {
-  opacity: 0.85;
+  background: var(--cream);
+  border-color: var(--cream);
   color: var(--navy);
-  background: var(--gold);
 }
 
 /* ── Hero text panel (navy) ────────────────────────────────── */
 
 .hero-panel {
+  position: relative;
+  overflow: hidden;
   text-align: center;
   padding-top: 48px;
   padding-bottom: 48px;
@@ -387,7 +389,7 @@ a {
 }
 
 .hero-panel h1 {
-  font-size: clamp(20px, 2.5vw, 28px);
+  font-size: clamp(22px, 2.8vw, 32px);
   max-width: 580px;
   margin: 0 auto 28px;
   font-family: 'Dancing Script', cursive;
@@ -405,6 +407,11 @@ a {
 .hero-panel .divider {
   background: var(--gold);
   opacity: 0.5;
+}
+
+.hero-panel .container {
+  position: relative;
+  z-index: 2;
 }
 
 /* ── Legacy: keep .hero for MagConnect page-hero ──────────── */
@@ -555,10 +562,14 @@ a {
 
 .method-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.4fr 1fr;
   gap: 80px;
   align-items: center;
   text-align: left;
+}
+
+.method-intro {
+  text-align: center;
 }
 
 .method-intro h2 {
