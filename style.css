@@ -395,6 +395,7 @@ a {
   font-family: 'Dancing Script', cursive;
   font-weight: 500;
   color: var(--gold) !important;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.5);
 }
 
 .hero-panel .intro {
