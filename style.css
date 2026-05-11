@@ -358,7 +358,7 @@ a {
 .hero-banner-btns .btn-gold:hover {
   background: var(--gold);
   border-color: var(--gold);
-  color: var(--navy);
+  color: var(--cream);
 }
 
 /* ── Hero text panel (navy) ────────────────────────────────── */
