@@ -1043,6 +1043,14 @@ footer nav a:hover {
 .alt .split-content .direction { color: var(--gold); font-style: italic; margin-top: 24px; }
 
 @media (max-width: 720px) {
+  .hero-panel {
+    align-items: flex-start;
+    padding-top: 32px;
+    min-height: 520px;
+  }
+  .hero-panel .tagline {
+    margin-bottom: 160px;
+  }
   .method-layout {
     grid-template-columns: 1fr;
     gap: 40px;
