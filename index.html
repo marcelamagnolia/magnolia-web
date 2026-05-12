@@ -330,8 +330,8 @@
     <p data-en>Receive exclusive early access to: our launches, our insights, and the projects transforming how we live!</p>
 
     <form class="email-form" onsubmit="handleSubscribe(event, 'magnolia', 6)">
-      <input type="email" id="email-magnolia" placeholder="votre@email.com" data-fr required>
-      <input type="email" id="email-magnolia-en" placeholder="your@email.com" data-en required>
+      <input type="email" id="email-magnolia" placeholder="votre@email.com" data-fr>
+      <input type="email" id="email-magnolia-en" placeholder="your@email.com" data-en>
       <button type="submit" data-fr>Rejoindre le Collectif</button>
       <button type="submit" data-en>Join the Collective</button>
     </form>
@@ -359,8 +359,15 @@
     e.preventDefault();
     const isEn = document.body.classList.contains('lang-en');
     const emailId = isEn ? `email-${formKey}-en` : `email-${formKey}`;
-    const email = document.getElementById(emailId).value;
+    const email = document.getElementById(emailId).value.trim();
     const msg = document.getElementById(`msg-${formKey}`);
+
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      msg.style.display = 'block';
+      msg.style.color = '#e53e3e';
+      msg.textContent = isEn ? 'Please enter a valid email address.' : 'Veuillez entrer une adresse courriel valide.';
+      return;
+    }
 
     try {
       const res = await fetch(`${API_URL}/waitlist`, {

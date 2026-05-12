@@ -248,8 +248,8 @@
     <h2 data-en>MagSelf is being built.<br>Be among the first to savour the joy of being yourself.</h2>
 
     <form class="email-form" onsubmit="handleSubscribe(event, 'magself', 8)" style="margin-top:24px;">
-      <input type="email" id="email-magself" placeholder="ton@courriel.com" data-fr required>
-      <input type="email" id="email-magself-en" placeholder="your@email.com" data-en required>
+      <input type="email" id="email-magself" placeholder="ton@courriel.com" data-fr>
+      <input type="email" id="email-magself-en" placeholder="your@email.com" data-en>
       <button type="submit" class="btn btn-gold" data-fr>Je m'offre le luxe de me connaître</button>
       <button type="submit" class="btn btn-gold" data-en>I give myself the luxury of self-knowledge</button>
     </form>
@@ -274,8 +274,15 @@
     e.preventDefault();
     const isEn = document.body.classList.contains('lang-en');
     const emailId = isEn ? `email-${formKey}-en` : `email-${formKey}`;
-    const email = document.getElementById(emailId).value;
+    const email = document.getElementById(emailId).value.trim();
     const msg = document.getElementById(`msg-${formKey}`);
+
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      msg.style.display = 'block';
+      msg.style.color = '#e53e3e';
+      msg.textContent = isEn ? 'Please enter a valid email address.' : 'Veuillez entrer une adresse courriel valide.';
+      return;
+    }
 
     try {
       const res = await fetch(`${API_URL}/waitlist`, {

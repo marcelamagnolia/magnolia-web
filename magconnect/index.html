@@ -244,8 +244,8 @@
     <h2 data-en>The pilot is launching in the Orford region and surrounding area.<br>Join us!</h2>
 
     <form class="email-form" onsubmit="handleSubscribe(event, 'magconnect', 4)" style="margin-top:24px;">
-      <input type="email" id="email-magconnect" placeholder="ton@courriel.com" data-fr required>
-      <input type="email" id="email-magconnect-en" placeholder="your@email.com" data-en required>
+      <input type="email" id="email-magconnect" placeholder="ton@courriel.com" data-fr>
+      <input type="email" id="email-magconnect-en" placeholder="your@email.com" data-en>
       <button type="submit" class="btn btn-gold" data-fr>Je rejoins la liste des privilégiés</button>
       <button type="submit" class="btn btn-gold" data-en>I join the founding community</button>
     </form>
@@ -270,8 +270,15 @@
     e.preventDefault();
     const isEn = document.body.classList.contains('lang-en');
     const emailId = isEn ? `email-${formKey}-en` : `email-${formKey}`;
-    const email = document.getElementById(emailId).value;
+    const email = document.getElementById(emailId).value.trim();
     const msg = document.getElementById(`msg-${formKey}`);
+
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      msg.style.display = 'block';
+      msg.style.color = '#e53e3e';
+      msg.textContent = isEn ? 'Please enter a valid email address.' : 'Veuillez entrer une adresse courriel valide.';
+      return;
+    }
 
     try {
       const res = await fetch(`${API_URL}/waitlist`, {
