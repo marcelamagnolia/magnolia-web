@@ -335,7 +335,7 @@
       <button type="submit" data-fr>Rejoindre le Collectif</button>
       <button type="submit" data-en>Join the Collective</button>
     </form>
-    <p id="msg-magnolia" style="display:none;margin-top:12px;font-size:14px;"></p>
+    <p id="msg-magnolia" style="display:none;margin-top:12px;font-size:17px;color:var(--cream);"></p>
 
     <p class="hero-quote" style="margin-top:32px;" data-fr>« Rien n'arrête une idée dont le temps est venu. »<br>— Victor Hugo</p>
     <p class="hero-quote" style="margin-top:32px;" data-en>"Nothing is more powerful than an idea whose time has come."<br>— Victor Hugo</p>
@@ -377,8 +377,8 @@
       });
       msg.style.display = 'block';
       if (res.ok) {
-        msg.style.color = '#3f856c';
-        msg.textContent = isEn ? 'You\'re on the list! We\'ll be in touch.' : 'C\'est noté ! On te contacte bientôt.';
+        msg.style.color = '#fff7e6';
+        msg.textContent = isEn ? 'Thank you for joining us! We'll be in touch soon.' : 'Merci de nous rejoindre ! On te contacte bientôt.';
       } else {
         msg.style.color = '#e53e3e';
         msg.textContent = isEn ? 'Something went wrong. Please try again.' : 'Une erreur s\'est produite. Réessaie.';
