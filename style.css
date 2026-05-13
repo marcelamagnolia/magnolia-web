@@ -1008,10 +1008,31 @@ a {
 /* ── Footer ────────────────────────────────────────────────── */
 
 footer {
-  background: var(--cream);
+  background: var(--navy);
   border-top: 1px solid var(--border);
   padding: 40px 0;
   text-align: center;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.footer-social a {
+  color: var(--cream);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.footer-social a:hover {
+  opacity: 1;
+}
+
+.footer-social i {
+  width: 22px;
+  height: 22px;
 }
 
 footer .footer-logo img {
@@ -1022,7 +1043,7 @@ footer .footer-logo img {
 
 footer p {
   font-size: 12px;
-  color: var(--slate);
+  color: var(--cream);
   opacity: 0.6;
 }
 
