@@ -1157,11 +1157,16 @@ footer nav a:hover {
   }
   .hero-panel .tagline {
     font-size: clamp(26px, 5.5vw, 34px);
-    margin-bottom: 200px;
+    margin-bottom: 240px;
   }
   .hero-panel h1 {
     color: var(--cream) !important;
     text-shadow: 0 1px 12px rgba(0,0,0,0.8), 0 0 30px rgba(0,0,0,0.5);
+    margin-bottom: 12px;
+  }
+
+  .hero-panel .hero-banner-btns {
+    margin-top: 24px !important;
   }
 
   .hero-panel .hero-overlay {
