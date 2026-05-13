@@ -261,6 +261,13 @@ a {
   text-decoration: none;
 }
 
+.bio-caption-link {
+  color: var(--cream) !important;
+}
+.bio-caption-link:hover {
+  text-decoration: underline;
+}
+
 /* ── Divider ───────────────────────────────────────────────── */
 
 .divider {
