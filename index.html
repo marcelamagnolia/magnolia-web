@@ -79,7 +79,31 @@
     <h2 data-fr>Chaque pas est une œuvre.<br>Chaque œuvre commence par un pas.</h2>
     <h2 data-en>Every step is a masterpiece.<br>Every masterpiece begins with a step.</h2>
 
-    <div class="manifesto-text">
+    <!-- Headlines -->
+    <div class="manifesto-headlines">
+      <div data-fr>
+        <p class="manifesto-headline">Le monde évolue vite, et nous perdons nos repères.</p>
+        <p class="manifesto-headline">Des humains brillants s'épuisent, s'isolent.</p>
+        <p class="manifesto-headline">Une autre façon d'agir est possible.</p>
+        <p class="manifesto-headline">Notre choix est clair : placer l'humain avant tout.</p>
+      </div>
+      <div data-en>
+        <p class="manifesto-headline">The world is moving fast, and we are losing our sense of direction.</p>
+        <p class="manifesto-headline">Brilliant people burn out and isolate themselves.</p>
+        <p class="manifesto-headline">Another way of acting is possible.</p>
+        <p class="manifesto-headline">Our choice is clear: place the human being first.</p>
+      </div>
+    </div>
+
+    <!-- Toggle -->
+    <button class="manifesto-toggle" onclick="toggleManifesto()" id="manifesto-btn">
+      <span data-fr>Lire le manifeste complet</span>
+      <span data-en>Read the full manifesto</span>
+      <i data-lucide="chevron-down" id="manifesto-chevron" style="width:16px;height:16px;transition:transform 0.3s;"></i>
+    </button>
+
+    <!-- Full text (collapsed by default) -->
+    <div class="manifesto-text" id="manifesto-full" style="display:none;margin-top:32px;">
 
       <div data-fr>
         <p>Le monde évolue vite, et nous perdons nos repères.<br>
@@ -391,6 +415,15 @@
       msg.style.color = '#e53e3e';
       msg.textContent = isEn ? 'Something went wrong. Please try again.' : 'Une erreur s\'est produite. Réessaie.';
     }
+  }
+
+  function toggleManifesto() {
+    const full = document.getElementById('manifesto-full');
+    const chevron = document.getElementById('manifesto-chevron');
+    const btn = document.getElementById('manifesto-btn');
+    const isOpen = full.style.display !== 'none';
+    full.style.display = isOpen ? 'none' : 'block';
+    chevron.style.transform = isOpen ? '' : 'rotate(180deg)';
   }
 
   function toggleNav() {

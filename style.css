@@ -525,6 +525,46 @@ a {
   margin: 0 auto 40px;
 }
 
+.manifesto-headlines {
+  max-width: 620px;
+  margin: 0 auto 32px;
+}
+
+.manifesto-headline {
+  font-size: clamp(17px, 2vw, 21px);
+  font-family: 'Instrument Serif', serif;
+  color: var(--navy);
+  line-height: 1.5;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  margin: 0;
+}
+
+.manifesto-headline:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.manifesto-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--navy);
+  opacity: 0.6;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 8px 0;
+  transition: opacity 0.2s;
+}
+
+.manifesto-toggle:hover {
+  opacity: 1;
+}
+
 .manifesto-text {
   max-width: 620px;
   margin: 0 auto;
