@@ -1158,10 +1158,6 @@ footer nav a:hover {
     font-size: clamp(26px, 5.5vw, 34px);
     margin-bottom: 200px;
   }
-  .hero-panel .tagline {
-    color: var(--navy) !important;
-  }
-
   .hero-panel h1 {
     color: var(--cream) !important;
     text-shadow: 0 1px 12px rgba(0,0,0,0.8), 0 0 30px rgba(0,0,0,0.5);
