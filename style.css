@@ -679,7 +679,30 @@ a {
 }
 
 .biography.section-split {
-  grid-template-columns: 1fr 1.4fr;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: stretch;
+}
+
+.biography .split-img {
+  position: static;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 48px 18px 48px 8px;
+}
+
+.biography .split-content {
+  padding-left: 80px;
+  padding-right: 64px;
+}
+
+.biography .split-img img {
+  position: static;
+  width: 85%;
+  height: auto;
+  object-fit: unset;
+  border-radius: 12px;
 }
 
 .bio-photo {
