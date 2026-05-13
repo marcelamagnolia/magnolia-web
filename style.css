@@ -357,8 +357,8 @@ a {
 }
 
 .hero-banner-btns .btn-gold:hover {
-  background: var(--gold);
-  border-color: var(--gold);
+  background: var(--navy);
+  border-color: var(--navy);
   color: var(--cream);
 }
 
@@ -394,8 +394,8 @@ a {
   margin: 0 auto 28px;
   font-family: 'Dancing Script', cursive;
   font-weight: 500;
-  color: var(--cream) !important;
-  text-shadow: 0 1px 8px rgba(0,0,0,0.6);
+  color: var(--navy) !important;
+  text-shadow: 0 1px 8px rgba(255,255,255,0.6);
 }
 
 .hero-panel .intro {
@@ -632,7 +632,7 @@ a {
 }
 
 .biography.section-split {
-  grid-template-columns: 1.4fr 1fr;
+  grid-template-columns: 1fr 1.4fr;
 }
 
 .bio-photo {
@@ -916,7 +916,7 @@ a {
 }
 
 .email-form button {
-  flex: 1;
+  flex: 0 0 auto;
   padding: 13px 24px;
   background: var(--gold);
   color: var(--cream);
@@ -1033,6 +1033,20 @@ footer nav a:hover {
   display: block;
 }
 
+.split-img-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 0.03em;
+  padding: 8px 12px;
+  background: rgba(0,0,0,0.35);
+  pointer-events: none;
+}
+
 .split-content {
   padding: 64px 48px;
   display: flex;
@@ -1080,7 +1094,7 @@ footer nav a:hover {
   .biography .split-img {
     order: -1;
     height: auto;
-    position: static;
+    position: relative;
   }
   .biography .split-img img {
     position: static;
