@@ -1159,8 +1159,8 @@ footer nav a:hover {
     margin-bottom: 200px;
   }
   .hero-panel h1 {
-    color: var(--navy) !important;
-    text-shadow: 0 1px 8px rgba(255,255,255,0.6);
+    color: var(--cream) !important;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.6);
   }
   .method-layout {
     grid-template-columns: 1fr;
