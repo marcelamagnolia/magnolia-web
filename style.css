@@ -962,6 +962,12 @@ a {
   margin: 0 auto 36px;
 }
 
+.email-capture .hero-quote {
+  max-width: none !important;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
 .email-form {
   display: flex;
   gap: 8px;
