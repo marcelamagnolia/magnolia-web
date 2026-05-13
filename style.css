@@ -384,11 +384,11 @@ a {
 .hero-panel .tagline {
   font-family: 'Instrument Serif', serif;
   font-size: clamp(32px, 3.5vw, 52px);
-  color: var(--navy);
+  color: var(--cream);
   line-height: 1.2;
   margin-bottom: 28px;
-  font-weight: 700;
-  text-shadow: 0 1px 10px rgba(255,247,230,0.8);
+  font-weight: normal;
+  text-shadow: 0 1px 8px rgba(255,255,255,0.6);
 }
 
 .hero-panel .tagline em {
