@@ -9,6 +9,7 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <style>
     :root { --navy: #3f856c; }
+    nav, nav .nav-links a, nav .nav-links a:hover, nav .nav-dropdown li a { color: #34507A !important; }
     .hero-panel h1 { color: var(--cream) !important; }
     section h2 { margin-bottom: 32px; }
     .hero-panel .tagline { font-size: clamp(22px, 2.5vw, 36px); }
@@ -92,33 +93,36 @@
 </section>
 
 <!-- ── Manifeste ─────────────────────────────────────────── -->
-<section style="padding-bottom:0;">
+<section style="background: var(--cream);">
   <div class="container">
 
     <span class="section-label" data-fr>Manifeste</span>
     <span class="section-label" data-en>Manifesto</span>
 
-    <p class="intro" data-fr>Nous avons appris à produire, consommer, jeter<br>sans questionner notre lien à la matière ni aux autres.<br>Résultat : des humains déconnectés de leur élan naturel à coopérer et des ressources laissées à l'abandon.<br>MagConnect recrée les conditions de la rencontre : entre des propriétaires, des experts, des passionnés et du bois inutilisé.</p>
-    <p class="intro" data-en>We have learned to produce, consume, and discard<br>without questioning our relationship to materials or to one another.<br>The result: a disconnect from our natural impulse to cooperate, and resources left to fade away.<br>MagConnect sets the stage for meaningful connections between owners, experts, enthusiasts, and the potential of unused wood.</p>
+    <h2 data-fr>Tout commence par une rencontre.</h2>
+    <h2 data-en>Everything begins with a connection.</h2>
+
+    <p class="intro" data-fr>Nous avons appris à produire, à consommer, et à jeter…<br>sans questionner notre lien à la matière ni aux autres.<br><br>Résultat : des humains déconnectés de leur élan naturel à coopérer et des ressources laissées à l'abandon.</p>
+    <p class="intro" data-en>We have learned to produce, consume, and discard<br>without questioning our relationship to materials or to one another.<br><br>The result: a disconnect from our natural impulse to cooperate, and resources left to fade away.</p>
+
+    <p data-fr style="font-size:20px; font-style:italic; color:var(--navy); line-height:1.5; margin-top:24px;">MagConnect recrée les conditions de la rencontre :<br>entre des propriétaires, des experts, des passionnés et du bois inutilisé.</p>
+    <p data-en style="font-size:20px; font-style:italic; color:var(--navy); line-height:1.5; margin-top:24px;">MagConnect sets the stage for meaningful connections:<br>between owners, experts, enthusiasts,<br>and the potential of unused wood.</p>
 
   </div>
 </section>
 
 <!-- ── Ce que fait MagConnect ─────────────────────────────── -->
-<section id="decouvrir">
+<section id="decouvrir" style="background: var(--white);">
   <div class="container">
 
     <span class="section-label" data-fr>Ce que fait MagConnect</span>
     <span class="section-label" data-en>What MagConnect does</span>
 
-    <h2 data-fr>Simple. Pratique. Local.</h2>
-    <h2 data-en>Simple. Practical. Local.</h2>
+    <h2 data-fr>Deux niveaux d'impact.</h2>
+    <h2 data-en>Two levels of impact.</h2>
 
-    <p style="max-width:580px;margin-bottom:16px;" data-fr>MagConnect est plus qu'une plateforme, c'est un catalyseur de collectif. Là où humains et matières se relient et se reconnaissent.</p>
-    <p style="max-width:580px;margin-bottom:16px;" data-en>MagConnect is more than a platform, it's a collective catalyst. A place where people and materials reconnect and recognize one another.</p>
-
-    <p class="subtitle" style="margin-bottom:40px;" data-fr>Deux niveaux d'impact :</p>
-    <p class="subtitle" style="margin-bottom:40px;" data-en>Two levels of impact:</p>
+    <p style="max-width:580px;margin-bottom:16px;" data-fr>MagConnect est plus qu'une plateforme, c'est un catalyseur de collectif.</p>
+    <p style="max-width:580px;margin-bottom:16px;" data-en>MagConnect is more than a platform, it's a collective catalyst.</p>
 
     <div class="two-col">
 
@@ -134,8 +138,8 @@
         <span class="method-icon"><i data-lucide="sprout"></i></span>
         <h3 data-fr>Ressource</h3>
         <h3 data-en>Resource</h3>
-        <p data-fr>Révéler la potentialité de la matière, la faire circuler et partager des savoirs pour mieux réparer, réutiliser, recycler, revaloriser.</p>
-        <p data-en>Revealing the potential of materials, putting them back in circulation, and sharing knowledge to better repair, reuse, recycle, and repurpose.</p>
+        <p data-fr>Faire circuler la matière, révéler son potentiel et partager des savoirs pour mieux réparer, réutiliser, recycler, revaloriser.</p>
+        <p data-en>Putting materials back in circulation, revealing their potential, and sharing knowledge to better repair, reuse, recycle, and repurpose.</p>
       </div>
 
     </div>
@@ -158,8 +162,8 @@
     <p data-fr>Chaque secteur géographique regorge de matières, de savoirs et d'humains engagés. Pourtant, ces richesses se croisent rarement. Nous commençons par le bois : une matière noble, vivante, universelle.</p>
     <p data-en>Every region is full of materials, knowledge, and committed people. Yet these resources rarely cross paths. We are starting with wood: a noble, living, universal material.</p>
 
-    <p style="margin-top:16px;" data-fr><em>MagConnect est né d'une évidence : les déchets des uns font le trésor des autres. Tout commence par une rencontre.</em></p>
-    <p style="margin-top:16px;" data-en><em>MagConnect was born of a simple truth: one person's waste is another person's treasure. It all starts when we allow connection.</em></p>
+    <p style="margin-top:16px;" data-fr><em>MagConnect est né d'une évidence : les déchets des uns font le trésor des autres.</em></p>
+    <p style="margin-top:16px;" data-en><em>MagConnect was born of a simple truth: one person's waste is another person's treasure.</em></p>
   </div>
 </section>
 
@@ -173,7 +177,7 @@
     <h2 data-en>A community that reflects who you are.</h2>
 
     <ul class="audience-list" data-fr>
-      <li>Ceux qui ont un lien d'amour avec le bois, le travail soigné, et la nature</li>
+      <li>Ceux qui aiment prendre soin du bois et de la nature</li>
       <li>Ceux qui aiment transmettre autant qu'apprendre</li>
       <li>Ceux qui veulent agir concrètement</li>
       <li>Ceux qui valorisent ce qui existe déjà</li>
@@ -182,7 +186,7 @@
     </ul>
 
     <ul class="audience-list" data-en>
-      <li>For those who have a deep love for wood, careful craftsmanship, and nature</li>
+      <li>Those who love caring for wood and nature</li>
       <li>For those who love to teach as much as they love to learn</li>
       <li>For those who want to take concrete action</li>
       <li>For those who value what already exists</li>
@@ -226,8 +230,8 @@
       <div class="method-item">
         <span class="method-icon"><i data-lucide="users"></i></span>
         <h3>Club Bois</h3>
-        <p data-fr>Connecter des passionnés, des experts, des propriétaires de bois inutilisés pour créer, transformer et honorer la matière.</p>
-        <p data-en>Connecting enthusiasts, experts, and owners of unused wood to create, transform, and honour the material.</p>
+        <p data-fr>Connecter des passionnés, des experts, des propriétaires pour créer, transformer et honorer la matière.</p>
+        <p data-en>Connecting enthusiasts, experts, and owners to create, transform, and honour the material.</p>
       </div>
 
     </div>
