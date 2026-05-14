@@ -1201,7 +1201,18 @@ footer nav a:hover {
 
 .impact-item {
   padding-top: 24px;
-  border-top: 2px solid var(--gold);
+  padding-left: 16px;
+  position: relative;
+}
+
+.impact-item::before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--gold), rgba(236,186,100,0.15));
 }
 
 .impact-item h3 {
