@@ -10,20 +10,31 @@
   <style>
     :root { --navy: #c2664a; }
     nav, nav .nav-links a, nav .nav-links a:hover, nav .nav-dropdown li a { color: #34507A !important; }
+    .hero-panel.alt {
+      background: linear-gradient(rgba(194,102,74,0.55), rgba(194,102,74,0.55)), url('../assets/lifestyle-nature-10.jpg') center center / cover no-repeat;
+    }
     section h2 { margin-bottom: 32px; }
-    .hero-panel .tagline { font-size: clamp(20px, 2.2vw, 32px); }
+    .hero-panel .tagline { font-size: clamp(22px, 2.5vw, 36px); }
     .method-icon { display: block; margin-bottom: 12px; }
     .method-icon svg { width: 28px; height: 28px; stroke: var(--gold); stroke-width: 1.5; fill: none; }
     .method-grid { grid-template-columns: repeat(2, 1fr); }
-    .audience-closing { margin-top: 24px; font-style: italic; color: var(--slate); font-size: 15px; }
-    .audience-tagline { margin-top: 10px; font-weight: 700; color: var(--navy); font-size: 14px; }
+    .audience-closing { margin-top: 24px; color: var(--slate); font-style: italic; font-weight: 700; }
+    .audience-tagline { margin-top: 10px; font-weight: 700; color: var(--navy); }
+    .audience-list { grid-template-columns: 1fr; }
+    .section-split.alt .split-content { color: var(--cream); }
+    .section-split.alt .split-content h2 { color: var(--cream); }
+    .section-split.alt .split-content .section-label { color: var(--gold); }
+    .section-split.alt .split-content .audience-list li { color: rgba(255,247,230,.85); border-left-color: var(--gold); }
+    .section-split.alt .split-content .audience-closing { color: rgba(255,247,230,.85); }
+    .section-split.alt .split-content .audience-tagline { color: var(--cream); }
     .pilot {
       background: var(--navy);
       text-align: center;
     }
-    .pilot h2 { color: var(--cream); }
+    .pilot h2 { color: var(--cream); max-width: 640px; }
     .pilot p { color: rgba(255,247,230,.75); }
     .pilot .tagline { color: var(--gold); }
+    .pilot .email-form { max-width: 560px; }
   </style>
 </head>
 <body>
@@ -68,11 +79,11 @@
 <section class="hero-panel alt">
   <div class="container">
 
-    <span class="tagline" style="margin-top:24px;display:block;" data-fr>Là où des jeunes s'épanouissent et se réalisent grâce à la connaissance de soi.</span>
-    <span class="tagline" style="margin-top:24px;display:block;" data-en>Where young people flourish and find themselves through self-knowledge.</span>
+    <span class="tagline" style="margin-top:24px;display:block;" data-fr>Là où des jeunes s'épanouissent et se réalisent,<br>grâce à la connaissance de soi.</span>
+    <span class="tagline" style="margin-top:24px;display:block;" data-en>Where young people flourish and find themselves,<br>through self-knowledge.</span>
 
-    <h1 data-fr>Se connaître est un luxe.<br>Personne ne nous l'enseigne réellement.</h1>
-    <h1 data-en>Self-knowledge is a luxury.<br>Nobody truly teaches it.</h1>
+    <h1 style="color:#34507A !important;" data-fr>Se connaître est un luxe.<br>Personne ne nous l'enseigne réellement.</h1>
+    <h1 style="color:#34507A !important;" data-en>Self-knowledge is a luxury.<br>Nobody truly teaches it.</h1>
 
     <div class="hero-banner-btns" style="margin-top:40px;">
       <a href="#pilote" class="btn btn-gold" data-fr>Rejoindre</a>
@@ -140,9 +151,11 @@
 </section>
 
 <!-- ── Pourquoi ce sujet est d'utilité publique ────────────── -->
-<section class="alt">
-  <div class="container">
-
+<section class="alt section-split" style="padding:0;">
+  <div class="split-img">
+    <img src="../assets/arbre-lumière-3.jpg" alt="Pourquoi ce sujet est d'utilité publique">
+  </div>
+  <div class="split-content">
     <span class="section-label" data-fr>Pourquoi ce sujet est d'utilité publique ?</span>
     <span class="section-label" data-en>Why this matters</span>
 
@@ -151,25 +164,26 @@
 
     <p data-fr>La santé mentale des jeunes se fragilise.<br>Pas par manque de capacité ou d'effort.<br>Par manque de connaissance d'eux-mêmes.<br>Sans repères&nbsp;: on choisit par défaut, on doute en permanence, on s'épuise à plaire.</p>
     <p data-en>Young people's mental health is becoming more fragile.<br>Not for lack of ability or effort.<br>For lack of self-knowledge.<br>Without inner bearings: we choose by default, doubt constantly, exhaust ourselves trying to please.</p>
-
   </div>
 </section>
 
 <!-- ── À qui s'adresse MagSelf ──────────────────────────────── -->
-<section style="background: var(--cream);">
-  <div class="container">
-
+<section class="alt section-split" style="padding:0;">
+  <div class="split-content">
     <span class="section-label" data-fr>À qui s'adresse MagSelf ?</span>
     <span class="section-label" data-en>Who is MagSelf for?</span>
 
+    <h2 data-fr>Les 18-30 ans prêts à se connaître pour se réaliser.</h2>
+    <h2 data-en>18–30 year olds ready to know themselves in order to fulfil their potential.</h2>
+
     <ul class="audience-list" data-fr>
-      <li>À ceux qui sentent que ça ne suffit plus de faire "comme il faut"</li>
-      <li>À ceux qui avancent, réussissent… mais sont dépourvus de sens</li>
-      <li>À ceux qui sont dans le flou, et peinent à faire des choix</li>
-      <li>À ceux qui sont fatigués de se suradapter</li>
-      <li>À ceux qui se sentent à côté de leur désir, de leur joie</li>
-      <li>À ceux qui veulent arrêter de fonctionner en pilote automatique</li>
-      <li>À ceux qui veulent explorer leur intériorité, et manquent d'outils ou de temps</li>
+      <li>Ceux qui sentent que ça ne suffit plus de faire "comme il faut"</li>
+      <li>Ceux qui avancent, réussissent… mais sont dépourvus de sens</li>
+      <li>Ceux qui sont dans le flou, et peinent à faire des choix</li>
+      <li>Ceux qui sont fatigués de se suradapter</li>
+      <li>Ceux qui se sentent à côté de leur désir, de leur joie</li>
+      <li>Ceux qui veulent arrêter de fonctionner en pilote automatique</li>
+      <li>Ceux qui veulent explorer leur intériorité, et manquent d'outils ou de temps</li>
     </ul>
 
     <ul class="audience-list" data-en>
@@ -184,9 +198,9 @@
 
     <p class="audience-closing" data-fr>Ces signaux ne sont pas des faiblesses. Ce sont des invitations.</p>
     <p class="audience-closing" data-en>These signals are not weaknesses. They are invitations.</p>
-    <p class="audience-tagline" data-fr>MagSelf s'adresse aux 18-30 ans prêts à se connaître pour se réaliser.</p>
-    <p class="audience-tagline" data-en>MagSelf is for 18–30 year olds ready to know themselves in order to fulfil their potential.</p>
-
+  </div>
+  <div class="split-img">
+    <img src="../assets/lifestyle-nature-11.jpg" alt="À qui s'adresse MagSelf">
   </div>
 </section>
 
@@ -240,11 +254,8 @@
 <section class="pilot" id="pilote">
   <div class="container">
 
-    <span class="tagline" data-fr>Réalise ton haut potentiel !</span>
-    <span class="tagline" data-en>Unlock your full potential!</span>
-
-    <h2 data-fr>MagSelf se bâtit.<br>Fais partie des privilégiés à savourer la joie d'être soi.</h2>
-    <h2 data-en>MagSelf is being built.<br>Be among the first to savour the joy of being yourself.</h2>
+    <span class="tagline" style="font-family:'Instrument Serif', serif; font-style:normal; font-size:clamp(22px, 2.8vw, 32px); color:var(--cream); line-height:1.2; margin-bottom:44px; display:block;" data-fr>MagSelf se bâtit.<br>Fais partie des privilégiés à savourer la joie d'être soi.<br><br><em style="font-family:'Dancing Script', cursive; font-style:normal; font-size:0.85em; color:var(--gold); line-height:2;">Réalise ton haut potentiel !</em></span>
+    <span class="tagline" style="font-family:'Instrument Serif', serif; font-style:normal; font-size:clamp(22px, 2.8vw, 32px); color:var(--cream); line-height:1.2; margin-bottom:44px; display:block;" data-en>MagSelf is being built.<br>Be among the first to savour the joy of being yourself.<br><br><em style="font-family:'Dancing Script', cursive; font-style:normal; font-size:0.85em; color:var(--gold); line-height:2;">Unlock your full potential!</em></span>
 
     <form class="email-form" onsubmit="handleSubscribe(event, 'magself', 8)" style="margin-top:24px;">
       <input type="email" id="email-magself" placeholder="ton@courriel.com" data-fr>
