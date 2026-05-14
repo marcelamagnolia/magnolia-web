@@ -364,8 +364,8 @@ a {
 }
 
 .hero-banner-btns .btn-gold:hover {
-  background: var(--navy);
-  border-color: var(--navy);
+  background: var(--gold);
+  border-color: var(--gold);
   color: var(--cream);
 }
 
