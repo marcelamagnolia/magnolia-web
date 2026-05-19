@@ -528,6 +528,7 @@ a {
 .manifesto-headlines {
   max-width: 620px;
   margin: 0 auto 32px;
+  padding: 0 40px;
 }
 
 .manifesto-headline {
@@ -550,8 +551,12 @@ a {
 
 .manifesto-headline.vision {
   color: var(--navy);
-  border-left: 3px solid var(--gold);
-  padding-left: 16px;
+}
+
+.manifesto-headline.foundation {
+  color: var(--navy);
+  border-top: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
 }
 
 .manifesto-toggle {
