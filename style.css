@@ -544,6 +544,16 @@ a {
   border-top: 1px solid var(--border);
 }
 
+.manifesto-headline.constat {
+  color: var(--slate);
+}
+
+.manifesto-headline.vision {
+  color: var(--navy);
+  border-left: 3px solid var(--gold);
+  padding-left: 16px;
+}
+
 .manifesto-toggle {
   display: flex;
   align-items: center;
