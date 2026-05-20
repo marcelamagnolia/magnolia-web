@@ -1009,6 +1009,9 @@ footer nav a:hover {
     grid-template-columns: 1fr;
     direction: ltr;
   }
+  .section-split .split-img {
+    order: -1;
+  }
   .split-img {
     position: relative;
     height: 260px;
