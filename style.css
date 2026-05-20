@@ -1015,6 +1015,9 @@ footer nav a:hover {
   }
   .split-img img { position: absolute; }
   .biography.section-split { grid-template-columns: 1fr; }
+  .biography .split-content {
+    padding: 32px 20px;
+  }
   .biography .split-img {
     order: -1;
     height: auto;
