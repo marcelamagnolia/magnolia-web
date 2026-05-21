@@ -19,7 +19,7 @@ Do not change the structure of the document or the section labels.
 | FR | EN |
 |----|----|
 | Nous apprenons à travailler, à perfectionner, à avancer vite. Et personne ne nous enseigne à nous comprendre réellement. | We learn to work, to improve, to move fast. But nobody truly teaches us to understand ourselves. |
-| Résultat : des jeunes qui avancent sans repères, qui doutent, imitent, s'adaptent, et finissent par se perdre. | The result: young people moving forward without bearings, who doubt, imitate, adapt, and end up losing themselves. |
+| Résultat : des jeunes qui avancent sans repères, qui doutent, imitent, s'adaptent, et finissent par se perdre. | The result: young people moving forward without landmarks, who doubt, imitate, adapt, and end up losing themselves. |
 | MagSelf offre un espace pour se connaître, se comprendre, s'assumer et partager. Une seule finalité : mieux se relier à soi, et aux autres. | MagSelf offers a space to know yourself, understand yourself, embrace who you are, and share. One purpose: to connect more deeply with yourself, and with others. |
 
 ---
@@ -49,7 +49,7 @@ Do not change the structure of the document or the section labels.
 | Extérieur | Outer |
 | S'appuyer sur ses repères pour faire des choix alignés. | Draw on your inner compass to make aligned choices. |
 | Agir avec clarté, stabilité et confiance. | Act with clarity, stability and confidence. |
-| Se sentir légitime, validé et crédible. | Feel legitimate, validated and credible. |
+| Se sentir légitime, validé et crédible. | Feel legitimate, validated and worthy. |
 
 ---
 
@@ -57,9 +57,9 @@ Do not change the structure of the document or the section labels.
 
 | FR | EN |
 |----|----|
-| Pourquoi ce sujet est d'utilité publique ? | Why this matters |
-| L'angle mort de notre époque : ignorer notre inné. | The blind spot of our era: ignoring our innate nature. |
-| Le bien-être des jeunes se fragilise principalement par manque de repères et de connaissance de soi. Le doute et le flou sont épuisants. | Young people's mental health is becoming more fragile. Not for lack of ability or effort. For lack of self-knowledge. Without inner bearings: we choose by default, doubt constantly, exhaust ourselves trying to please. |
+| Pourquoi ce sujet est d'utilité publique ? | Why it matters |
+| L'angle mort de notre époque : ignorer notre inné. | The blind spot of our era: ignoring our inner nature. |
+| Le bien-être des jeunes se fragilise principalement par manque de repères et de connaissance de soi. Le doute et le flou sont épuisants. | Young people's well-being is weakening mainly from a lack of direction and self-knowledge. Living in the blur is exhausting. |
 
 ---
 
@@ -133,4 +133,4 @@ Do not change the structure of the document or the section labels.
 |----|----|
 | MagSelf se bâtit. Fais partie des privilégiés à savourer la joie d'être soi. | MagSelf is being built. Be among the privileged few to savour the joy of being yourself. |
 | Réalise ton haut potentiel ! *(cursive)* | Unlock your full potential! *(cursive)* |
-| Je pars à ma découverte ! *(button)* | I give myself the luxury of self-knowledge! *(button)* |
+| Je pars à ma découverte ! *(button)* | I'm embarking on my self-discovery! *(button)* |
