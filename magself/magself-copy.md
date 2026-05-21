@@ -9,7 +9,7 @@ Do not change the structure of the document or the section labels.
 
 | FR | EN |
 |----|----|
-| Là où des jeunes s'épanouissent et se réalisent, grâce à la connaissance de soi. | Where young people flourish and find themselves, through self-knowledge. |
+| Là où des jeunes s'épanouissent et se réalisent, grâce à la connaissance de soi. | Where young people flourish by finding themselves. |
 | Se connaître est un luxe. | Self-knowledge is a luxury. |
 
 ---
