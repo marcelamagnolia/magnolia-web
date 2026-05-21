@@ -20,7 +20,7 @@ Do not change the structure of the document or the section labels.
 |----|----|
 | Nous apprenons à travailler, à perfectionner, à avancer vite. Et personne ne nous enseigne à nous comprendre réellement. | We learn to work, to improve, to move fast. But nobody truly teaches us to understand ourselves. |
 | Résultat : des jeunes qui avancent sans repères, qui doutent, imitent, s'adaptent, et finissent par se perdre. | The result: young people moving forward without bearings, who doubt, imitate, adapt, and end up losing themselves. |
-| MagSelf offre un espace pour se connaître, se comprendre, s'assumer et partager. Une seule finalité : mieux se relier à soi, et aux autres. | MagSelf offers a space to know yourself, understand yourself, own yourself, and share. One purpose: to connect more deeply with yourself, and with others. |
+| MagSelf offre un espace pour se connaître, se comprendre, s'assumer et partager. Une seule finalité : mieux se relier à soi, et aux autres. | MagSelf offers a space to know yourself, understand yourself, embrace who you are, and share. One purpose: to connect more deeply with yourself, and with others. |
 
 ---
 
@@ -75,9 +75,9 @@ Do not change the structure of the document or the section labels.
 | FR | EN |
 |----|----|
 | Ceux qui sentent que ça ne suffit plus de faire "comme il faut". | Those who feel that doing things "the right way" is no longer enough. |
-| Ceux qui avancent, réussissent… mais sont dépourvus de sens. | Those who move forward, succeed… but feel empty of meaning. |
+| Ceux qui avancent, réussissent… mais sont dépourvus de sens. | Those who move forward, succeed… but find no meaning in it. |
 | Ceux qui sont dans le flou, et peinent à faire des choix. | Those who feel lost, and struggle to make choices. |
-| Ceux qui sont fatigués de se suradapter. | Those who are tired of over-adapting. |
+| Ceux qui sont fatigués de se suradapter. | Those who are tired of constantly adapting to others. |
 | Ceux qui se sentent à côté de leur désir, de leur joie. | Those who feel out of touch with their desires, their joy. |
 | Ceux qui veulent arrêter de fonctionner en pilote automatique. | Those who want to stop running on autopilot. |
 | Ceux qui veulent explorer leur intériorité, et manquent d'outils ou de temps. | Those who want to explore their inner world, but lack the tools or the time. |
@@ -109,14 +109,14 @@ Do not change the structure of the document or the section labels.
 | FR | EN |
 |----|----|
 | Ludique | Playful |
-| Évoluer à travers des parcours variés et personnalisés : jeux, vidéos, ateliers… pour découvrir avec plaisir. | Grow through varied and personalised journeys: games, videos, workshops… to discover with pleasure. |
+| Évoluer à travers des parcours variés et personnalisés : jeux, vidéos, ateliers… pour découvrir avec plaisir. | Grow through varied and personalised journeys: games, videos, workshops… and enjoy discovering yourself along the way. |
 
 **Orientation**
 
 | FR | EN |
 |----|----|
 | Orientation | Orientation |
-| Être guidé vers les thérapeutes les plus adaptés à ses besoins et à sa personnalité. | Access an online directory of therapists adapted to your needs and personality. |
+| Être guidé vers les thérapeutes les plus adaptés à ses besoins et à sa personnalité. | Be guided towards the therapists best suited to your needs and your personality. |
 
 **Connexion**
 
@@ -131,6 +131,6 @@ Do not change the structure of the document or the section labels.
 
 | FR | EN |
 |----|----|
-| MagSelf se bâtit. Fais partie des privilégiés à savourer la joie d'être soi. | MagSelf is being built. Be among the first to savour the joy of being yourself. |
+| MagSelf se bâtit. Fais partie des privilégiés à savourer la joie d'être soi. | MagSelf is being built. Be among the privileged few to savour the joy of being yourself. |
 | Réalise ton haut potentiel ! *(cursive)* | Unlock your full potential! *(cursive)* |
 | Je pars à ma découverte ! *(button)* | I give myself the luxury of self-knowledge! *(button)* |
