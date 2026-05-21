@@ -18,8 +18,8 @@ Do not change the structure of the document or the section labels.
 
 | FR | EN |
 |----|----|
-| Nous apprenons à travailler, à perfectionner, à avancer vite. Et personne ne nous enseigne à nous comprendre réellement. | We learn to work, to improve, to move fast. But nobody truly teaches us to understand ourselves. |
-| Résultat : des jeunes qui avancent sans repères, qui doutent, imitent, s'adaptent, et finissent par se perdre. | The result: young people moving forward without landmarks, who doubt, imitate, adapt, and end up losing themselves. |
+| Nous apprenons à travailler, à perfectionner, à avancer vite. Et personne ne nous enseigne à nous comprendre réellement. | We learn to perform, to improve, to move fast. Yet nobody teaches us to truly understand ourselves. |
+| Résultat : des jeunes qui avancent sans repères, qui doutent, imitent, s'adaptent, et finissent par se perdre. | The result: young people adrift, who doubt, imitate, adapt, and end up losing themselves. |
 | MagSelf offre un espace pour se connaître, se comprendre, s'assumer et partager. Une seule finalité : mieux se relier à soi, et aux autres. | MagSelf offers a space to know yourself, understand yourself, embrace who you are, and share. One purpose: to connect more deeply with yourself, and with others. |
 
 ---
