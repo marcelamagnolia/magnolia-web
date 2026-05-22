@@ -59,7 +59,7 @@ Do not change the structure of the document or the section labels.
 |----|----|
 | Pourquoi ce sujet est d'utilité publique ? | Why it matters |
 | L'angle mort de notre époque : ignorer notre inné. | The blind spot of our era: ignoring our inner nature. |
-| Le bien-être des jeunes se fragilise principalement par manque de repères et de connaissance de soi. Le doute et le flou sont épuisants. | Young people's well-being is weakening mainly from a lack of direction and self-knowledge. Living in the blur is exhausting. |
+| Le bien-être des jeunes se fragilise principalement par manque de repères et de connaissance de soi. Le doute et le flou sont épuisants. | Young people's well-being is suffering mainly from a lack of direction and self-knowledge. Living in the fog is exhausting. |
 
 ---
 
