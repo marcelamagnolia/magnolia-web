@@ -102,7 +102,7 @@ Do not change the structure of the document or the section labels.
 | FR | EN |
 |----|----|
 | Exploration | Exploration |
-| Aller à la rencontre de soi, comprendre ses doutes, ses choix et ses défis grâce à un compagnon virtuel aligné sur nos fonctionnements innés. | A journey inward to understand your doubts, your choices and your challenges, with a virtual companion aligned with your inner nature. |
+| Aller à la rencontre de soi, comprendre ses doutes, ses choix et ses défis, guidé à chaque étape par un accompagnement aligné sur nos fonctionnements innés. | A journey inward to understand your doubts, your choices and your challenges, with personalised guidance aligned with your inner nature, at every step. |
 
 **Ludique / Playful**
 
