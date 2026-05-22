@@ -68,16 +68,16 @@ Do not change the structure of the document or the section labels.
 | FR | EN |
 |----|----|
 | À qui s'adresse MagSelf ? | Who is MagSelf for? |
-| Les 18-30 ans prêts à se connaître pour se réaliser. | 18–30 year olds ready to know themselves in order to fulfil their potential. |
+| Les 18-30 ans prêts à se connaître pour se réaliser. | 18–30 year-olds ready to discover themselves and flourish. |
 
 **Liste / List**
 
 | FR | EN |
 |----|----|
-| Ceux qui sentent que ça ne suffit plus de faire "comme il faut". | Those who feel that doing things "the right way" is no longer enough. |
+| Ceux qui sentent que ça ne suffit plus de faire "comme il faut". | Those for whom doing things "right" is no longer enough. |
 | Ceux qui avancent, réussissent… mais sont dépourvus de sens. | Those who move forward, succeed… but find no meaning in it. |
-| Ceux qui sont dans le flou, et peinent à faire des choix. | Those who feel lost, and struggle to make choices. |
-| Ceux qui sont fatigués de se suradapter. | Those who are tired of constantly adapting to others. |
+| Ceux qui sont dans le flou, et peinent à faire des choix. | Those who live in the fog and struggle to make choices. |
+| Ceux qui sont fatigués de se suradapter. | Those who are tired of shrinking themselves to fit. |
 | Ceux qui se sentent à côté de leur désir, de leur joie. | Those who feel out of touch with their desires, their joy. |
 | Ceux qui veulent arrêter de fonctionner en pilote automatique. | Those who want to stop running on autopilot. |
 | Ceux qui veulent explorer leur intériorité, et manquent d'outils ou de temps. | Those who want to explore their inner world, but lack the tools or the time. |
