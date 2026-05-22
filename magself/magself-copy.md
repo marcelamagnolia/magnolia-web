@@ -20,7 +20,7 @@ Do not change the structure of the document or the section labels.
 |----|----|
 | Nous apprenons à travailler, à perfectionner, à avancer vite. Et personne ne nous enseigne à nous comprendre réellement. | We learn to perform, to improve, to move fast. Yet nobody teaches us to truly understand ourselves. |
 | Résultat : des jeunes qui avancent sans repères, qui doutent, imitent, s'adaptent, et finissent par se perdre. | The result: young people adrift, who doubt, imitate, adapt, and end up disconnected from their inner compass. |
-| MagSelf offre un espace pour se connaître, se comprendre, s'assumer et partager. Une seule finalité : mieux se relier à soi, et aux autres. | MagSelf offers a safe space to explore, embrace, and share who you truly are. One purpose: to connect more deeply with yourself, and with others. |
+| MagSelf offre un espace pour se connaître, se comprendre, s'assumer et partager. Une seule finalité : mieux se relier à soi, et aux autres. | MagSelf offers a safe space to explore, embrace, and share who we truly are. One purpose: to connect more deeply with ourselves, and with others. |
 
 ---
 
@@ -131,6 +131,6 @@ Do not change the structure of the document or the section labels.
 
 | FR | EN |
 |----|----|
-| MagSelf se bâtit. Fais partie des privilégiés à savourer la joie d'être soi. | MagSelf is being built. Be among the privileged few to savour the joy of being yourself. |
+| MagSelf se bâtit. Fais partie des privilégiés à savourer la joie d'être soi. | MagSelf is being built. Be among the lucky few to savour being yourself. |
 | Réalise ton haut potentiel ! *(cursive)* | Unlock your full potential! *(cursive)* |
 | Je pars à ma découverte ! *(button)* | I'm embarking on my self-discovery! *(button)* |
