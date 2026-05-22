@@ -108,8 +108,8 @@ Do not change the structure of the document or the section labels.
 
 | FR | EN |
 |----|----|
-| Ludique | Playful |
-| Évoluer à travers des parcours variés et personnalisés : jeux, vidéos, ateliers… pour découvrir avec plaisir. | Grow through varied and personalised journeys: games, videos, workshops… and enjoy discovering yourself along the way. |
+| Ludique | Play |
+| Évoluer à travers des parcours variés et personnalisés : jeux, vidéos, ateliers… pour découvrir avec plaisir. | Grow through varied and personalised formats: games, videos, workshops. Self-discovery made enjoyable. |
 
 **Orientation**
 
@@ -123,7 +123,7 @@ Do not change the structure of the document or the section labels.
 | FR | EN |
 |----|----|
 | Connexion | Connexion |
-| Partager et grandir avec des personnes qui nous ressemblent, dans des espaces anonymes, sécurisants et bienveillants. | Share and grow with like-minded people in anonymous, safe and caring spaces. |
+| Partager et grandir avec des personnes qui nous ressemblent, dans des espaces anonymes, sécurisants et bienveillants. | Connect and grow with people who feel the same way, in anonymous, safe and caring spaces. |
 
 ---
 
