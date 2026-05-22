@@ -20,7 +20,7 @@ Do not change the structure of the document or the section labels.
 |----|----|
 | Nous apprenons à travailler, à perfectionner, à avancer vite. Et personne ne nous enseigne à nous comprendre réellement. | We learn to perform, to improve, to move fast. Yet nobody teaches us to truly understand ourselves. |
 | Résultat : des jeunes qui avancent sans repères, qui doutent, imitent, s'adaptent, et finissent par se perdre. | The result: young people adrift, who doubt, imitate, adapt, and end up disconnected from their inner compass. |
-| MagSelf offre un espace pour se connaître, se comprendre, s'assumer et partager. Une seule finalité : mieux se relier à soi, et aux autres. | MagSelf offers a safe space to explore, embrace, and share who you truly are. One purpose: deeper connection — with yourself, and with others. |
+| MagSelf offre un espace pour se connaître, se comprendre, s'assumer et partager. Une seule finalité : mieux se relier à soi, et aux autres. | MagSelf offers a safe space to explore, embrace, and share who you truly are. One purpose: to connect more deeply with yourself, and with others. |
 
 ---
 
@@ -38,18 +38,18 @@ Do not change the structure of the document or the section labels.
 | FR | EN |
 |----|----|
 | Intérieur | Inner |
-| Comprendre ses fonctionnements, ses besoins, ses réactions. | Understand how you function, your needs, your reactions. |
-| Identifier ce qui est juste pour soi et l'assumer. | Identify what feels right for you and own it. |
-| Trouver ce qui fait sens. | Find what makes sense. |
+| Comprendre ses fonctionnements, ses besoins, ses réactions. | Understand your needs, your reactions, your patterns. |
+| Identifier ce qui est juste pour soi et l'assumer. | Identify what feels right and trust it. |
+| Trouver ce qui fait sens. | Find what gives your life meaning. |
 
 **Extérieur / Outer**
 
 | FR | EN |
 |----|----|
 | Extérieur | Outer |
-| S'appuyer sur ses repères pour faire des choix alignés. | Draw on your inner compass to make aligned choices. |
+| S'appuyer sur ses repères pour faire des choix alignés. | Let your inner compass guide your choices. |
 | Agir avec clarté, stabilité et confiance. | Act with clarity, stability and confidence. |
-| Se sentir légitime, validé et crédible. | Feel legitimate, validated and worthy. |
+| Se sentir légitime, validé et crédible. | Feel grounded, validated and worthy. |
 
 ---
 
