@@ -344,8 +344,8 @@ a {
   margin: 0 auto 28px;
   font-family: 'Dancing Script', cursive;
   font-weight: 500;
-  color: var(--navy) !important;
-  text-shadow: 0 1px 8px rgba(255,255,255,0.6);
+  color: var(--cream) !important;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.25);
 }
 
 .hero-panel .intro {
