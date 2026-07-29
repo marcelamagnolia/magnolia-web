@@ -342,7 +342,7 @@
     <span class="tagline" data-fr style="margin-bottom:44px; display:block;">Soyez les premiers à vivre la révolution Magnolia :<br><em style="font-family:'Dancing Script', cursive; font-style:normal; font-size:0.85em; color:var(--gold);">une nouvelle façon d'être, d'agir et de se relier.</em></span>
     <span class="tagline" data-en style="margin-bottom:44px; display:block;">Be among the first to experience the Magnolia revolution:<br><em style="font-family:'Dancing Script', cursive; font-style:normal; font-size:0.85em; color:var(--gold);">a new way of being, doing, and connecting.</em></span>
 
-    <form class="email-form" onsubmit="handleSubscribe(event, 'magnolia', 6)">
+    <form class="email-form" onsubmit="handleSubscribe(event, 'magnolia', 6, 14)">
       <input type="email" id="email-magnolia" placeholder="votre@email.com" data-fr>
       <input type="email" id="email-magnolia-en" placeholder="your@email.com" data-en>
       <button type="submit" data-fr>Rejoindre le Collectif</button>
@@ -387,38 +387,56 @@
     localStorage.setItem('ms-lang', lang);
   }
 
-  async function handleSubscribe(e, formKey, listId) {
+  function showPopup(message, isError) {
+    let overlay = document.getElementById('ms-popup');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.id = 'ms-popup';
+      overlay.className = 'ms-popup-overlay';
+      overlay.innerHTML = '<div class="ms-popup-card"><p class="ms-popup-msg"></p><button type="button" class="ms-popup-close"></button></div>';
+      document.body.appendChild(overlay);
+      const hide = () => overlay.classList.remove('show');
+      overlay.addEventListener('click', ev => { if (ev.target === overlay) hide(); });
+      overlay.querySelector('.ms-popup-close').addEventListener('click', hide);
+    }
+    const isEn = document.body.classList.contains('lang-en');
+    overlay.querySelector('.ms-popup-msg').textContent = message;
+    overlay.querySelector('.ms-popup-card').classList.toggle('error', !!isError);
+    overlay.querySelector('.ms-popup-close').textContent = isEn ? 'Close' : 'Fermer';
+    overlay.classList.add('show');
+  }
+
+  async function handleSubscribe(e, formKey, listId, enListId) {
     e.preventDefault();
     const isEn = document.body.classList.contains('lang-en');
+    const list = isEn && enListId ? enListId : listId;
     const emailId = isEn ? `email-${formKey}-en` : `email-${formKey}`;
-    const email = document.getElementById(emailId).value.trim();
-    const msg = document.getElementById(`msg-${formKey}`);
+    const input = document.getElementById(emailId);
+    const email = input.value.trim();
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      msg.style.display = 'block';
-      msg.style.color = '#e53e3e';
-      msg.textContent = isEn ? 'Please enter a valid email address.' : 'Veuillez entrer une adresse courriel valide.';
+      showPopup(isEn ? 'Please enter a valid email address.' : 'Veuillez entrer une adresse courriel valide.', true);
       return;
     }
 
+    const btn = e.submitter;
+    if (btn) btn.disabled = true;
     try {
       const res = await fetch(`${API_URL}/waitlist`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, list_id: listId }),
+        body: JSON.stringify({ email, list_id: list }),
       });
-      msg.style.display = 'block';
       if (res.ok) {
-        msg.style.color = '#fff7e6';
-        msg.textContent = isEn ? "Thank you for joining us! We'll be in touch soon." : "Merci de nous rejoindre ! On te contacte bientôt.";
+        input.value = '';
+        showPopup(isEn ? "Thank you for joining us! We'll be in touch soon." : "Merci de nous rejoindre ! On te contacte bientôt.", false);
       } else {
-        msg.style.color = '#e53e3e';
-        msg.textContent = isEn ? 'Something went wrong. Please try again.' : 'Une erreur s\'est produite. Réessaie.';
+        showPopup(isEn ? 'Something went wrong. Please try again.' : 'Une erreur s\'est produite. Réessaie.', true);
       }
     } catch {
-      msg.style.display = 'block';
-      msg.style.color = '#e53e3e';
-      msg.textContent = isEn ? 'Something went wrong. Please try again.' : 'Une erreur s\'est produite. Réessaie.';
+      showPopup(isEn ? 'Something went wrong. Please try again.' : 'Une erreur s\'est produite. Réessaie.', true);
+    } finally {
+      if (btn) btn.disabled = false;
     }
   }
 
