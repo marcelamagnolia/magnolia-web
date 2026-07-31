@@ -1216,6 +1216,7 @@ footer nav a:hover {
   line-height: 1.5;
   margin: 0 0 24px;
   color: var(--navy);
+  white-space: pre-line;
 }
 .ms-popup-card.error .ms-popup-msg { color: #c0392b; }
 .ms-popup-close {
