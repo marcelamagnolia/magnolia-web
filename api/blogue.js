@@ -44,7 +44,7 @@ export default async function handler(req, res) {
 async function liste() {
   const articles = await supabase(
     'blog_articles?statut=eq.PUBLIE&langue=eq.fr' +
-    '&select=slug,titre,resume,image_url,categorie,auteur_nom,publie_le' +
+    '&select=slug,titre,resume,image_url,categorie,publie_le' +
     '&order=publie_le.desc&limit=50')
 
   const cartes = articles.length ? articles.map(a => `
@@ -54,7 +54,7 @@ async function liste() {
         <div>
           ${a.categorie ? `<span class="etiquette">${esc(a.categorie)}</span>` : ''}
           <a href="/blogue/${esc(a.slug)}"><h3>${esc(a.titre)}</h3></a>
-          <p class="article-meta">${dateFr(a.publie_le)} · ${esc(a.auteur_nom)}</p>
+          <p class="article-meta">${dateFr(a.publie_le)}</p>
           ${a.resume ? `<p>${esc(a.resume)}</p>` : ''}
         </div>
       </article>`).join('\n') : `
@@ -128,7 +128,7 @@ ${brouillon ? `<div style="background: var(--gold); color:#4a3410; text-align:ce
     <h1 style="font-family:'Instrument Serif',serif; color: var(--navy); font-size: clamp(30px,4.6vw,46px); line-height:1.2; margin: 6px 0 14px;">
       ${esc(a.titre)}
     </h1>
-    <p class="article-meta">${a.publie_le ? dateFr(a.publie_le) + ' · ' : ''}${esc(a.auteur_nom)}</p>
+    <p class="article-meta">${a.publie_le ? dateFr(a.publie_le) : 'Brouillon'}</p>
     ${a.image_url ? `<img src="${esc(a.image_url)}" alt="" class="image-tete">` : ''}
     <div class="corps">
 ${markdown(a.corps_md)}
