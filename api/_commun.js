@@ -173,6 +173,10 @@ export function page({ titre, description, url, image, corps, categorie, apercu 
   <link rel="icon" type="image/svg+xml" href="/assets/magnolia_favicon.svg">
   <link rel="stylesheet" href="/style.css">
   <style>
+    html, body { min-height: 100vh; }
+    body { display: flex; flex-direction: column; }
+    body > section { flex: 0 0 auto; }
+    body > .remplissage { flex: 1 1 auto; }
     .blogue { max-width: 760px; margin: 0 auto; padding: 0 24px; }
     .blogue-large { max-width: 900px; }
     .article-carte {
@@ -222,6 +226,8 @@ export function page({ titre, description, url, image, corps, categorie, apercu 
 </nav>
 
 ${corps}
+
+<div class="remplissage" style="background: var(--cream);"></div>
 
 <footer style="background: var(--navy); color: var(--cream); text-align:center; padding: 44px 24px;">
   <p style="opacity:.82; font-size: 14px; margin:0;">

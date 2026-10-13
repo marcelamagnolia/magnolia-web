@@ -58,7 +58,7 @@ async function liste() {
           ${a.resume ? `<p>${esc(a.resume)}</p>` : ''}
         </div>
       </article>`).join('\n') : `
-      <p style="text-align:center; color: rgba(52,80,122,.6); padding: 40px 0;">
+      <p style="text-align:center; color: rgba(52,80,122,.6); padding: 60px 0;">
         Les premiers articles arrivent bientôt.
       </p>`
 
@@ -67,19 +67,10 @@ async function liste() {
     description: "Des histoires de terrain, des savoir-faire, et ce que le collectif découvre en faisant circuler la matière.",
     url: `${SITE}/blogue/`,
     image: `${SITE}/assets/partage/accueil.jpg`,
+    // Pas de titre ni de sous-titre sur la liste : la navigation dit déjà
+    // « Blogue », et les articles se présentent mieux seuls qu'introduits.
     corps: `
-<section style="background: var(--cream); padding-top: 56px; padding-bottom: 8px;">
-  <div class="blogue">
-    <span class="section-label" style="text-align:center; display:block;">Le blogue</span>
-    <h2 style="text-align:center; margin-bottom: 10px;">Ce qu'on apprend en chemin</h2>
-    <p style="text-align:center; max-width: 560px; margin: 0 auto; color: rgba(52,80,122,.72);">
-      Des histoires de terrain, des savoir-faire, et ce que le collectif
-      découvre en faisant circuler la matière.
-    </p>
-  </div>
-</section>
-
-<section style="background: var(--cream); padding-top: 8px;">
+<section style="background: var(--cream); padding-top: 48px;">
   <div class="blogue">
 ${cartes}
   </div>
