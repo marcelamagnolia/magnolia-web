@@ -224,7 +224,7 @@ export function page({ titre, description, url, image, corps, categorie, apercu 
     </ul>
     <!-- Le sélecteur garde sa place pour que la barre ne saute pas d'une page
          à l'autre, mais EN est grisé : les trois pages du site ont une version
-         anglaise, le blogue n'en a pas. La colonne `langue` existe en base
+         anglaise, le blogue n'en a pas. La colonne « langue » existe en base
          pour le jour où on en voudra une. -->
     <div class="nav-controls">
       <div class="lang-toggle">
