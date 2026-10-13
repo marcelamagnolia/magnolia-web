@@ -1,0 +1,5 @@
+# Tout est public et indexable : il n'y a rien à cacher sur ce site.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.magnoliasignature.org/sitemap.xml
