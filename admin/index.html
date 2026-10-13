@@ -52,6 +52,7 @@
       padding:3px 9px; border-radius:999px; white-space:nowrap; }
     .brouillon { background:rgba(236,186,100,.25); color:#8a6520; }
     .publie { background:rgba(63,133,108,.16); color:#2f6b55; }
+    .note { font-size:12.5px; color:rgba(52,80,122,.55); margin:6px 0 0; }
     .aide { font-size:13px; color:rgba(52,80,122,.65); line-height:1.7;
       background:rgba(236,186,100,.12); border-radius:10px; padding:14px 16px; margin-top:8px; }
     .aide code { background:#fff; padding:1px 5px; border-radius:4px; font-size:12.5px; }
@@ -105,21 +106,21 @@
     <h1 id="titre-vue" style="margin-top:14px;">Nouvel article</h1>
 
     <label for="f-titre">Titre</label>
-    <input id="f-titre" placeholder="Reconnaître un bon bois de grange">
+    <input id="f-titre">
 
     <label for="f-categorie">Catégorie</label>
-    <input id="f-categorie" placeholder="Récupération, Collectif, Savoir-faire…">
+    <input id="f-categorie">
 
     <label for="f-resume">Résumé</label>
-    <textarea id="f-resume" rows="2"
-      placeholder="Deux phrases. C'est ce qui s'affiche dans la liste et sous le lien dans Google."></textarea>
+    <textarea id="f-resume" rows="2"></textarea>
+    <p class="note">S'affiche dans la liste des articles et sous le lien dans Google.</p>
 
     <label for="f-image">Image principale</label>
     <input id="f-image" type="file" accept="image/jpeg,image/png,image/webp,image/gif">
     <img id="apercu-image" class="apercu-image cache" alt="">
 
     <label for="f-corps">Le texte</label>
-    <textarea id="f-corps" rows="22" placeholder="Écris ici…"></textarea>
+    <textarea id="f-corps" rows="22"></textarea>
     <div class="aide">
       <code>## Un sous-titre</code> &nbsp;·&nbsp;
       <code>**gras**</code> &nbsp;·&nbsp;
