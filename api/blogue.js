@@ -116,8 +116,10 @@ async function article(cle, res, { brouillon = false } = {}) {
     categorie: a.categorie,
     apercu: brouillon,
     corps: `
-${brouillon ? `<div style="background: var(--gold); color:#4a3410; text-align:center; padding:9px 16px; font-size:13.5px; font-weight:600; letter-spacing:.03em;">
+${brouillon ? `<div style="background: var(--gold); color:#4a3410; text-align:center; padding:10px 16px; font-size:13.5px; font-weight:600; letter-spacing:.03em;">
   Aperçu — cet article n'est pas encore publié.
+  &nbsp;·&nbsp;
+  <a href="/admin/" style="color:#4a3410; text-decoration:underline;">Retourner à l'écriture</a>
 </div>` : ''}
 <section style="background: var(--cream); padding-top: 48px;">
   <div class="blogue">
@@ -127,7 +129,7 @@ ${brouillon ? `<div style="background: var(--gold); color:#4a3410; text-align:ce
       ${esc(a.titre)}
     </h1>
     <p class="article-meta">${a.publie_le ? dateFr(a.publie_le) + ' · ' : ''}${esc(a.auteur_nom)}</p>
-    ${a.image_url ? `<img src="${esc(a.image_url)}" alt="" style="width:100%; border-radius:12px; margin: 26px 0 34px;">` : ''}
+    ${a.image_url ? `<img src="${esc(a.image_url)}" alt="" class="image-tete">` : ''}
     <div class="corps">
 ${markdown(a.corps_md)}
     </div>

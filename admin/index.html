@@ -297,9 +297,15 @@ async function enregistrer(statut) {
 // correction en croyant relire la dernière — et c'est précisément la faute
 // qu'un aperçu doit empêcher.
 $('btn-apercu').onclick = async () => {
+  // L'onglet est réservé TOUT DE SUITE, avant le moindre `await` : un
+  // navigateur n'autorise l'ouverture d'une fenêtre que dans la foulée
+  // immédiate du clic. Après une attente, le droit est perdu et l'aperçu
+  // s'ouvre à la place de l'éditeur — ce qui donne l'impression d'avoir perdu
+  // son texte, alors qu'il est enregistré.
+  const onglet = window.open('', '_blank')
   dire('mot-article', 'Enregistrement…', 'ok')
   await enregistrer(null)
-  if (!articleEnCours?.id) return
+  if (!articleEnCours?.id) { onglet?.close(); return }
   try {
     const r = await fetch(`/api/blogue?apercu=${articleEnCours.id}`, {
       headers: { Authorization: `Bearer ${session.access_token}` },
@@ -309,10 +315,11 @@ $('btn-apercu').onclick = async () => {
     // Le HTML est ouvert depuis la mémoire plutôt que depuis une adresse
     // publique : un brouillon n'a pas d'adresse, et ne doit pas en avoir une.
     const url = URL.createObjectURL(new Blob([html], { type: 'text/html' }))
-    window.open(url, '_blank')
+    if (onglet) onglet.location = url
+    else window.open(url, '_blank')   // repli si l'onglet a été refusé
     setTimeout(() => URL.revokeObjectURL(url), 60000)
-    dire('mot-article', 'Aperçu ouvert dans un nouvel onglet.', 'ok')
-  } catch (err) { dire('mot-article', err.message) }
+    dire('mot-article', 'Aperçu ouvert dans un nouvel onglet. Ton texte est enregistré.', 'ok')
+  } catch (err) { onglet?.close(); dire('mot-article', err.message) }
 }
 
 $('btn-enregistrer').onclick = () => enregistrer(null)
