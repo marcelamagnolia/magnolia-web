@@ -93,9 +93,13 @@
     </ul>
     <div class="nav-controls">
       <div class="lang-toggle">
-        <a href="/magself/" id="btn-fr" class="active">FR</a>
+        <a href="#" id="btn-fr" class="active" onclick="return false;">FR</a>
         <span class="sep">|</span>
-        <a href="/en/magself/" id="btn-en">EN</a>
+        <!-- L'anglais est en place et fonctionne (/en/magself/), mais pas
+             encore proposé. Rendre le EN non cliquable plutôt que de le
+             retirer garde la barre identique : enlever un élément
+             déplacerait tout ce qui l'entoure. -->
+        <span id="btn-en" style="opacity:.35; cursor:default;" title="Version anglaise à venir">EN</span>
       </div>
       <button class="nav-hamburger" onclick="toggleNav()" aria-label="Menu">☰</button>
     </div>
