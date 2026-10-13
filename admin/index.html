@@ -122,6 +122,7 @@
 
     <div class="boutons">
       <button class="p" id="btn-enregistrer">Enregistrer</button>
+      <button class="s" id="btn-apercu">Aperçu</button>
       <button class="s" id="btn-publier">Publier</button>
       <button class="s cache" id="btn-depublier">Remettre en brouillon</button>
       <a class="s cache" id="btn-voir" target="_blank" style="text-decoration:none;">Voir en ligne</a>
@@ -289,6 +290,29 @@ async function enregistrer(statut) {
                         statut === 'BROUILLON' ? 'Remis en brouillon.' : 'Enregistré.', 'ok')
   } catch (err) { dire('mot-article', err.message) }
   finally { boutons.forEach(b => b.disabled = false) }
+}
+
+// L'aperçu enregistre d'abord : il montre ce qui est EN BASE, pas ce qui est
+// à l'écran. Sans cette sauvegarde, on relirait la version d'avant la dernière
+// correction en croyant relire la dernière — et c'est précisément la faute
+// qu'un aperçu doit empêcher.
+$('btn-apercu').onclick = async () => {
+  dire('mot-article', 'Enregistrement…', 'ok')
+  await enregistrer(null)
+  if (!articleEnCours?.id) return
+  try {
+    const r = await fetch(`/api/blogue?apercu=${articleEnCours.id}`, {
+      headers: { Authorization: `Bearer ${session.access_token}` },
+    })
+    if (!r.ok) throw new Error('Aperçu indisponible')
+    const html = await r.text()
+    // Le HTML est ouvert depuis la mémoire plutôt que depuis une adresse
+    // publique : un brouillon n'a pas d'adresse, et ne doit pas en avoir une.
+    const url = URL.createObjectURL(new Blob([html], { type: 'text/html' }))
+    window.open(url, '_blank')
+    setTimeout(() => URL.revokeObjectURL(url), 60000)
+    dire('mot-article', 'Aperçu ouvert dans un nouvel onglet.', 'ok')
+  } catch (err) { dire('mot-article', err.message) }
 }
 
 $('btn-enregistrer').onclick = () => enregistrer(null)

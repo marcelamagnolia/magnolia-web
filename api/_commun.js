@@ -145,7 +145,7 @@ export function markdown(texte) {
 // navigation, même pied de page. C'est tout l'intérêt de le construire
 // nous-mêmes — un lecteur qui passe de l'accueil au blogue ne doit pas sentir
 // qu'il a changé d'endroit.
-export function page({ titre, description, url, image, corps, categorie }) {
+export function page({ titre, description, url, image, corps, categorie, apercu }) {
   const esc = s => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;')
                                   .replace(/>/g, '&gt;').replace(/"/g, '&quot;')
   return `<!DOCTYPE html>
@@ -153,6 +153,12 @@ export function page({ titre, description, url, image, corps, categorie }) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  ${apercu ? `<!-- L'aperçu s'ouvre depuis une adresse « blob: », où « /style.css »
+       ne pointe nulle part. Cette balise donne au navigateur le point de
+       départ à partir duquel résoudre les chemins. Sans elle, l'aperçu
+       s'affiche sans aucune mise en forme. -->
+  <base href="${SITE}/">
+  <meta name="robots" content="noindex, nofollow">` : ''}
   <title>${esc(titre)}</title>
   <meta name="description" content="${esc(description)}">
   <link rel="canonical" href="${esc(url)}">

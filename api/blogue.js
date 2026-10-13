@@ -3,13 +3,28 @@
 // Rendu sur le serveur, pas dans le navigateur. Google lit ce qu'on lui envoie,
 // et l'intérêt du blogue est précisément d'être trouvé : une page qui s'assemble
 // en JavaScript arrive vide pour lui.
-import { supabase, markdown, page, dateFr, SITE } from './_commun.js'
+import { supabase, markdown, page, dateFr, SITE, auteurAutorise } from './_commun.js'
 
 const esc = s => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;')
                                 .replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 
 export default async function handler(req, res) {
   try {
+    // L'aperçu d'un brouillon : même rendu que la vraie page, parce qu'un
+    // aperçu qui ressemble à l'article sans l'être ne sert à rien. Réservé à
+    // l'équipe — un brouillon n'est pas public tant qu'il est brouillon.
+    const apercu = (req.query?.apercu || '').trim()
+    if (apercu) {
+      const auteur = await auteurAutorise(req)
+      if (!auteur) return res.status(401).send('Connexion requise.')
+      const html = await article(apercu, res, { brouillon: true })
+      if (html === null) return
+      res.setHeader('Content-Type', 'text/html; charset=utf-8')
+      // Jamais en cache : on relit l'aperçu après chaque correction.
+      res.setHeader('Cache-Control', 'no-store')
+      return res.status(200).send(html)
+    }
+
     const slug = (req.query?.slug || '').trim()
     const html = slug ? await article(slug, res) : await liste()
     if (html === null) return   // l'article a déjà répondu 404
@@ -73,11 +88,15 @@ ${cartes}
 }
 
 // ── Un article ─────────────────────────────────────────────────────────────
-async function article(slug, res) {
+async function article(cle, res, { brouillon = false } = {}) {
   // `statut=eq.PUBLIE` est dans la requête, pas dans un test après coup : un
   // brouillon ne doit pas pouvoir être lu par quelqu'un qui devine son adresse.
-  const trouves = await supabase(
-    `blog_articles?slug=eq.${encodeURIComponent(slug)}&statut=eq.PUBLIE&select=*&limit=1`)
+  // En mode aperçu on cherche par identifiant, et l'appelant a déjà été
+  // authentifié plus haut.
+  const trouves = brouillon
+    ? await supabase(`blog_articles?id=eq.${encodeURIComponent(cle)}&select=*&limit=1`)
+    : await supabase(
+        `blog_articles?slug=eq.${encodeURIComponent(cle)}&statut=eq.PUBLIE&select=*&limit=1`)
   const a = trouves?.[0]
 
   if (!a) {
@@ -104,7 +123,11 @@ async function article(slug, res) {
     url: `${SITE}/blogue/${a.slug}`,
     image: a.image_url || `${SITE}/assets/partage/accueil.jpg`,
     categorie: a.categorie,
+    apercu: brouillon,
     corps: `
+${brouillon ? `<div style="background: var(--gold); color:#4a3410; text-align:center; padding:9px 16px; font-size:13.5px; font-weight:600; letter-spacing:.03em;">
+  Aperçu — cet article n'est pas encore publié.
+</div>` : ''}
 <section style="background: var(--cream); padding-top: 48px;">
   <div class="blogue">
     <a class="retour" href="/blogue/">← Le blogue</a>
@@ -112,7 +135,7 @@ async function article(slug, res) {
     <h1 style="font-family:'Instrument Serif',serif; color: var(--navy); font-size: clamp(30px,4.6vw,46px); line-height:1.2; margin: 6px 0 14px;">
       ${esc(a.titre)}
     </h1>
-    <p class="article-meta">${dateFr(a.publie_le)} · ${esc(a.auteur_nom)}</p>
+    <p class="article-meta">${a.publie_le ? dateFr(a.publie_le) + ' · ' : ''}${esc(a.auteur_nom)}</p>
     ${a.image_url ? `<img src="${esc(a.image_url)}" alt="" style="width:100%; border-radius:12px; margin: 26px 0 34px;">` : ''}
     <div class="corps">
 ${markdown(a.corps_md)}
