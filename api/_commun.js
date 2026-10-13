@@ -193,12 +193,14 @@ export function page({ titre, description, url, image, corps, categorie, apercu 
     .etiquette { display: inline-block; font-size: 11px; letter-spacing: .12em;
       text-transform: uppercase; color: var(--navy); background: rgba(236,186,100,.22);
       padding: 3px 10px; border-radius: 999px; margin-bottom: 10px; }
-    /* L'image de tête est bornée en hauteur, pas seulement en largeur.
-       Une photo en portrait — 756 x 924 au premier essai — s'étirait sur
-       toute la colonne et occupait l'écran entier avant le premier mot.
-       Recadrée au centre, elle devient un bandeau quelle que soit sa forme. */
-    .image-tete { width: 100%; max-height: 360px; object-fit: cover;
-      object-position: center; border-radius: 12px; margin: 26px 0 34px; display: block; }
+    /* L'image de tête garde ses proportions, et rien n'est jamais coupé.
+       Deux essais avant celui-ci : pleine largeur, une photo en portrait —
+       756 x 924 — occupait l'écran entier avant le premier mot ; recadrée en
+       bandeau, elle perdait la tête de la personne. Ici on borne la HAUTEUR
+       et on laisse la largeur suivre : un portrait devient une image haute
+       mais raisonnable, centrée ; une photo large remplit la colonne. */
+    .image-tete { max-width: 100%; max-height: 460px; width: auto; height: auto;
+      border-radius: 12px; margin: 26px auto 34px; display: block; }
     .corps { line-height: 1.75; color: #413f3c; font-size: 17px; }
     .corps h2 { font-family: 'Instrument Serif', serif; color: var(--navy);
       font-size: 30px; margin: 44px 0 14px; }
