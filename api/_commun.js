@@ -222,6 +222,17 @@ export function page({ titre, description, url, image, corps, categorie, apercu 
       <li><a href="/blogue/" class="active">Blogue</a></li>
       <li><a href="/#collectif">Rejoindre</a></li>
     </ul>
+    <!-- Le sélecteur de langue était absent de cette barre : le blogue a été
+         bâti à part, et la barre du reste du site ne s'était pas reportée ici.
+         Résultat, la navigation sautait d'une page à l'autre. Même état
+         qu'ailleurs : EN en place, grisé, pas encore proposé. -->
+    <div class="nav-controls">
+      <div class="lang-toggle">
+        <a href="#" id="btn-fr" class="active" onclick="return false;">FR</a>
+        <span class="sep">|</span>
+        <span id="btn-en" style="opacity:.35; cursor:default;" title="Version anglaise à venir">EN</span>
+      </div>
+    </div>
   </div>
 </nav>
 
