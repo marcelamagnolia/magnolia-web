@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Écrire — Magnolia Signature</title>
+  <!-- Jamais dans Google : c'est une porte de service, pas une page du site. -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="/assets/magnolia_favicon.svg">
+  <style>
+    :root { --navy:#34507A; --gold:#ecba64; --cream:#fff7e6; --cream-l:#fffbf3; }
+    * { box-sizing: border-box; }
+    body { margin:0; background: var(--cream-l); color:#3a3a3a;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif; font-size:15px; }
+    header { background: var(--navy); color: var(--cream); padding:14px 24px;
+      display:flex; align-items:center; justify-content:space-between; }
+    header strong { font-weight:600; letter-spacing:.02em; }
+    header a, header button { color: var(--cream); background:none; border:none;
+      font:inherit; cursor:pointer; opacity:.85; text-decoration:none; }
+    header a:hover, header button:hover { opacity:1; }
+    main { max-width: 860px; margin:0 auto; padding:28px 24px 80px; }
+    h1 { font-size:22px; color:var(--navy); margin:0 0 18px; font-weight:600; }
+    label { display:block; font-size:12px; font-weight:600; color:var(--navy);
+      text-transform:uppercase; letter-spacing:.08em; margin:18px 0 6px; }
+    input, textarea, select { width:100%; padding:10px 12px; border:1px solid rgba(52,80,122,.22);
+      border-radius:8px; font:inherit; background:#fff; color:#3a3a3a; }
+    input:focus, textarea:focus, select:focus { outline:none; border-color:var(--navy); }
+    textarea { resize:vertical; line-height:1.6; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:14px; }
+    .boutons { display:flex; gap:10px; flex-wrap:wrap; margin-top:24px; align-items:center; }
+    button.p { background:var(--navy); color:#fff; border:none; padding:11px 22px;
+      border-radius:8px; font:inherit; font-weight:600; cursor:pointer; }
+    button.s { background:#fff; color:var(--navy); border:1px solid rgba(52,80,122,.3);
+      padding:11px 20px; border-radius:8px; font:inherit; cursor:pointer; }
+    button.d { background:none; color:#b4443a; border:none; font:inherit; cursor:pointer; margin-left:auto; }
+    button:disabled { opacity:.45; cursor:default; }
+    .liste a { display:flex; justify-content:space-between; align-items:center; gap:12px;
+      padding:14px 16px; background:#fff; border:1px solid rgba(52,80,122,.12);
+      border-radius:10px; margin-bottom:8px; text-decoration:none; color:inherit; }
+    .liste a:hover { border-color: rgba(52,80,122,.35); }
+    .liste .t { font-weight:600; color:var(--navy); }
+    .liste .m { font-size:12.5px; color:rgba(52,80,122,.55); margin-top:3px; }
+    .jeton { font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+      padding:3px 9px; border-radius:999px; white-space:nowrap; }
+    .brouillon { background:rgba(236,186,100,.25); color:#8a6520; }
+    .publie { background:rgba(63,133,108,.16); color:#2f6b55; }
+    .aide { font-size:13px; color:rgba(52,80,122,.65); line-height:1.7;
+      background:rgba(236,186,100,.12); border-radius:10px; padding:14px 16px; margin-top:8px; }
+    .aide code { background:#fff; padding:1px 5px; border-radius:4px; font-size:12.5px; }
+    .mot { padding:11px 14px; border-radius:8px; margin:16px 0; font-size:14px; }
+    .mot.err { background:#fdeceb; color:#a33; }
+    .mot.ok { background:rgba(63,133,108,.12); color:#2f6b55; }
+    .connexion { max-width:360px; margin:12vh auto; }
+    .apercu-image { max-width:220px; border-radius:8px; margin-top:10px; display:block; }
+    .cache { display:none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <strong>Magnolia — écrire</strong>
+  <span id="entete-droite"></span>
+</header>
+
+<main>
+  <!-- ── Connexion ── -->
+  <section id="vue-connexion" class="cache">
+    <div class="connexion">
+      <h1>Connexion</h1>
+      <p style="color:rgba(52,80,122,.7); margin-top:-8px;">
+        Avec ton compte MagConnect.
+      </p>
+      <label for="courriel">Courriel</label>
+      <input id="courriel" type="email" autocomplete="username">
+      <label for="mdp">Mot de passe</label>
+      <input id="mdp" type="password" autocomplete="current-password">
+      <div class="boutons">
+        <button class="p" id="btn-connexion">Entrer</button>
+      </div>
+      <div id="mot-connexion"></div>
+    </div>
+  </section>
+
+  <!-- ── Liste ── -->
+  <section id="vue-liste" class="cache">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <h1 style="margin:0;">Les articles</h1>
+      <button class="p" id="btn-nouveau">Nouvel article</button>
+    </div>
+    <div class="liste" id="liste" style="margin-top:20px;"></div>
+  </section>
+
+  <!-- ── Rédaction ── -->
+  <section id="vue-article" class="cache">
+    <a href="#" id="btn-retour" style="color:rgba(52,80,122,.7); text-decoration:none; font-size:14px;">← Tous les articles</a>
+    <h1 id="titre-vue" style="margin-top:14px;">Nouvel article</h1>
+
+    <label for="f-titre">Titre</label>
+    <input id="f-titre" placeholder="Reconnaître un bon bois de grange">
+
+    <label for="f-categorie">Catégorie</label>
+    <input id="f-categorie" placeholder="Récupération, Collectif, Savoir-faire…">
+
+    <label for="f-resume">Résumé</label>
+    <textarea id="f-resume" rows="2"
+      placeholder="Deux phrases. C'est ce qui s'affiche dans la liste et sous le lien dans Google."></textarea>
+
+    <label for="f-image">Image principale</label>
+    <input id="f-image" type="file" accept="image/jpeg,image/png,image/webp,image/gif">
+    <img id="apercu-image" class="apercu-image cache" alt="">
+
+    <label for="f-corps">Le texte</label>
+    <textarea id="f-corps" rows="22" placeholder="Écris ici…"></textarea>
+    <div class="aide">
+      <code>## Un sous-titre</code> &nbsp;·&nbsp;
+      <code>**gras**</code> &nbsp;·&nbsp;
+      <code>*italique*</code> &nbsp;·&nbsp;
+      <code>- une puce</code> &nbsp;·&nbsp;
+      <code>[un lien](https://…)</code> &nbsp;·&nbsp;
+      <code>&gt; une citation</code><br>
+      Une ligne vide sépare deux paragraphes.
+    </div>
+
+    <div class="boutons">
+      <button class="p" id="btn-enregistrer">Enregistrer</button>
+      <button class="s" id="btn-publier">Publier</button>
+      <button class="s cache" id="btn-depublier">Remettre en brouillon</button>
+      <a class="s cache" id="btn-voir" target="_blank" style="text-decoration:none;">Voir en ligne</a>
+      <button class="d cache" id="btn-supprimer">Supprimer</button>
+    </div>
+    <div id="mot-article"></div>
+  </section>
+</main>
+
+<script type="module">
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
+
+const $ = id => document.getElementById(id)
+const montrer = v => ['vue-connexion','vue-liste','vue-article']
+  .forEach(x => $(x).classList.toggle('cache', x !== v))
+const dire = (ou, texte, type='err') => {
+  $(ou).innerHTML = texte ? `<div class="mot ${type}">${texte}</div>` : ''
+}
+
+let sb, session, articleEnCours = null
+
+// La configuration vient du serveur : une clé de moins dans le dépôt.
+const cfg = await (await fetch('/api/config')).json()
+sb = createClient(cfg.url, cfg.cle)
+
+// ── Connexion ──────────────────────────────────────────────────────────────
+async function verifierSession() {
+  const { data } = await sb.auth.getSession()
+  session = data.session
+  if (session) {
+    $('entete-droite').innerHTML = '<button id="btn-sortir">Se déconnecter</button>'
+    $('btn-sortir').onclick = async () => { await sb.auth.signOut(); location.reload() }
+    await chargerListe()
+  } else {
+    $('entete-droite').innerHTML = ''
+    montrer('vue-connexion')
+  }
+}
+
+$('btn-connexion').onclick = async () => {
+  dire('mot-connexion', '')
+  const { error } = await sb.auth.signInWithPassword({
+    email: $('courriel').value.trim(), password: $('mdp').value,
+  })
+  // Le message reste vague sur la cause : dire « ce courriel n'existe pas »
+  // révèle qui a un compte à qui essaie au hasard.
+  if (error) return dire('mot-connexion', 'Courriel ou mot de passe incorrect.')
+  await verifierSession()
+}
+$('mdp').addEventListener('keydown', e => { if (e.key === 'Enter') $('btn-connexion').click() })
+
+// ── Appels au serveur ──────────────────────────────────────────────────────
+async function api(chemin, options = {}) {
+  const r = await fetch(chemin, {
+    ...options,
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${session.access_token}`,
+      ...(options.headers || {}),
+    },
+  })
+  if (r.status === 401) { await sb.auth.signOut(); location.reload(); return }
+  if (!r.ok) throw new Error((await r.json().catch(() => ({}))).erreur || 'Erreur')
+  return r.status === 204 ? null : r.json()
+}
+
+// ── La liste ───────────────────────────────────────────────────────────────
+async function chargerListe() {
+  montrer('vue-liste')
+  const articles = await api('/api/articles')
+  $('liste').innerHTML = articles.length ? articles.map(a => `
+    <a href="#" data-id="${a.id}">
+      <span>
+        <span class="t">${echapper(a.titre)}</span>
+        <div class="m">${a.auteur_nom}${a.publie_le ? ' · ' + new Date(a.publie_le).toLocaleDateString('fr-CA') : ''}</div>
+      </span>
+      <span class="jeton ${a.statut === 'PUBLIE' ? 'publie' : 'brouillon'}">
+        ${a.statut === 'PUBLIE' ? 'En ligne' : 'Brouillon'}
+      </span>
+    </a>`).join('') :
+    '<p style="color:rgba(52,80,122,.6);">Aucun article pour l\'instant.</p>'
+  $('liste').querySelectorAll('a').forEach(a => {
+    a.onclick = async e => { e.preventDefault(); await ouvrir(a.dataset.id) }
+  })
+}
+
+function echapper(s) {
+  return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+}
+
+// ── Rédaction ──────────────────────────────────────────────────────────────
+function remplir(a) {
+  articleEnCours = a
+  $('f-titre').value = a?.titre || ''
+  $('f-categorie').value = a?.categorie || ''
+  $('f-resume').value = a?.resume || ''
+  $('f-corps').value = a?.corps_md || ''
+  $('titre-vue').textContent = a ? 'Modifier l\'article' : 'Nouvel article'
+  const img = $('apercu-image')
+  img.src = a?.image_url || ''
+  img.classList.toggle('cache', !a?.image_url)
+  $('btn-supprimer').classList.toggle('cache', !a)
+  $('btn-publier').classList.toggle('cache', a?.statut === 'PUBLIE')
+  $('btn-depublier').classList.toggle('cache', a?.statut !== 'PUBLIE')
+  const voir = $('btn-voir')
+  voir.classList.toggle('cache', a?.statut !== 'PUBLIE')
+  if (a?.slug) voir.href = `/blogue/${a.slug}`
+  dire('mot-article', '')
+  montrer('vue-article')
+}
+
+$('btn-nouveau').onclick = () => remplir(null)
+$('btn-retour').onclick = e => { e.preventDefault(); chargerListe() }
+async function ouvrir(id) { remplir(await api(`/api/articles?id=${id}`)) }
+
+// Le dépôt de l'image se fait tout de suite, pas à l'enregistrement : si on
+// attendait, une erreur de téléversement ferait perdre le texte avec elle.
+$('f-image').onchange = async e => {
+  const f = e.target.files?.[0]
+  if (!f) return
+  dire('mot-article', 'Dépôt de l\'image…', 'ok')
+  try {
+    const r = await fetch('/api/televerser', {
+      method: 'POST',
+      headers: { 'Content-Type': f.type, Authorization: `Bearer ${session.access_token}` },
+      body: f,
+    })
+    const d = await r.json()
+    if (!r.ok) throw new Error(d.erreur || 'Échec')
+    articleEnCours = { ...(articleEnCours || {}), image_url: d.url }
+    $('apercu-image').src = d.url
+    $('apercu-image').classList.remove('cache')
+    dire('mot-article', 'Image déposée.', 'ok')
+  } catch (err) { dire('mot-article', err.message) }
+}
+
+function champs() {
+  return {
+    titre: $('f-titre').value.trim(),
+    categorie: $('f-categorie').value.trim(),
+    resume: $('f-resume').value.trim(),
+    corps_md: $('f-corps').value,
+    image_url: articleEnCours?.image_url || null,
+  }
+}
+
+async function enregistrer(statut) {
+  const c = champs()
+  if (!c.titre) return dire('mot-article', 'Il faut un titre.')
+  const boutons = [...document.querySelectorAll('.boutons button')]
+  boutons.forEach(b => b.disabled = true)
+  try {
+    if (articleEnCours?.id) {
+      const a = await api(`/api/articles?id=${articleEnCours.id}`,
+        { method: 'PATCH', body: JSON.stringify({ ...c, ...(statut ? { statut } : {}) }) })
+      remplir(a)
+    } else {
+      const a = await api('/api/articles', { method: 'POST', body: JSON.stringify(c) })
+      if (statut === 'PUBLIE') {
+        remplir(await api(`/api/articles?id=${a.id}`,
+          { method: 'PATCH', body: JSON.stringify({ statut: 'PUBLIE' }) }))
+      } else remplir(a)
+    }
+    dire('mot-article', statut === 'PUBLIE' ? 'Publié.' :
+                        statut === 'BROUILLON' ? 'Remis en brouillon.' : 'Enregistré.', 'ok')
+  } catch (err) { dire('mot-article', err.message) }
+  finally { boutons.forEach(b => b.disabled = false) }
+}
+
+$('btn-enregistrer').onclick = () => enregistrer(null)
+$('btn-publier').onclick = () => enregistrer('PUBLIE')
+$('btn-depublier').onclick = () => enregistrer('BROUILLON')
+
+$('btn-supprimer').onclick = async () => {
+  if (!confirm('Supprimer cet article ? C\'est définitif.')) return
+  await api(`/api/articles?id=${articleEnCours.id}`, { method: 'DELETE' })
+  await chargerListe()
+}
+
+await verifierSession()
+</script>
+</body>
+</html>
