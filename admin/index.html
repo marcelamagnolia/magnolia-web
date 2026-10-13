@@ -18,6 +18,15 @@
     header a, header button { color: var(--cream); background:none; border:none;
       font:inherit; cursor:pointer; opacity:.85; text-decoration:none; }
     header a:hover, header button:hover { opacity:1; }
+    /* Les sorties étaient du texte nu sur fond marine : on ne les voyait pas.
+       Un contour suffit à dire que ça se clique. */
+    .liens-entete { display:flex; align-items:center; gap:14px; font-size:13.5px; }
+    .liens-entete .qui { opacity:.6; }
+    .liens-entete a, .liens-entete button {
+      border:1px solid rgba(255,247,230,.35); border-radius:7px;
+      padding:5px 12px; font-size:13px; }
+    .liens-entete a:hover, .liens-entete button:hover {
+      border-color: rgba(255,247,230,.7); }
     main { max-width: 860px; margin:0 auto; padding:28px 24px 80px; }
     h1 { font-size:22px; color:var(--navy); margin:0 0 18px; font-weight:600; }
     label { display:block; font-size:12px; font-weight:600; color:var(--navy);
@@ -58,7 +67,7 @@
 
 <header>
   <strong>Magnolia — écrire</strong>
-  <span id="entete-droite"></span>
+  <span id="entete-droite" class="liens-entete"></span>
 </header>
 
 <main>
@@ -153,7 +162,14 @@ async function verifierSession() {
   const { data } = await sb.auth.getSession()
   session = data.session
   if (session) {
-    $('entete-droite').innerHTML = '<button id="btn-sortir">Se déconnecter</button>'
+    // Qui est connecté, où aller, et comment sortir. Les trois manquaient :
+    // on pouvait se retrouver dans l'éditeur sans savoir sous quel compte ni
+    // comment revenir au site.
+    $('entete-droite').innerHTML =
+      `<span class="qui">${session.user?.email || ''}</span>` +
+      '<a href="/blogue/" target="_blank">Voir le blogue</a>' +
+      '<a href="/">Le site</a>' +
+      '<button id="btn-sortir">Se déconnecter</button>'
     $('btn-sortir').onclick = async () => { await sb.auth.signOut(); location.reload() }
     await chargerListe()
   } else {
