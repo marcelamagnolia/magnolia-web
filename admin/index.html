@@ -95,6 +95,7 @@
       <h1 style="margin:0;">Les articles</h1>
       <button class="p" id="btn-nouveau">Nouvel article</button>
     </div>
+    <div id="mot-liste"></div>
     <div class="liste" id="liste" style="margin-top:20px;"></div>
   </section>
 
@@ -208,6 +209,7 @@ async function api(chemin, options = {}) {
 // ── La liste ───────────────────────────────────────────────────────────────
 async function chargerListe() {
   montrer('vue-liste')
+  dire('mot-liste', '')
   const articles = await api('/api/articles')
   $('liste').innerHTML = articles.length ? articles.map(a => `
     <a href="#" data-id="${a.id}">
@@ -302,8 +304,17 @@ async function enregistrer(statut) {
           { method: 'PATCH', body: JSON.stringify({ statut: 'PUBLIE' }) }))
       } else remplir(a)
     }
-    dire('mot-article', statut === 'PUBLIE' ? 'Publié.' :
-                        statut === 'BROUILLON' ? 'Remis en brouillon.' : 'Enregistré.', 'ok')
+    // Publier termine le travail : on revient à la liste, où l'article
+    // apparaît maintenant « En ligne ». Rester dans l'éditeur après coup
+    // laisse croire qu'il reste quelque chose à faire.
+    //
+    // Enregistrer, lui, ne quitte pas : on enregistre pour continuer à écrire.
+    if (statut === 'PUBLIE') {
+      await chargerListe()
+      dire('mot-liste', 'Article publié.', 'ok')
+      return
+    }
+    dire('mot-article', statut === 'BROUILLON' ? 'Remis en brouillon.' : 'Enregistré.', 'ok')
   } catch (err) { dire('mot-article', err.message) }
   finally { boutons.forEach(b => b.disabled = false) }
 }
