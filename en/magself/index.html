@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MagSelf — A space for young people who want to know themselves</title>
+
+  <meta name="description" content="MagSelf is a space for young people who want to understand their inner world. Connecting more deeply with themselves, to connect better with others.">
+
+  <!-- L'adresse de référence de CETTE version. Chaque langue a la sienne. -->
+  <link rel="canonical" href="https://www.magnoliasignature.org/en/magself/">
+
+  <!-- hreflang : dit à Google que ces deux pages sont la même, dans deux
+       langues. Sans ça, il voyait du contenu dupliqué à une seule adresse et
+       ne savait ni laquelle indexer, ni à qui la servir. `x-default` désigne
+       la version à donner quand la langue du visiteur ne correspond à
+       aucune : le français, puisque le collectif est en Estrie. -->
+  <link rel="alternate" hreflang="fr" href="https://www.magnoliasignature.org/magself/">
+  <link rel="alternate" hreflang="en" href="https://www.magnoliasignature.org/en/magself/">
+  <link rel="alternate" hreflang="x-default" href="https://www.magnoliasignature.org/magself/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:site_name" content="Magnolia Signature">
+  <meta property="og:url" content="https://www.magnoliasignature.org/en/magself/">
+  <meta property="og:title" content="MagSelf — A space for young people who want to know themselves">
+  <meta property="og:description" content="MagSelf is a space for young people who want to understand their inner world. Connecting more deeply with themselves, to connect better with others.">
+  <meta property="og:image" content="https://www.magnoliasignature.org/assets/partage/magself.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/assets/magnolia_favicon.svg">
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+    :root { --navy: #c2664a; --gold: #34507A; }
+    nav, nav .nav-links a, nav .nav-links a:hover, nav .nav-dropdown li a { color: #34507A !important; }
+    .hero-panel.alt {
+      background: linear-gradient(rgba(20,15,10,0.40), rgba(20,15,10,0.40)), url('/assets/long_summit.jpg') center center / cover no-repeat;
+    }
+    section h2 { margin-bottom: 32px; }
+    .hero-panel h1 { color: var(--cream) !important; }
+    .hero-panel .tagline { font-size: clamp(22px, 2.5vw, 36px); }
+    .method-icon { display: block; margin-bottom: 12px; }
+    .method-icon svg { width: 28px; height: 28px; stroke: var(--gold); stroke-width: 1.5; fill: none; }
+    .method-grid { grid-template-columns: repeat(2, 1fr); }
+    .audience-closing { margin-top: 24px; color: var(--slate); font-style: italic; font-weight: 700; }
+    .audience-tagline { margin-top: 10px; font-weight: 700; color: var(--navy); }
+    .audience-list { grid-template-columns: 1fr; }
+    .section-split.alt .split-content { color: var(--cream); }
+    .section-split.alt .split-content h2 { color: var(--cream); }
+    .section-split.alt .split-content .section-label { color: var(--gold); }
+    .section-split.alt .split-content .audience-list li { color: rgba(255,247,230,.85); border-left-color: var(--gold); }
+    .section-split.alt .split-content .audience-closing { color: rgba(255,247,230,.85); }
+    .section-split.alt .split-content .audience-tagline { color: var(--cream); }
+    .pilot {
+      background: var(--navy);
+      text-align: center;
+    }
+    .pilot h2 { color: var(--cream); max-width: 640px; }
+    .pilot p { color: rgba(255,247,230,.75); }
+    .pilot .tagline { color: var(--gold); }
+    .pilot .email-form { max-width: 560px; }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ──────────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="/en/">
+      <img src="/assets/Magnolia_bleu.svg" alt="Magnolia Signature">
+    </a>
+    <ul class="nav-links">
+      <li>
+        <a href="/en/#manifeste">About us</a>
+        <ul class="nav-dropdown">
+          <li><a href="/en/#manifeste">Manifesto</a></li>
+          <li><a href="/en/#approche">Approach</a></li>
+          <li><a href="/en/#valeurs">Values</a></li>
+          <li><a href="/en/#fondatrice">Creator</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/en/#univers">Initiatives</a>
+        <ul class="nav-dropdown">
+          <li><a href="/en/magconnect/">MagConnect app</a></li>
+          <li><a href="/en/magself/" class="active">MagSelf app</a></li>
+        </ul>
+      </li>
+      <li><a href="/en/#collectif">Join us</a></li>
+    </ul>
+    <div class="nav-controls">
+      <div class="lang-toggle">
+        <a href="/magself/" id="btn-fr">FR</a>
+        <span class="sep">|</span>
+        <a href="/en/magself/" id="btn-en" class="active">EN</a>
+      </div>
+      <button class="nav-hamburger" onclick="toggleNav()" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero text ─────────────────────────────────────────── -->
+<section class="hero-panel alt">
+  <div class="container">
+
+    
+    <span class="tagline" style="margin-top:24px;display:block;line-height:1.6;">Where young people flourish<br>by discovering themselves.</span>
+
+    
+    <h1 style="line-height:1.3;">Self-knowledge is the ultimate luxury.</h1>
+
+    <div class="hero-banner-btns" style="margin-top:80px;">
+      
+      <a href="#decouvrir" class="btn btn-gold">Learn more</a>
+      
+      <a href="#pilote" class="btn btn-gold">Join us</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Manifeste ─────────────────────────────────────────── -->
+<section style="background: var(--cream);">
+  <div class="container">
+
+    
+    <span class="section-label" style="text-align: center;">Manifesto</span>
+
+    <div class="manifesto-headlines">
+      
+      <div>
+        <p class="manifesto-headline constat">We learn to perform, to improve, to move fast. Yet nobody teaches us to truly understand ourselves.</p>
+        <p class="manifesto-headline constat">The result: young people adrift, who doubt, imitate, adapt, and end up disconnected from their inner compass.</p>
+        <p class="manifesto-headline foundation">MagSelf offers a safe space to explore, embrace, and share who we truly are. One purpose: to connect more deeply with ourselves, and with others.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Ce que fait MagSelf ─────────────────────────────────── -->
+<section id="decouvrir" style="background: var(--white);">
+  <div class="container">
+
+    
+    <span class="section-label" style="text-align: center;">What MagSelf does</span>
+
+    
+    <h2 style="text-align: center;">Two levels of impact.</h2>
+
+
+    <div class="two-col">
+
+      <div class="impact-item">
+        <span class="method-icon"><i data-lucide="heart"></i></span>
+        
+        <h3>Inner</h3>
+        
+        <ul class="audience-list">
+          <li>Understand your needs, your reactions, your patterns.</li>
+          <li>Identify what feels right and trust it.</li>
+          <li>Find what gives your life meaning.</li>
+        </ul>
+      </div>
+
+      <div class="impact-item">
+        <span class="method-icon"><i data-lucide="zap"></i></span>
+        
+        <h3>Outer</h3>
+        
+        <ul class="audience-list">
+          <li>Let your inner compass guide your choices.</li>
+          <li>Act with clarity, stability and confidence.</li>
+          <li>Feel grounded, validated and worthy.</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Pourquoi ce sujet est d'utilité publique ────────────── -->
+<section class="alt section-split" style="padding:0;">
+  <div class="split-img">
+    <img src="/assets/lifestyle-nature-10.jpg" alt="Pourquoi ce sujet est d'utilité publique">
+  </div>
+  <div class="split-content">
+    
+    <span class="section-label">Why it matters</span>
+
+    
+    <h2>The blind spot of our era: ignoring our inner nature.</h2>
+
+    
+    <p>Young people's well-being is suffering mainly from a lack of direction and self-knowledge. Living in the fog is exhausting.</p>
+  </div>
+</section>
+
+<!-- ── À qui s'adresse MagSelf ──────────────────────────────── -->
+<section class="alt section-split" style="padding:0;">
+  <div class="split-content">
+    
+    <span class="section-label" style="text-align: center;">Who is MagSelf for?</span>
+
+    
+    <h2 style="text-align: center;">18–30 year-olds ready to discover themselves and flourish.</h2>
+
+    
+
+    <ul class="audience-list">
+      <li>Those for whom doing things "right" is no longer enough.</li>
+      <li>Those who move forward, succeed… but find no meaning in it.</li>
+      <li>Those who live in the fog and struggle to make choices.</li>
+      <li>Those who are tired of shrinking themselves to fit.</li>
+      <li>Those who feel out of touch with their desires, their joy.</li>
+      <li>Those who want to stop running on autopilot.</li>
+      <li>Those who want to explore their inner world, but lack the tools or the time.</li>
+    </ul>
+
+    
+    <p class="audience-closing">These signals are not weaknesses. They are invitations.</p>
+  </div>
+  <div class="split-img">
+    <img src="/assets/lifestyle-nature-11.jpg" alt="À qui s'adresse MagSelf">
+  </div>
+</section>
+
+<!-- ── Qu'est-ce que MagSelf ────────────────────────────────── -->
+<section style="background: var(--white);">
+  <div class="container">
+
+    
+    <span class="section-label" style="text-align: center;">How does MagSelf work?</span>
+
+    
+    <h2 style="text-align: center;">Four spaces. One ecosystem.</h2>
+
+    <div class="method-grid">
+
+      <div class="method-item">
+        <span class="method-icon"><i data-lucide="compass"></i></span>
+        <h3>Exploration</h3>
+        
+        <p>A journey inward to understand your doubts, your choices and your challenges, with personalised guidance aligned with your inner nature, at every step.</p>
+      </div>
+
+      <div class="method-item">
+        <span class="method-icon"><i data-lucide="sparkles"></i></span>
+        
+        <h3>Play</h3>
+        
+        <p>Grow through varied and personalised formats: games, videos, workshops. Self-discovery made enjoyable.</p>
+      </div>
+
+      <div class="method-item">
+        <span class="method-icon"><i data-lucide="map-pin"></i></span>
+        <h3>Orientation</h3>
+        
+        <p>Be guided towards the therapists best suited to your needs and your personality.</p>
+      </div>
+
+      <div class="method-item">
+        <span class="method-icon"><i data-lucide="users"></i></span>
+        <h3>Connexion</h3>
+        
+        <p>Connect and grow with people who feel the same way, in anonymous, safe and caring spaces.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Rejoindre le pilote ─────────────────────────────────── -->
+<section class="pilot" id="pilote">
+  <div class="container">
+
+    
+    <span class="tagline" style="font-family:'Instrument Serif', serif; font-style:normal; font-size:clamp(22px, 2.8vw, 32px); color:var(--cream); line-height:1.2; margin-bottom:44px; display:block;">MagSelf is being built.<br>Be among the lucky few to savour being yourself.<br><br><em style="font-family:'Dancing Script', cursive; font-style:normal; font-size:0.85em; color:var(--gold); line-height:2;">Unlock your full potential!</em></span>
+
+    <form class="email-form" onsubmit="handleSubscribe(event, 'magself', 8, 15)" style="margin-top:24px;">
+      
+      <input type="email" id="email-magself-en" placeholder="your@email.com">
+      
+      <button type="submit" class="btn btn-gold">I'm embarking on my self-discovery!</button>
+    </form>
+    <p id="msg-magself" style="display:none;margin-top:12px;font-size:17px;color:var(--cream);"></p>
+
+  </div>
+</section>
+
+
+<script>
+  const API_URL = 'https://magconnect-production.up.railway.app';
+
+
+  function showPopup(message, isError) {
+    let overlay = document.getElementById('ms-popup');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.id = 'ms-popup';
+      overlay.className = 'ms-popup-overlay';
+      overlay.innerHTML = '<div class="ms-popup-card"><p class="ms-popup-msg"></p><button type="button" class="ms-popup-close"></button></div>';
+      document.body.appendChild(overlay);
+      const hide = () => overlay.classList.remove('show');
+      overlay.addEventListener('click', ev => { if (ev.target === overlay) hide(); });
+      overlay.querySelector('.ms-popup-close').addEventListener('click', hide);
+    }
+    const isEn = document.documentElement.lang === 'en';
+    overlay.querySelector('.ms-popup-msg').textContent = message;
+    overlay.querySelector('.ms-popup-card').classList.toggle('error', !!isError);
+    overlay.querySelector('.ms-popup-close').textContent = isEn ? 'Close' : 'Fermer';
+    overlay.classList.add('show');
+  }
+
+  async function handleSubscribe(e, formKey, listId, enListId) {
+    e.preventDefault();
+    const isEn = document.documentElement.lang === 'en';
+    const list = isEn && enListId ? enListId : listId;
+    const emailId = isEn ? `email-${formKey}-en` : `email-${formKey}`;
+    const input = document.getElementById(emailId);
+    const email = input.value.trim();
+
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showPopup(isEn ? 'Please enter a valid email address.' : 'Veuillez entrer une adresse courriel valide.', true);
+      return;
+    }
+
+    const btn = e.submitter;
+    if (btn) btn.disabled = true;
+    try {
+      const res = await fetch(`${API_URL}/waitlist`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, list_id: list }),
+      });
+      if (res.ok) {
+        input.value = '';
+        showPopup(isEn ? "Thank you for joining us!\nWe'll be in touch soon." : "Merci de nous rejoindre !\nOn te contacte bientôt.", false);
+      } else {
+        showPopup(isEn ? 'Something went wrong. Please try again.' : 'Une erreur s\'est produite. Réessaie.', true);
+      }
+    } catch {
+      showPopup(isEn ? 'Something went wrong. Please try again.' : 'Une erreur s\'est produite. Réessaie.', true);
+    } finally {
+      if (btn) btn.disabled = false;
+    }
+  }
+
+  function toggleNav() {
+    document.querySelector('.nav-links').classList.toggle('open');
+  }
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('nav')) {
+      document.querySelector('.nav-links').classList.remove('open');
+    }
+  });
+
+  // Restore saved language preference
+
+  lucide.createIcons();
+</script>
+
+</body>
+</html>

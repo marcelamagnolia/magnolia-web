@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magnolia Signature — A Revolution: Gentle, Human and Powerful</title>
+
+  <meta name="description" content="A Revolution: Gentle, Human and Powerful. Magnolia Signature builds initiatives that place the human element first.">
+
+  <!-- L'adresse de référence de CETTE version. Chaque langue a la sienne. -->
+  <link rel="canonical" href="https://www.magnoliasignature.org/en/">
+
+  <!-- hreflang : dit à Google que ces deux pages sont la même, dans deux
+       langues. Sans ça, il voyait du contenu dupliqué à une seule adresse et
+       ne savait ni laquelle indexer, ni à qui la servir. `x-default` désigne
+       la version à donner quand la langue du visiteur ne correspond à
+       aucune : le français, puisque le collectif est en Estrie. -->
+  <link rel="alternate" hreflang="fr" href="https://www.magnoliasignature.org/">
+  <link rel="alternate" hreflang="en" href="https://www.magnoliasignature.org/en/">
+  <link rel="alternate" hreflang="x-default" href="https://www.magnoliasignature.org/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:site_name" content="Magnolia Signature">
+  <meta property="og:url" content="https://www.magnoliasignature.org/en/">
+  <meta property="og:title" content="Magnolia Signature — A Revolution: Gentle, Human and Powerful">
+  <meta property="og:description" content="A Revolution: Gentle, Human and Powerful. Magnolia Signature builds initiatives that place the human element first.">
+  <meta property="og:image" content="https://www.magnoliasignature.org/assets/partage/accueil.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/assets/magnolia_favicon.svg">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preload" as="image" href="/assets/magali_flowers.jpg">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<!-- ── Navigation ──────────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="/en/">
+      <img src="/assets/Magnolia_bleu.svg" alt="Magnolia Signature">
+    </a>
+    <ul class="nav-links">
+      <li>
+        <a href="#manifeste">About us</a>
+        <ul class="nav-dropdown">
+          <li><a href="#manifeste">Manifesto</a></li>
+          <li><a href="#approche">Approach</a></li>
+          <li><a href="#valeurs">Values</a></li>
+          <li><a href="#fondatrice">Creator</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#univers">Initiatives</a>
+        <ul class="nav-dropdown">
+          <li><a href="/en/magconnect/">MagConnect app</a></li>
+          <li><a href="/en/magself/">MagSelf app</a></li>
+        </ul>
+      </li>
+      <li><a href="#collectif">Join us</a></li>
+    </ul>
+    <div class="nav-controls">
+      <div class="lang-toggle">
+        <a href="/" id="btn-fr">FR</a>
+        <span class="sep">|</span>
+        <a href="/en/" id="btn-en" class="active">EN</a>
+      </div>
+      <button class="nav-hamburger" onclick="toggleNav()" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero text ─────────────────────────────────────────── -->
+<section class="hero-panel alt" style="background-color: var(--cream);">
+  <img class="hero-bg" src="/assets/magali_flowers.jpg" alt="Magnolia Signature" style="object-position: right 35%;" fetchpriority="high">
+  <div class="hero-overlay" style="background: rgba(52,80,122,0.40);"></div>
+  <div class="container">
+
+    
+    <span class="tagline" style="margin-top:24px;display:block;">A Revolution:<br>Gentle, Human and Powerful.</span>
+
+    
+    <h1>We don't need more.<br>We need to reconnect, more deeply.</h1>
+
+    <div class="hero-banner-btns" style="margin-top:80px;">
+      
+      <a href="#univers" class="btn btn-gold">Discover our initiatives</a>
+      
+      <a href="#collectif" class="btn btn-gold">Join the collective</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Manifesto ────────────────────────────────────────────── -->
+<section class="manifesto" id="manifeste">
+  <div class="container">
+
+    
+    <span class="section-label">Our Manifesto</span>
+
+    
+    <h2>Every step is a masterpiece.<br>Every masterpiece begins with a step.</h2>
+
+    <!-- Headlines -->
+    <div class="manifesto-headlines">
+      
+      <div>
+        <p class="manifesto-headline constat">The world is moving fast, and we are losing our sense of direction.</p>
+        <p class="manifesto-headline constat">Brilliant people burn out and isolate themselves.</p>
+        <p class="manifesto-headline foundation">A new way of being, acting, and connecting is possible.<br>Our choice is clear: place the human element first.</p>
+      </div>
+    </div>
+
+    <!-- Toggle -->
+    <button class="manifesto-toggle" onclick="toggleManifesto()" id="manifesto-btn">
+      
+      <span>Read more</span>
+      <i data-lucide="chevron-down" id="manifesto-chevron" style="width:16px;height:16px;transition:transform 0.3s;"></i>
+    </button>
+
+    <!-- Full text (collapsed by default) -->
+    <div class="manifesto-text" id="manifesto-full" style="display:none;margin-top:32px;">
+
+      
+
+      <div>
+        <p>The world is moving fast, and we are losing our sense of direction.<br>
+        We have learned to perform without knowing ourselves.<br>
+        To consume, rather than to feel.<br>
+        To move forward, even when meaning disappears.<br>
+        Little by little, our connections have frayed: we have become disconnected from ourselves, from others, and from the world around us.</p>
+
+        <div class="result">
+          <p>The result:<br>Brilliant people burn out, isolate themselves, and doubt their power and their place.<br>
+          Precious resources lie dormant or disappear, even though they still hold value.</p>
+        </div>
+
+        <p>Today, a new way of being, acting, and connecting is possible: regenerative models where the human element returns to the centre, and where every resource is given its full potential.</p>
+
+        <p>To know ourselves is to unlock our potential and our fulfillment.<br>
+        When individuality is understood and embraced, it doesn't divide, it connects.<br>
+        It gives rise to collectives that are fair, solid, and efficient.<br>
+        Bringing people together around shared values brings forth hope, pride, purpose, and the desire to cooperate.</p>
+
+        <div class="result">
+          <p>Our choice is clear: place the human element first.<br>
+          Because an aligned person naturally creates impact, and cooperation generates autonomy, both individual and collective.<br>
+          This is a gentle revolution and its effects are powerful.</p>
+        </div>
+
+        <p class="closing">Do you share our vision?<br>We welcome people who are ready to live differently.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Method ─────────────────────────────────────────────── -->
+<section class="method alt" id="approche">
+  <div class="container">
+
+    
+    <span class="section-label">Our approach</span>
+
+    
+    <h2>Building differently.</h2>
+
+    <div class="method-items">
+      <div class="method-item">
+        
+        <h3>Connect</h3>
+        
+        <p>Catalyzing connection: to oneself, to others, to the material world.</p>
+      </div>
+      <div class="method-item">
+        
+        <h3>Reveal</h3>
+        
+        <p>Bringing to light what already exists but lies dormant.</p>
+      </div>
+      <div class="method-item">
+        
+        <h3>Realize</h3>
+        
+        <p>Stepping into your potential.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Values ─────────────────────────────────────────────── -->
+<section class="values" id="valeurs">
+  <div class="container">
+
+    
+    <span class="section-label">Our values</span>
+
+    
+    <h2>What guides us.</h2>
+
+    <div class="values-grid">
+      <div class="value-item">
+        <span class="value-icon"><i data-lucide="sparkles"></i></span>
+        
+        <h3>Fulfilment</h3>
+        
+        <p>Radiating and acting from who we truly are.</p>
+      </div>
+      <div class="value-item">
+        <span class="value-icon"><i data-lucide="leaf"></i></span>
+        
+        <h3>Simplicity</h3>
+        
+        <p>Going to the essence, without unnecessary detours.</p>
+      </div>
+      <div class="value-item">
+        <span class="value-icon"><i data-lucide="shield"></i></span>
+        
+        <h3>Empowerment</h3>
+        
+        <p>Cultivating autonomy and self-belief.</p>
+      </div>
+      <div class="value-item">
+        <span class="value-icon"><i data-lucide="zap"></i></span>
+        
+        <h3>Efficiency</h3>
+        
+        <p>Doing better with less, and with others.</p>
+      </div>
+      <div class="value-item">
+        <span class="value-icon"><i data-lucide="flame"></i></span>
+        
+        <h3>Boldness</h3>
+        
+        <p>Daring to create new paths.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Biography ─────────────────────────────────────────────── -->
+<section class="biography alt section-split" id="fondatrice" style="padding:0;">
+  <div class="split-content">
+    
+    <span class="section-label" style="text-align:center;display:block;">The creator</span>
+
+    
+    <h2 style="text-align:center;margin-bottom:32px;">"Sensitive and deeply human."</h2>
+
+    
+
+    <div style="text-align:justify;">
+      <p>After moving from France across the Atlantic and raising three children, I chose to step off the beaten path to follow what truly makes me come alive. Uprooting my life became my greatest turning point, it was the moment I finally met myself.</p>
+      <p>Headhunter, HR director, then yoga teacher and Reiki master: my journey has been a gradual process of unlearning.<br>I understood one essential thing: individualism is born of despair, and embraced individuality is a source of collective power.</p>
+      <p>For more than five years, I have been building high-impact projects and engaged collectives: connecting people, unlocking the value of resources, and funding meaningful, sustainable initiatives. Through my presence, I care deeply about bringing to light the inner worlds of those I meet, giving voice to what is already there, but still silent.</p>
+      <p>Magnolia Signature is a calling.</p>
+    </div>
+
+  </div>
+  <div class="split-img">
+    <img src="/assets/magali_et_simba_reframe.jpg" alt="Magali Duburcq — Créatrice de Magnolia Signature">
+    <p style="margin-top:8px;text-align:center;"><a href="https://www.linkedin.com/in/magali-duburcq-270220284/" target="_blank" rel="noopener" class="bio-caption-link">Magali Duburcq</a> & Simba</p>
+  </div>
+</section>
+
+<!-- ── Universes ──────────────────────────────────────────── -->
+<section class="universes" id="univers">
+  <div class="container">
+
+    
+    <span class="section-label">Our initiatives</span>
+
+    
+    <h2 style="margin-bottom:40px;">Four levers of impact.</h2>
+
+    <div class="universes-grid">
+
+      <a href="/en/magconnect/" class="universe-item">
+        <span class="uni-icon"><i data-lucide="sprout"></i></span>
+        <span class="uni-name">MagConnect app</span>
+        
+        <h3>Social & Sustainability</h3>
+        
+        <p>Connecting people to catalyze cooperation and reveal the potential of materials.</p>
+      </a>
+
+      <a href="/en/magself/" class="universe-item">
+        <span class="uni-icon"><i data-lucide="sparkles"></i></span>
+        <span class="uni-name">MagSelf app</span>
+        
+        <h3>Self discovery</h3>
+        
+        <p>Making self-discovery accessible, helping young adults make informed choices and flourish.</p>
+      </a>
+
+      <div class="universe-item coming-soon">
+        
+        <span class="uni-badge">Coming soon</span>
+        <span class="uni-icon"><i data-lucide="target"></i></span>
+        <span class="uni-name">MagAlign</span>
+        
+        <h3>Leadership Alignment</h3>
+        
+        <p>Elevating the self in pursuit of efficient excellence.</p>
+      </div>
+
+      <div class="universe-item coming-soon">
+        
+        <span class="uni-badge">Coming soon</span>
+        <span class="uni-icon"><i data-lucide="heart"></i></span>
+        <span class="uni-name">MagGive</span>
+        
+        <h3>Foundation</h3>
+        
+        <p>Redistributing part of our earnings to amplify our impact.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Email capture ─────────────────────────────────────── -->
+<section class="email-capture" id="collectif">
+  <div class="container">
+
+    
+    <span class="tagline" style="margin-bottom:44px; display:block;">Be among the first to experience the Magnolia revolution:<br><em style="font-family:'Dancing Script', cursive; font-style:normal; font-size:0.85em; color:var(--gold);">a new way of being, doing, and connecting.</em></span>
+
+    <form class="email-form" onsubmit="handleSubscribe(event, 'magnolia', 6, 14)">
+      
+      <input type="email" id="email-magnolia-en" placeholder="your@email.com">
+      
+      <button type="submit">Join the Collective</button>
+    </form>
+    <p id="msg-magnolia" style="display:none;margin-top:12px;font-size:17px;color:var(--cream);"></p>
+
+    <div class="victor-hugo-quote">
+      
+      <p>"Nothing is more powerful than an idea whose time has come." — Victor Hugo</p>
+    </div>
+
+    <div class="footer-social" style="margin-top:40px;">
+      <a href="https://www.instagram.com/_magnoliasignature/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="22" height="22" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" /></svg>
+      </a>
+      <a href="https://www.facebook.com/magaliduburcq/" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg width="22" height="22" viewbox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/magali-duburcq/?_l=en_US" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg width="22" height="22" viewbox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
+      </a>
+      <a href="https://www.threads.com/@_magnoliasignature" target="_blank" rel="noopener" aria-label="Threads" class="threads-icon">
+        <svg width="22" height="22" viewbox="0 0 192 192" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4484 44.7443 97.3355 44.7443 97.222 44.7443C82.2364 44.7443 69.7731 51.1409 62.102 62.7807L75.881 72.2328C81.6116 63.5383 90.6052 61.6848 97.2286 61.6848C97.3051 61.6848 97.3819 61.6848 97.4576 61.6855C105.707 61.7381 111.932 64.1366 115.961 68.814C118.893 72.2193 120.854 76.925 121.825 82.8638C114.511 81.6207 106.601 81.2385 98.145 81.7233C74.3247 83.0954 59.0111 96.9879 60.0396 116.292C60.5615 126.084 65.4397 134.508 73.7746 140.011C80.8224 144.663 89.899 146.938 99.3323 146.423C111.79 145.74 121.563 140.987 128.381 132.296C133.559 125.696 136.834 117.143 138.28 106.366C144.217 109.949 148.617 114.664 151.047 120.332C155.179 129.967 155.42 145.8 142.501 158.708C131.182 169.966 117.576 174.908 96.8103 175.056C73.6652 174.888 56.4351 167.569 45.2312 153.302C34.6851 139.92 29.0465 120.524 28.7337 96C29.0465 71.4755 34.6851 52.0795 45.2312 38.6975C56.4351 24.4305 73.6652 17.1115 96.8103 16.9438C120.098 17.1128 137.629 24.4754 149.054 38.886C154.682 45.9981 158.945 54.8129 161.794 65.0506L178.299 60.7171C174.865 48.3751 169.524 37.6545 162.268 28.5919C147.559 10.0835 126.522 0.59534 96.8784 0.374609L96.7201 0.374023C67.1525 0.593748 46.3422 10.1159 31.8316 28.5919C18.8574 45.2418 12.1338 68.5928 11.8785 96C12.1338 123.407 18.8574 146.758 31.8316 163.408C46.3422 181.884 67.1525 191.406 96.7201 191.626L96.8784 191.626C123.336 191.429 141.535 183.713 156.151 169.179C174.249 151.189 173.656 128.574 167.484 114.625C163.001 104.253 154.395 95.8802 141.537 88.9883ZM100.564 129.524C89.9819 130.111 78.9476 125.301 78.4124 115.109C77.9882 107.394 83.8069 98.7703 101.443 97.8215C103.495 97.7081 105.511 97.6523 107.493 97.6523C113.935 97.6523 119.953 98.2773 125.421 99.5C123.371 124.572 111.266 128.938 100.564 129.524Z" />
+        </svg>
+      </a>
+    </div>
+    <p style="margin-top:16px;font-size:12px;color:var(--cream);opacity:0.4;">© 2025 Magnolia Signature</p>
+
+  </div>
+</section>
+
+<script>
+  const API_URL = 'https://magconnect-production.up.railway.app';
+
+
+  function showPopup(message, isError) {
+    let overlay = document.getElementById('ms-popup');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.id = 'ms-popup';
+      overlay.className = 'ms-popup-overlay';
+      overlay.innerHTML = '<div class="ms-popup-card"><p class="ms-popup-msg"></p><button type="button" class="ms-popup-close"></button></div>';
+      document.body.appendChild(overlay);
+      const hide = () => overlay.classList.remove('show');
+      overlay.addEventListener('click', ev => { if (ev.target === overlay) hide(); });
+      overlay.querySelector('.ms-popup-close').addEventListener('click', hide);
+    }
+    const isEn = document.documentElement.lang === 'en';
+    overlay.querySelector('.ms-popup-msg').textContent = message;
+    overlay.querySelector('.ms-popup-card').classList.toggle('error', !!isError);
+    overlay.querySelector('.ms-popup-close').textContent = isEn ? 'Close' : 'Fermer';
+    overlay.classList.add('show');
+  }
+
+  async function handleSubscribe(e, formKey, listId, enListId) {
+    e.preventDefault();
+    const isEn = document.documentElement.lang === 'en';
+    const list = isEn && enListId ? enListId : listId;
+    const emailId = isEn ? `email-${formKey}-en` : `email-${formKey}`;
+    const input = document.getElementById(emailId);
+    const email = input.value.trim();
+
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showPopup(isEn ? 'Please enter a valid email address.' : 'Veuillez entrer une adresse courriel valide.', true);
+      return;
+    }
+
+    const btn = e.submitter;
+    if (btn) btn.disabled = true;
+    try {
+      const res = await fetch(`${API_URL}/waitlist`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, list_id: list }),
+      });
+      if (res.ok) {
+        input.value = '';
+        showPopup(isEn ? "Thank you for joining us!\nWe'll be in touch soon." : "Merci de nous rejoindre !\nOn te contacte bientôt.", false);
+      } else {
+        showPopup(isEn ? 'Something went wrong. Please try again.' : 'Une erreur s\'est produite. Réessaie.', true);
+      }
+    } catch {
+      showPopup(isEn ? 'Something went wrong. Please try again.' : 'Une erreur s\'est produite. Réessaie.', true);
+    } finally {
+      if (btn) btn.disabled = false;
+    }
+  }
+
+  function toggleManifesto() {
+    const full = document.getElementById('manifesto-full');
+    const chevron = document.getElementById('manifesto-chevron');
+    const btn = document.getElementById('manifesto-btn');
+    const isOpen = full.style.display !== 'none';
+    full.style.display = isOpen ? 'none' : 'block';
+    chevron.style.transform = isOpen ? '' : 'rotate(180deg)';
+  }
+
+  function toggleNav() {
+    document.querySelector('.nav-links').classList.toggle('open');
+  }
+
+  function closeNav() {
+    document.querySelector('.nav-links').classList.remove('open');
+  }
+
+  // Close menu when any nav link is clicked (mobile)
+  document.querySelectorAll('.nav-links a').forEach(function(link) {
+    link.addEventListener('click', closeNav);
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('nav')) {
+      closeNav();
+    }
+  });
+
+  // Restore saved language preference
+
+  lucide.createIcons();
+</script>
+
+</body>
+</html>

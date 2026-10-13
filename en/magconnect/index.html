@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MagConnect — Give, sell and trade reclaimed wood in the Estrie</title>
+
+  <meta name="description" content="A collective of reclaimed-wood enthusiasts in the Estrie. We give, sell, trade, help each other and pass on what we know.">
+
+  <!-- L'adresse de référence de CETTE version. Chaque langue a la sienne. -->
+  <link rel="canonical" href="https://www.magnoliasignature.org/en/magconnect/">
+
+  <!-- hreflang : dit à Google que ces deux pages sont la même, dans deux
+       langues. Sans ça, il voyait du contenu dupliqué à une seule adresse et
+       ne savait ni laquelle indexer, ni à qui la servir. `x-default` désigne
+       la version à donner quand la langue du visiteur ne correspond à
+       aucune : le français, puisque le collectif est en Estrie. -->
+  <link rel="alternate" hreflang="fr" href="https://www.magnoliasignature.org/magconnect/">
+  <link rel="alternate" hreflang="en" href="https://www.magnoliasignature.org/en/magconnect/">
+  <link rel="alternate" hreflang="x-default" href="https://www.magnoliasignature.org/magconnect/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:site_name" content="Magnolia Signature">
+  <meta property="og:url" content="https://www.magnoliasignature.org/en/magconnect/">
+  <meta property="og:title" content="MagConnect — Give, sell and trade reclaimed wood in the Estrie">
+  <meta property="og:description" content="A collective of reclaimed-wood enthusiasts in the Estrie. We give, sell, trade, help each other and pass on what we know.">
+  <meta property="og:image" content="https://www.magnoliasignature.org/assets/partage/magconnect.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/assets/magnolia_favicon.svg">
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+    :root { --navy: #3f856c; --gold: #34507A; }
+    nav, nav .nav-links a, nav .nav-links a:hover, nav .nav-dropdown li a { color: #34507A !important; }
+    .audience-list { grid-template-columns: 1fr; }
+    .hero-panel h1 { color: var(--cream) !important; }
+    section h2 { margin-bottom: 32px; }
+    .hero-panel .tagline { font-size: clamp(22px, 2.5vw, 36px); }
+    .hero-banner { aspect-ratio: 16/5; max-height: 380px; overflow: hidden; }
+    .hero-banner img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .method-icon { display: block; margin-bottom: 12px; }
+    .method-icon svg { width: 28px; height: 28px; stroke: var(--gold); stroke-width: 1.5; fill: none; }
+    .alt .method-item { border-top-color: rgba(255,255,255,.18); }
+    .section-split.alt .split-content { color: var(--cream); }
+    .section-split.alt .split-content h2 { color: var(--cream); }
+    .section-split.alt .split-content .section-label { color: var(--gold); }
+    .section-split.alt .split-content .audience-list li { color: rgba(255,247,230,.85); border-left-color: var(--gold); }
+    /* Deux déclarations, pas une erreur : la première est le repli.
+       Cette image garde sa transparence, donc elle ne peut pas devenir un
+       JPEG — mettre un fond derrière l'arbre se verrait. En WebP elle passe
+       de 973 Ko à 79 Ko sans rien perdre. Les navigateurs qui ne lisent pas
+       le WebP (Safari avant 14) ignorent la seconde ligne et gardent le PNG :
+       c'est la règle de la cascade CSS, une déclaration qu'on ne comprend pas
+       est écartée. */
+    .hero-panel.alt {
+      background: linear-gradient(rgba(20,15,10,0.40), rgba(20,15,10,0.40)), url('/assets/long_hugging_tree.png') center center / cover no-repeat;
+      background: linear-gradient(rgba(20,15,10,0.40), rgba(20,15,10,0.40)), image-set(url('/assets/long_hugging_tree.webp') type('image/webp'), url('/assets/long_hugging_tree.png') type('image/png')) center center / cover no-repeat;
+    }
+    .pilot {
+      background: var(--navy);
+      text-align: center;
+    }
+    .pilot h2 { color: var(--cream); }
+    .pilot p { color: rgba(255,247,230,.75); }
+    .pilot .tagline { color: var(--gold); }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ──────────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="/en/">
+      <img src="/assets/Magnolia_bleu.svg" alt="Magnolia Signature">
+    </a>
+    <ul class="nav-links">
+      <li>
+        <a href="/en/#manifeste">About us</a>
+        <ul class="nav-dropdown">
+          <li><a href="/en/#manifeste">Manifesto</a></li>
+          <li><a href="/en/#approche">Approach</a></li>
+          <li><a href="/en/#valeurs">Values</a></li>
+          <li><a href="/en/#fondatrice">Creator</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/en/#univers">Initiatives</a>
+        <ul class="nav-dropdown">
+          <li><a href="/en/magconnect/" class="active">MagConnect app</a></li>
+          <li><a href="/en/magself/">MagSelf app</a></li>
+        </ul>
+      </li>
+      <li><a href="/en/#collectif">Join us</a></li>
+    </ul>
+    <div class="nav-controls">
+      <div class="lang-toggle">
+        <a href="/magconnect/" id="btn-fr">FR</a>
+        <span class="sep">|</span>
+        <a href="/en/magconnect/" id="btn-en" class="active">EN</a>
+      </div>
+      <button class="nav-hamburger" onclick="toggleNav()" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero text ─────────────────────────────────────────── -->
+<section class="hero-panel alt">
+  <div class="container">
+
+    
+    <span class="tagline" style="margin-top:24px;display:block;line-height:1.6;">Where people rediscover the joy of cooperating,<br>and materials find new value.</span>
+
+    
+    <h1 style="line-height:1.3;">An unused resource is an opportunity<br>for human connection.</h1>
+
+    <div class="hero-banner-btns" style="margin-top:80px;">
+      
+      <a href="#decouvrir" class="btn btn-gold">Learn more</a>
+      
+      <a href="#pilote" class="btn btn-gold">Join us</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Manifeste ─────────────────────────────────────────── -->
+<section style="background: var(--cream);">
+  <div class="container">
+
+    
+    <span class="section-label" style="text-align: center;">Manifesto</span>
+
+    <div class="manifesto-headlines">
+      
+      <div>
+        <p class="manifesto-headline constat">We have learned to produce, consume, and discard — without questioning our relationship to materials or to one another.</p>
+        <p class="manifesto-headline constat">The result: a disconnect from our natural impulse to cooperate, and resources left to fade away.</p>
+        <p class="manifesto-headline foundation">MagConnect recreates the conditions for cooperation between owners, experts, enthusiasts, and unused materials.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Ce que fait MagConnect ─────────────────────────────── -->
+<section id="decouvrir" style="background: var(--white);">
+  <div class="container">
+
+    
+    <span class="section-label" style="text-align: center;">What MagConnect does</span>
+
+    
+    <h2 style="text-align: center;">Two levels of impact.</h2>
+
+    
+    <p style="max-width:580px;margin-bottom:16px;">MagConnect is more than a platform, it's a collective catalyst.</p>
+
+    <div class="two-col">
+
+      <div class="impact-item">
+        <span class="method-icon"><i data-lucide="users"></i></span>
+        
+        <h3>Human</h3>
+        
+        <ul class="audience-list">
+          <li>Creating bonds.</li>
+          <li>Activating cooperation.</li>
+          <li>Revealing purpose, pride, and recognition.</li>
+        </ul>
+      </div>
+
+      <div class="impact-item">
+        <span class="method-icon"><i data-lucide="sprout"></i></span>
+        
+        <h3>Resource</h3>
+        
+        <ul class="audience-list">
+          <li>Putting materials back in circulation.</li>
+          <li>Revealing their potential.</li>
+          <li>Passing on knowledge to repair, reuse, recycle, and repurpose.</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Première initiative — Le Bois ─────────────────────── -->
+<section class="alt section-split" style="padding:0;">
+  <div class="split-img">
+    <img src="/assets/espoir-germer-3.jpg" alt="Le bois">
+  </div>
+  <div class="split-content">
+    
+    <span class="section-label" style="text-align: center;">Our first initiative: wood</span>
+
+    
+    <p>Every region is full of materials, knowledge, and committed people. Yet these resources rarely cross paths.</p>
+
+    
+    <p style="margin-top:16px;"><em>MagConnect was born of a simple truth: one person's waste is another person's treasure.</em></p>
+  </div>
+</section>
+
+<!-- ── À qui s'adresse MagConnect ────────────────────────── -->
+<section class="alt section-split" style="padding:0;">
+  <div class="split-content">
+    
+    <span class="section-label" style="text-align: center;">Who is MagConnect for?</span>
+
+    
+
+    <ul class="audience-list">
+      <li>Those who love caring for wood and nature.</li>
+      <li>Those who love to teach as much as they love to learn.</li>
+      <li>Those who want to act differently.</li>
+      <li>Those who value what already exists.</li>
+      <li>Those who are looking for meaning, connection, and impact.</li>
+      <li>Those who want to grow individually through the collective.</li>
+    </ul>
+  </div>
+  <div class="split-img">
+    <img src="/assets/ensemble-nature-3.jpg" alt="Une communauté">
+  </div>
+</section>
+
+<!-- ── Qu'est-ce que MagConnect ──────────────────────────── -->
+<section style="background: var(--cream);">
+  <div class="container">
+
+    
+    <span class="section-label" style="text-align: center;">How does MagConnect work?</span>
+
+    
+    <h2 style="text-align: center;">Three spaces. One ecosystem.</h2>
+
+
+    <div class="method-grid">
+
+      <div class="method-item">
+        <span class="method-icon"><i data-lucide="book-open"></i></span>
+        
+        <h3>Community journal</h3>
+        
+        <p>Showcasing local actions for environmental sustainability.</p>
+      </div>
+
+      <div class="method-item">
+        <span class="method-icon"><i data-lucide="repeat-2"></i></span>
+        <h3>Marketplace</h3>
+        
+        <p>Circularity in action: give, sell, and find what can still be used.</p>
+      </div>
+
+      <div class="method-item">
+        <span class="method-icon"><i data-lucide="users"></i></span>
+        <h3>Club Bois</h3>
+        
+        <p>Connecting wood enthusiasts to create, transform, and honour the material.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Rejoindre le pilote ─────────────────────────────────── -->
+<section class="pilot" id="pilote">
+  <div class="container">
+
+    
+    <span class="tagline" style="font-family:'Instrument Serif', serif; font-style:normal; font-size:clamp(22px, 2.8vw, 32px); color:var(--cream); margin-bottom:44px; display:block;">Launching in Orford and the surrounding area:<br><em style="font-family:'Dancing Script', cursive; font-style:normal; font-size:0.85em; color:var(--gold);">Be among the first to act differently!</em></span>
+
+    <form class="email-form" onsubmit="handleSubscribe(event, 'magconnect', 4, 13)" style="margin-top:24px;">
+      
+      <input type="email" id="email-magconnect-en" placeholder="your@email.com">
+      
+      <button type="submit" class="btn btn-gold">Join the MagConnect collective</button>
+    </form>
+    <p id="msg-magconnect" style="display:none;margin-top:12px;font-size:17px;color:var(--cream);"></p>
+
+  </div>
+</section>
+
+
+<script>
+  const API_URL = 'https://magconnect-production.up.railway.app';
+
+
+  function showPopup(message, isError) {
+    let overlay = document.getElementById('ms-popup');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.id = 'ms-popup';
+      overlay.className = 'ms-popup-overlay';
+      overlay.innerHTML = '<div class="ms-popup-card"><p class="ms-popup-msg"></p><button type="button" class="ms-popup-close"></button></div>';
+      document.body.appendChild(overlay);
+      const hide = () => overlay.classList.remove('show');
+      overlay.addEventListener('click', ev => { if (ev.target === overlay) hide(); });
+      overlay.querySelector('.ms-popup-close').addEventListener('click', hide);
+    }
+    const isEn = document.documentElement.lang === 'en';
+    overlay.querySelector('.ms-popup-msg').textContent = message;
+    overlay.querySelector('.ms-popup-card').classList.toggle('error', !!isError);
+    overlay.querySelector('.ms-popup-close').textContent = isEn ? 'Close' : 'Fermer';
+    overlay.classList.add('show');
+  }
+
+  async function handleSubscribe(e, formKey, listId, enListId) {
+    e.preventDefault();
+    const isEn = document.documentElement.lang === 'en';
+    const list = isEn && enListId ? enListId : listId;
+    const emailId = isEn ? `email-${formKey}-en` : `email-${formKey}`;
+    const input = document.getElementById(emailId);
+    const email = input.value.trim();
+
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showPopup(isEn ? 'Please enter a valid email address.' : 'Veuillez entrer une adresse courriel valide.', true);
+      return;
+    }
+
+    const btn = e.submitter;
+    if (btn) btn.disabled = true;
+    try {
+      const res = await fetch(`${API_URL}/waitlist`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, list_id: list }),
+      });
+      if (res.ok) {
+        input.value = '';
+        showPopup(isEn ? "Thank you for joining us!\nWe'll be in touch soon." : "Merci de nous rejoindre !\nOn te contacte bientôt.", false);
+      } else {
+        showPopup(isEn ? 'Something went wrong. Please try again.' : 'Une erreur s\'est produite. Réessaie.', true);
+      }
+    } catch {
+      showPopup(isEn ? 'Something went wrong. Please try again.' : 'Une erreur s\'est produite. Réessaie.', true);
+    } finally {
+      if (btn) btn.disabled = false;
+    }
+  }
+
+  function toggleNav() {
+    document.querySelector('.nav-links').classList.toggle('open');
+  }
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('nav')) {
+      document.querySelector('.nav-links').classList.remove('open');
+    }
+  });
+
+  // Restore saved language preference
+
+  lucide.createIcons();
+</script>
+
+</body>
+</html>

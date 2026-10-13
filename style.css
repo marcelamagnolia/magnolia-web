@@ -31,12 +31,11 @@ body {
 
 /* ── Bilingual toggle ──────────────────────────────────────── */
 
-[data-en] { display: none !important; }
-body.lang-en [data-fr] { display: none !important; }
-body.lang-en [data-en] { display: revert !important; }
-body.lang-en .tagline[data-en],
-body.lang-en .section-label[data-en] { display: block !important; }
-body.lang-en .btn[data-en] { display: inline-block !important; }
+/* Les règles qui cachaient une langue ont été retirées le 2026-10-13.
+   Les deux langues vivaient dans la même page et le CSS en masquait une :
+   Google voyait donc du contenu dupliqué et deux <h1> à une seule adresse.
+   Chaque langue a maintenant ses propres pages — / et /en/ — reliées par des
+   balises hreflang. Il n'y a plus rien à cacher. */
 
 /* ── Layout ────────────────────────────────────────────────── */
 
@@ -195,8 +194,10 @@ nav {
   color: var(--slate);
 }
 
-.lang-toggle button {
+.lang-toggle button,
+.lang-toggle a {
   background: none;
+  text-decoration: none;
   border: none;
   cursor: pointer;
   font: inherit;
@@ -206,7 +207,8 @@ nav {
 }
 
 .lang-toggle button.active,
-.lang-toggle button:hover {
+.lang-toggle button:hover,
+.lang-toggle a:hover {
   color: var(--navy);
 }
 

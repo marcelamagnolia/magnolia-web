@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- La liste des pages, pour que Google les trouve toutes sans dépendre des
-     liens entre elles. À compléter quand le blogue arrivera. -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!-- Six pages depuis le 2026-10-13 : chaque langue a les siennes. Les balises
+     xhtml:link disent à Google quelles pages sont des traductions l'une de
+     l'autre — la même information que les hreflang dans les pages, répétée ici
+     parce que Google lit souvent le sitemap en premier.
+     À compléter quand le blogue arrivera. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.magnoliasignature.org/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.magnoliasignature.org/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magnoliasignature.org/en/"/>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.magnoliasignature.org/en/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.magnoliasignature.org/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magnoliasignature.org/en/"/>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://www.magnoliasignature.org/magconnect/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.magnoliasignature.org/magconnect/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magnoliasignature.org/en/magconnect/"/>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.magnoliasignature.org/en/magconnect/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.magnoliasignature.org/magconnect/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magnoliasignature.org/en/magconnect/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.magnoliasignature.org/magself/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.magnoliasignature.org/magself/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magnoliasignature.org/en/magself/"/>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.magnoliasignature.org/en/magself/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.magnoliasignature.org/magself/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.magnoliasignature.org/en/magself/"/>
+    <priority>0.7</priority>
   </url>
 </urlset>
