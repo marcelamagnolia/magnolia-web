@@ -23,8 +23,16 @@
     .section-split.alt .split-content h2 { color: var(--cream); }
     .section-split.alt .split-content .section-label { color: var(--gold); }
     .section-split.alt .split-content .audience-list li { color: rgba(255,247,230,.85); border-left-color: var(--gold); }
+    /* Deux déclarations, pas une erreur : la première est le repli.
+       Cette image garde sa transparence, donc elle ne peut pas devenir un
+       JPEG — mettre un fond derrière l'arbre se verrait. En WebP elle passe
+       de 973 Ko à 79 Ko sans rien perdre. Les navigateurs qui ne lisent pas
+       le WebP (Safari avant 14) ignorent la seconde ligne et gardent le PNG :
+       c'est la règle de la cascade CSS, une déclaration qu'on ne comprend pas
+       est écartée. */
     .hero-panel.alt {
       background: linear-gradient(rgba(20,15,10,0.40), rgba(20,15,10,0.40)), url('../assets/long_hugging_tree.png') center center / cover no-repeat;
+      background: linear-gradient(rgba(20,15,10,0.40), rgba(20,15,10,0.40)), image-set(url('../assets/long_hugging_tree.webp') type('image/webp'), url('../assets/long_hugging_tree.png') type('image/png')) center center / cover no-repeat;
     }
     .pilot {
       background: var(--navy);
